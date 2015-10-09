@@ -1,0 +1,16 @@
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\EasyWebsite.DB.dll.config
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\EasyWebsite.DB.dll
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\EasyWebsite.DB.pdb
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\EntityFramework.dll
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\EntityFramework.xml
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\obj\Debug\EasyWebsite.DB.csprojResolveAssemblyReference.cache
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\obj\Debug\EasyWebsite.DB.dll
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\obj\Debug\EasyWebsite.DB.pdb
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\obj\Debug\EasyWebsite.DB.Migrations.CreationDatabase.resources
+C:\Serveur\Site\EasyWebsite.API\EasyWebsite.DB\obj\Debug\EasyWebsite.DB.csproj.GenerateResource.Cache
