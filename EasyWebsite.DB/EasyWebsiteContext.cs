@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EasyWebsite.DB
 {
-    public class EasyWebsiteContext : IdentityDbContext<ApplicationUser>
+    public class EasyWebsiteContext : IdentityDbContext<User>
     {
         public DbSet<User> Users {get; set;}
         public DbSet<News> News { get; set; }

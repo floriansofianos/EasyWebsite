@@ -52,8 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContextHelper.cs" />
+    <Compile Include="DataModel\IObjectWithState.cs" />
     <Compile Include="DataModel\Module.cs" />
     <Compile Include="DataModel\News.cs" />
+    <Compile Include="DataModel\StateHelper.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="EasyWebsiteContext.cs" />
     <Compile Include="Migrations\201510050616464_CreationDatabase.cs" />
