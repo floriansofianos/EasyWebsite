@@ -12,7 +12,7 @@ namespace EasyWebsite.DB.DataModel
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public bool Enabled { get; set; }
+        public bool IsDeleted { get; set; }
 
         [NotMapped]
         public State State { get; set; }  

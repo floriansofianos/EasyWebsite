@@ -8,23 +8,23 @@ using System.Data.Entity;
 
 namespace EasyWebsite.DB.Repositories
 {
-    public class UserRepository: IUserRepository
+    public class NewsRepository: INewsRepository
     {
         private EasyWebsiteContext _context;
 
-        public UserRepository(UnitOfWork uow)
+        public NewsRepository(UnitOfWork uow)
         {
             _context = uow.Context;
         }
 
-        public IQueryable<User> All
+        public IQueryable<News> All
         {
-            get { return _context.Users; }
+            get { return _context.News; }
         }
 
-        public IQueryable<User> AllIncluding(params System.Linq.Expressions.Expression<Func<User, object>>[] includeProperties)
+        public IQueryable<News> AllIncluding(params System.Linq.Expressions.Expression<Func<News, object>>[] includeProperties)
         {
-            IQueryable<User> query = _context.Users;
+            IQueryable<News> query = _context.News;
             foreach (var includeProperty in includeProperties)
             {
                 query = query.Include(includeProperty);
@@ -32,53 +32,53 @@ namespace EasyWebsite.DB.Repositories
             return query;
         }
 
-        public void InsertOrUpdate(User user)
+        public void InsertOrUpdate(News news)
         {
-            if (user.Id == default(string))
+            if (news.Id == default(int))
             {
                 // New Entity
-                _context.Entry(user).State = EntityState.Added;
+                _context.Entry(news).State = EntityState.Added;
             }
             else
             {
                 // Existing User
-                _context.Entry(user).State = EntityState.Modified;
+                _context.Entry(news).State = EntityState.Modified;
             }
         }
 
-        public void InsertOrUpdateGraph(User userGraph)
+        public void InsertOrUpdateGraph(News newsGraph)
         {
-            if (userGraph.State == State.Added)
+            if (newsGraph.State == State.Added)
             {
                 // New Entity
-                _context.Users.Add(userGraph);
+                _context.News.Add(newsGraph);
             }
             else
             {
                 // Existing User
-                _context.Users.Add(userGraph);
+                _context.News.Add(newsGraph);
                 _context.ApplyStateChanges();
             }
         }
 
-        public User Find(object id)
+        public News Find(object id)
         {
-            return _context.Users.Find((string)id);
+            return _context.News.Find((int)id);
         }
 
         public void Delete(object id)
         {
-            User user = _context.Users.Find((string)id);
-            user.IsDeleted = false;
-            InsertOrUpdate(user);
+            News news = _context.News.Find((int)id);
+            news.IsDeleted = true;
+            InsertOrUpdate(news);
         }
 
         public void Dispose()
         {
             _context.Dispose();
-        }        
+        }
     }
 
-    public interface IUserRepository: IRepository<User>
+    public interface INewsRepository : IRepository<News>
     { }
 }

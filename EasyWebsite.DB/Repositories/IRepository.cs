@@ -15,6 +15,5 @@ namespace EasyWebsite.DB.Repositories
         void InsertOrUpdate(T entity);
         void InsertOrUpdateGraph(T entityGraph);
         void Delete(object id);
-        void Save();
     }
 }

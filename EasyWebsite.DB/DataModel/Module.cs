@@ -14,6 +14,7 @@ namespace EasyWebsite.DB.DataModel
         public Type ModuleType { get; set; }
         public bool Deleted { get; set; }
         public int? MenuPosition { get; set; }
+        public bool IsDeleted { get; set; }
 
         [NotMapped]
         public State State { get; set; }  
