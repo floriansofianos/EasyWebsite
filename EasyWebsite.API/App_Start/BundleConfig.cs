@@ -26,6 +26,9 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-locale_en-us.js",
                       "~/Scripts/angular-locale_en-gb.js",
                       "~/Scripts/angular-locale_en-au.js",
+                      "~/Scripts/angular-translate.min.js",
+                      "~/Scripts/angular-sanitize.min.js",
+                      "~/Scripts/angular-translate-loader-url.min.js",
                       "~/Scripts/angular-route.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(

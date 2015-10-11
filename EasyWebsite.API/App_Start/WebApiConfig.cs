@@ -14,8 +14,8 @@ namespace EasyWebsite.API
         {
             // Configuration et services de l'API Web
             // Configurer l'API Web pour utiliser uniquement l'authentification de jeton du porteur.
-            config.SuppressDefaultHostAuthentication();
-            config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+            //config.SuppressDefaultHostAuthentication();
+            //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
             // Itinéraires de l'API Web
             config.MapHttpAttributeRoutes();

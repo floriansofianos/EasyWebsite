@@ -2,7 +2,7 @@
     var myApp = angular.module('myApp');
 
     var homePageController = function ($scope) {
-        $scope.helloWorld = 'Welcome to Easy Website!';
+        $scope.helloWorld = "'WELCOME_TO' Easy Website!";
     };
 
     myApp.controller('homePage', ['$scope', homePageController]);
