@@ -59,9 +59,9 @@
     <Compile Include="DataModel\StateHelper.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="EasyWebsiteContext.cs" />
-    <Compile Include="Migrations\201510050616464_CreationDatabase.cs" />
-    <Compile Include="Migrations\201510050616464_CreationDatabase.Designer.cs">
-      <DependentUpon>201510050616464_CreationDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\201510171253514_CreateDB.cs" />
+    <Compile Include="Migrations\201510171253514_CreateDB.Designer.cs">
+      <DependentUpon>201510171253514_CreateDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +76,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510050616464_CreationDatabase.resx">
-      <DependentUpon>201510050616464_CreationDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510171253514_CreateDB.resx">
+      <DependentUpon>201510171253514_CreateDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

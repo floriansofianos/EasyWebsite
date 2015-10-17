@@ -11,13 +11,14 @@ namespace EasyWebsite.DB
 {
     public class EasyWebsiteContext : IdentityDbContext<User>
     {
-        public DbSet<User> Users {get; set;}
+        //public DbSet<User> Users {get; set;}
         public DbSet<News> News { get; set; }
         public DbSet<Module> Modules { get; set; }
 
         public EasyWebsiteContext()
-            : base("EasyWebsiteDB")
+            : base("MyEasyWebsiteDB")
         {
         }
+
     }
 }

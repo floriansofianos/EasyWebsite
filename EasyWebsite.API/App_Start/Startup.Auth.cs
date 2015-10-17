@@ -23,7 +23,7 @@ namespace EasyWebsite.API
             {
                 TokenEndpointPath = new PathString("/Token"),
                 Provider = new ApplicationOAuthProvider(PublicClientId, UserManagerFactory),
-                AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
+                //AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
                 AllowInsecureHttp = true
             };
@@ -40,8 +40,8 @@ namespace EasyWebsite.API
         {
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
-            app.UseCookieAuthentication(new CookieAuthenticationOptions());
-            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+            /*app.UseCookieAuthentication(new CookieAuthenticationOptions());
+            app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);*/
 
             // Autoriser l’application à utiliser des jetons de support pour authentifier les utilisateurs
             app.UseOAuthBearerTokens(OAuthOptions);

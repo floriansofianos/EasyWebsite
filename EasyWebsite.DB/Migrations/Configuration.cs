@@ -1,5 +1,8 @@
 namespace EasyWebsite.DB.Migrations
 {
+    using EasyWebsite.DB.DataModel;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -26,6 +29,14 @@ namespace EasyWebsite.DB.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            if (!(context.Users.Any(u => u.UserName == "superadmin")))
+            {
+                var userStore = new UserStore<User>(context);
+                var userManager = new UserManager<User>(userStore);
+                var userToInsert = new User { UserName = "superadmin", FirstName = "", Surname = "superadmin" };
+                userManager.Create(userToInsert, "Brisbane=4000");
+            }
         }
     }
 }
