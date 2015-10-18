@@ -200,6 +200,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Providers\SimpleRefreshTokenProvider.cs" />
     <Compile Include="Resources\Index.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -215,17 +216,23 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-local-storage.min.js" />
     <Content Include="Scripts\angular-locale_en-au.js" />
     <Content Include="Scripts\angular-locale_en-gb.js" />
     <Content Include="Scripts\angular-locale_en-us.js" />
     <Content Include="Scripts\angular-locale_fr-fr.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-translate-loader-url.min.js" />
     <Content Include="Scripts\angular-translate.min.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app\controllers\AdminPage.js" />
     <Content Include="Scripts\app\controllers\HomePage.js" />
+    <Content Include="Scripts\app\controllers\LoginPage.js" />
     <Content Include="Scripts\app\modules\App.js" />
+    <Content Include="Scripts\app\services\AuthInterceptorService.js" />
+    <Content Include="Scripts\app\services\AuthService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -250,7 +257,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="templates\admin.html" />
     <Content Include="templates\home.html" />
+    <Content Include="templates\login.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -272,7 +281,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\app\directives\" />
     <Folder Include="Scripts\app\filters\" />
-    <Folder Include="Scripts\app\services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -285,6 +293,10 @@
     <ProjectReference Include="..\EasyWebsite.DB\EasyWebsite.DB.csproj">
       <Project>{02d0f1b2-844c-4a43-9e30-d9b11dcba2a3}</Project>
       <Name>EasyWebsite.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyWebsite.Library\EasyWebsite.Library.csproj">
+      <Project>{5ac46f1e-b9d1-4e6e-b810-27de95e2250f}</Project>
+      <Name>EasyWebsite.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

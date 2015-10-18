@@ -29,11 +29,17 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-translate.min.js",
                       "~/Scripts/angular-sanitize.min.js",
                       "~/Scripts/angular-translate-loader-url.min.js",
+                      "~/Scripts/angular-local-storage.min.js",
+                      "~/Scripts/angular-resource.min.js",
                       "~/Scripts/angular-route.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                       "~/Scripts/app/modules/App.js",
-                      "~/Scripts/app/controllers/HomePage.js"));
+                      "~/Scripts/app/controllers/HomePage.js",
+                      "~/Scripts/app/controllers/LoginPage.js",
+                      "~/Scripts/app/controllers/AdminPage.js",
+                      "~/Scripts/app/services/AuthService.js",
+                      "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

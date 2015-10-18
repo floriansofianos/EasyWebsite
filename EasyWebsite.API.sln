@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWebsite.API", "EasyWebs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWebsite.DB", "EasyWebsite.DB\EasyWebsite.DB.csproj", "{02D0F1B2-844C-4A43-9E30-D9B11DCBA2A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWebsite.Library", "EasyWebsite.Library\EasyWebsite.Library.csproj", "{5AC46F1E-B9D1-4E6E-B810-27DE95E2250F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{02D0F1B2-844C-4A43-9E30-D9B11DCBA2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02D0F1B2-844C-4A43-9E30-D9B11DCBA2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02D0F1B2-844C-4A43-9E30-D9B11DCBA2A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AC46F1E-B9D1-4E6E-B810-27DE95E2250F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AC46F1E-B9D1-4E6E-B810-27DE95E2250F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AC46F1E-B9D1-4E6E-B810-27DE95E2250F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AC46F1E-B9D1-4E6E-B810-27DE95E2250F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

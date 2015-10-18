@@ -1,5 +1,5 @@
 ﻿(function () {
-    var myApp = angular.module('myApp', ['ngRoute', 'pascalprecht.translate', 'ngSanitize']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule']);
 
     // Routing configuration
     myApp.config(['$routeProvider', '$locationProvider',
@@ -9,6 +9,14 @@
                     templateUrl: 'templates/home.html',
                     controller: 'homePage'
                 }).
+                  when('/admin', {
+                      templateUrl: 'templates/admin.html',
+                      controller: 'adminPage'
+                  }).
+                  when('/login', {
+                      templateUrl: 'templates/login.html',
+                      controller: 'loginPage'
+                  }).
                 otherwise({
                     redirectTo: '/'
                 });
@@ -25,4 +33,12 @@
             $translateProvider.useSanitizeValueStrategy('sanitize');
         }]);
 
-    }());
+    myApp.config(function ($httpProvider) {
+        $httpProvider.interceptors.push('authInterceptorService');
+    });
+
+    myApp.run(['authService', function (authService) {
+        authService.fillAuthData();
+    }]);
+
+}());

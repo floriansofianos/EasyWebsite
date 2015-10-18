@@ -25,6 +25,11 @@ namespace EasyWebsite.DB
             return _context.SaveChanges();
         }
 
+        public async Task<int> SaveAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
         public EasyWebsiteContext Context
         {
             get { return _context; }
