@@ -4,9 +4,11 @@ namespace EasyWebsite.DB.Migrations
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using EasyWebsite.Library;
 
     internal sealed class Configuration : DbMigrationsConfiguration<EasyWebsite.DB.EasyWebsiteContext>
     {
@@ -37,6 +39,32 @@ namespace EasyWebsite.DB.Migrations
                 var userToInsert = new User { UserName = "superadmin", FirstName = "", Surname = "superadmin" };
                 userManager.Create(userToInsert, "Brisbane=4000");
             }
+
+            if (context.Clients.Count() > 0)
+            {
+                return;
+            }
+
+            context.Clients.AddRange(BuildClientsList());
+        }
+
+        private static List<Client> BuildClientsList()
+        {
+
+            List<Client> ClientsList = new List<Client> 
+            {
+                new Client
+                { Id = "ngAuthApp", 
+                    Secret= "SecretToken".GetHash(), 
+                    Name="AngularJS front-end Application", 
+                    ApplicationType =  ApplicationTypes.Javascript, 
+                    Active = true, 
+                    RefreshTokenLifeTime = 7200, 
+                    AllowedOrigin = "*"
+                }
+            };
+
+            return ClientsList;
         }
     }
 }

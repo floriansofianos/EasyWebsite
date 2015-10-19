@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var authInterceptorService = function ($q, $location, localStorageService) {
+    var authInterceptorService = function ($q, $location, localStorageService, $injector) {
 
         var _request = function (config) {
 
@@ -16,10 +16,29 @@
         }
 
         var _responseError = function (rejection) {
+            var deferred = $q.defer();
             if (rejection.status === 401) {
-                $location.path('/login');
+                var authService = $injector.get('authService');
+                authService.refreshToken().then(function (response) {
+                    _retryHttpRequest(rejection.config, deferred);
+                }, function () {
+                    authService.logOut();
+                    $location.path('/login');
+                    deferred.reject(rejection);
+                });
+            } else {
+                deferred.reject(rejection);
             }
-            return $q.reject(rejection);
+            return deferred.promise;
+        }
+
+        var _retryHttpRequest = function (config, deferred) {
+            $http = $http || $injector.get('$http');
+            $http(config).then(function (response) {
+                deferred.resolve(response);
+            }, function (response) {
+                deferred.reject(response);
+            });
         }
 
         return {
@@ -28,5 +47,5 @@
         };
     };
 
-    app.factory('authInterceptorService', ['$q', '$location', 'localStorageService', authInterceptorService]);
+    app.factory('authInterceptorService', ['$q', '$location', 'localStorageService', '$injector', authInterceptorService]);
 }());

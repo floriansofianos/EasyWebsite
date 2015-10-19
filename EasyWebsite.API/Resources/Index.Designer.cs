@@ -88,6 +88,15 @@ namespace EasyWebsite.API.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Remember me.
+        /// </summary>
+        internal static string REMEMBER_ME {
+            get {
+                return ResourceManager.GetString("REMEMBER_ME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Welcome to.
         /// </summary>
         internal static string WELCOME_TO {
