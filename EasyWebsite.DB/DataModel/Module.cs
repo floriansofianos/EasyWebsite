@@ -13,7 +13,6 @@ namespace EasyWebsite.DB.DataModel
         public string Name { get; set; }
         public string Url { get; set; }
         public Type ModuleType { get; set; }
-        public bool Deleted { get; set; }
         public int? MenuPosition { get; set; }
         public bool IsDeleted { get; set; }
 

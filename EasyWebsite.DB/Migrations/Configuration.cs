@@ -40,18 +40,23 @@ namespace EasyWebsite.DB.Migrations
                 userManager.Create(userToInsert, "Brisbane=4000");
             }
 
-            if (context.Clients.Count() > 0)
+            if (context.Clients.Count() == 0)
             {
-                return;
+                context.Clients.AddRange(BuildClientsList());
             }
 
-            context.Clients.AddRange(BuildClientsList());
+            if(context.Modules.Count() == 0)
+            {
+                context.Modules.AddRange(BuildModuleList());
+            }
+
+            
         }
 
         private static List<Client> BuildClientsList()
         {
 
-            List<Client> ClientsList = new List<Client> 
+            List<Client> clientsList = new List<Client> 
             {
                 new Client
                 { Id = "ngAuthApp", 
@@ -64,7 +69,24 @@ namespace EasyWebsite.DB.Migrations
                 }
             };
 
-            return ClientsList;
+            return clientsList;
+        }
+
+        private static List<Module> BuildModuleList()
+        {
+            List<Module> moduleList = new List<Module>
+            {
+                new Module 
+                {
+                    IsDeleted = false,
+                    MenuPosition = 1,
+                    ModuleType = Module.Type.Static,
+                    Name = "Test Module",
+                    Url = "/test-module"
+                }
+            };
+
+            return moduleList;
         }
     }
 }

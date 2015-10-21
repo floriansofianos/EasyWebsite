@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201510191221554_OAuthRefreshToken.Designer.cs">
       <DependentUpon>201510191221554_OAuthRefreshToken.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510211142136_Alter_Table_Modules_Drop_Deleted.cs" />
+    <Compile Include="Migrations\201510211142136_Alter_Table_Modules_Drop_Deleted.Designer.cs">
+      <DependentUpon>201510211142136_Alter_Table_Modules_Drop_Deleted.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510191221554_OAuthRefreshToken.resx">
       <DependentUpon>201510191221554_OAuthRefreshToken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510211142136_Alter_Table_Modules_Drop_Deleted.resx">
+      <DependentUpon>201510211142136_Alter_Table_Modules_Drop_Deleted.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

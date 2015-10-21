@@ -20,6 +20,9 @@ namespace EasyWebsite.API
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
+                      "~/Scripts/underscore-min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                       "~/Scripts/angular.min.js",
                       "~/Scripts/angular-locale_fr-fr.js",
@@ -35,10 +38,16 @@ namespace EasyWebsite.API
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                       "~/Scripts/app/modules/App.js",
+                      "~/Scripts/app/modules/app.menu.js",
+                      "~/Scripts/app/directives/TopMenu.js",
+                      "~/Scripts/app/directives/TopMenuItem.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
                       "~/Scripts/app/controllers/AdminPage.js",
+                      "~/Scripts/app/controllers/TopMenu.js",
                       "~/Scripts/app/services/AuthService.js",
+                      "~/Scripts/app/services/RoutingHelper.js",
+                      "~/Scripts/app/services/TopMenuHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

@@ -1,1 +1,3 @@
-﻿<ul class="nav navbar-nav" ng-transclude></ul>
+﻿<ul class="nav navbar-nav">
+    <top-menu-item ng-repeat="item in topMenuItems" label="{{item.Label}}" route="{{item.Route}}" icon="{{item.Icon}}"></top-menu-item>
+</ul>
