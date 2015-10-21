@@ -18,7 +18,8 @@
                       controller: 'loginPage'
                   }).
                 otherwise({
-                    redirectTo: '/'
+                    templateUrl: 'templates/content.html',
+                    controller: 'contentController'
                 });
 
               // Use HTML5 URLs

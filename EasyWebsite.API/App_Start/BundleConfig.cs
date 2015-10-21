@@ -45,6 +45,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/LoginPage.js",
                       "~/Scripts/app/controllers/AdminPage.js",
                       "~/Scripts/app/controllers/TopMenu.js",
+                      "~/Scripts/app/controllers/ContentController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",

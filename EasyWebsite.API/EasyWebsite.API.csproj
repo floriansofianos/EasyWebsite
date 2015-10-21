@@ -231,6 +231,7 @@
     <Content Include="Scripts\angular-translate.min.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\controllers\AdminPage.js" />
+    <Content Include="Scripts\app\controllers\ContentController.js" />
     <Content Include="Scripts\app\controllers\HomePage.js" />
     <Content Include="Scripts\app\controllers\LoginPage.js" />
     <Content Include="Scripts\app\controllers\TopMenu.js" />
@@ -268,6 +269,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="templates\admin.html" />
+    <Content Include="templates\content.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />
     <Content Include="templates\top-menu-item.html" />
