@@ -56,8 +56,11 @@
     <Compile Include="DataModel\Client.cs" />
     <Compile Include="DataModel\IObjectWithState.cs" />
     <Compile Include="DataModel\Module.cs" />
+    <Compile Include="DataModel\ModuleContent.cs" />
+    <Compile Include="DataModel\ModuleContentTranslation.cs" />
     <Compile Include="DataModel\News.cs" />
     <Compile Include="DataModel\RefreshToken.cs" />
+    <Compile Include="DataModel\SiteSettings.cs" />
     <Compile Include="DataModel\StateHelper.cs" />
     <Compile Include="DataModel\User.cs" />
     <Compile Include="EasyWebsiteContext.cs" />
@@ -73,6 +76,10 @@
     <Compile Include="Migrations\201510211142136_Alter_Table_Modules_Drop_Deleted.Designer.cs">
       <DependentUpon>201510211142136_Alter_Table_Modules_Drop_Deleted.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510250820430_Create_Admin_Content.cs" />
+    <Compile Include="Migrations\201510250820430_Create_Admin_Content.Designer.cs">
+      <DependentUpon>201510250820430_Create_Admin_Content.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -80,6 +87,7 @@
     <Compile Include="Repositories\ModuleRepository.cs" />
     <Compile Include="Repositories\NewsRepository.cs" />
     <Compile Include="Repositories\RefreshTokenRepository.cs" />
+    <Compile Include="Repositories\SiteSettingsRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
@@ -96,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510211142136_Alter_Table_Modules_Drop_Deleted.resx">
       <DependentUpon>201510211142136_Alter_Table_Modules_Drop_Deleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510250820430_Create_Admin_Content.resx">
+      <DependentUpon>201510250820430_Create_Admin_Content.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

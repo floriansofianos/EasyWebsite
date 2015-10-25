@@ -34,18 +34,22 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-translate-loader-url.min.js",
                       "~/Scripts/angular-local-storage.min.js",
                       "~/Scripts/angular-resource.min.js",
+                      "~/Scripts/angular-gridster.min.js",
                       "~/Scripts/angular-route.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                       "~/Scripts/app/modules/App.js",
                       "~/Scripts/app/modules/app.menu.js",
+                      "~/Scripts/app/modules/app.dashboard.js",
                       "~/Scripts/app/directives/TopMenu.js",
                       "~/Scripts/app/directives/TopMenuItem.js",
+                      "~/Scripts/app/directives/ewDashboard.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
                       "~/Scripts/app/controllers/AdminPage.js",
                       "~/Scripts/app/controllers/TopMenu.js",
                       "~/Scripts/app/controllers/ContentController.js",
+                      "~/Scripts/app/controllers/AdminContentController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",
@@ -53,6 +57,7 @@ namespace EasyWebsite.API
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/angular-gridster.min.css",
                       "~/Content/site.css"));
         }
     }

@@ -214,11 +214,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\angular-gridster.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-gridster.min.js" />
     <Content Include="Scripts\angular-local-storage.min.js" />
     <Content Include="Scripts\angular-locale_en-au.js" />
     <Content Include="Scripts\angular-locale_en-gb.js" />
@@ -230,13 +233,16 @@
     <Content Include="Scripts\angular-translate-loader-url.min.js" />
     <Content Include="Scripts\angular-translate.min.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app\controllers\AdminContentController.js" />
     <Content Include="Scripts\app\controllers\AdminPage.js" />
     <Content Include="Scripts\app\controllers\ContentController.js" />
     <Content Include="Scripts\app\controllers\HomePage.js" />
     <Content Include="Scripts\app\controllers\LoginPage.js" />
     <Content Include="Scripts\app\controllers\TopMenu.js" />
+    <Content Include="Scripts\app\directives\ewDashboard.js" />
     <Content Include="Scripts\app\directives\TopMenu.js" />
     <Content Include="Scripts\app\directives\TopMenuItem.js" />
+    <Content Include="Scripts\app\modules\app.dashboard.js" />
     <Content Include="Scripts\app\modules\App.js" />
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
@@ -256,6 +262,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Scripts\app\modules\app.menu.js" />
+    <Content Include="Content\Site.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -268,8 +275,10 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\underscore-min.js" />
+    <Content Include="templates\admin-content.html" />
     <Content Include="templates\admin.html" />
     <Content Include="templates\content.html" />
+    <Content Include="templates\ewDashboardTemplate.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />
     <Content Include="templates\top-menu-item.html" />
@@ -282,7 +291,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />

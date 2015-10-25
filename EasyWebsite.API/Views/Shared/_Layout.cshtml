@@ -14,7 +14,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <body ng-app="myApp">
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -24,19 +24,12 @@
                 @Html.ActionLink("Nom de l'application", "Index", "Home", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                </ul>
+                <top-menu></top-menu>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
     @Scripts.Render("~/bundles/scripts")
     @RenderSection("scripts", required: false)

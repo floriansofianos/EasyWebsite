@@ -1,5 +1,5 @@
 ﻿(function () {
-    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard']);
 
     // Routing configuration
     myApp.config(['$routeProvider', '$locationProvider',
@@ -12,6 +12,10 @@
                   when('/admin', {
                       templateUrl: 'templates/admin.html',
                       controller: 'adminPage'
+                  }).
+                  when('/admin-content', {
+                      templateUrl: 'templates/admin-content.html',
+                      controller: 'adminContentController'
                   }).
                   when('/login', {
                       templateUrl: 'templates/login.html',
