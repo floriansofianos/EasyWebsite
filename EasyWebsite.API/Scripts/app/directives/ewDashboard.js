@@ -22,6 +22,11 @@
                         col: 6
                     }
                 ];
+
+                scope.gridsterOpts = {
+                    columns: 24,
+                    rowHeight: 40
+                }
             }
         }
     }
