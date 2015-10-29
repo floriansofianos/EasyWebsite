@@ -27,6 +27,15 @@
                     columns: 24,
                     rowHeight: 40
                 }
+
+                scope.addNewElement = function () {
+                    scope.elements.push({
+                        sizeX: 3,
+                        sizeY: 3,
+                        row: 0,
+                        col: 0
+                    });
+                }
             }
         }
     }

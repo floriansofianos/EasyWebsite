@@ -1,4 +1,10 @@
-﻿<div gridster="gridsterOpts">
+﻿<div class="row">
+    <div class="add-button-container" ng-click="addNewElement()">
+        <i class="fa fa-plus"></i>
+        <span>{{'ADD' | translate}}</span>
+    </div>
+</div>
+<div gridster="gridsterOpts">
     <ul>
         <li gridster-item="item" ng-repeat="item in elements">
             <div></div>
