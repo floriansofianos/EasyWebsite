@@ -192,6 +192,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EWApiController.cs" />
+    <Compile Include="Controllers\ModuleContentController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\TranslationController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -246,6 +247,7 @@
     <Content Include="Scripts\app\modules\App.js" />
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
+    <Content Include="Scripts\app\services\ModuleContentHelper.js" />
     <Content Include="Scripts\app\services\RoutingHelper.js" />
     <Content Include="Scripts\app\services\TopMenuHelper.js" />
     <Content Include="Scripts\bootstrap.js" />

@@ -10,14 +10,14 @@
             link: function (scope) {
                 scope.elements = [
                     {
-                        id: 0,
+                        ui_id: 0,
                         sizeX: 3,
                         sizeY: 3,
                         row: 0,
                         col: 0
                     },
                     {
-                        id: 1,
+                        ui_id: 1,
                         sizeX: 5,
                         sizeY: 6,
                         row: 1,

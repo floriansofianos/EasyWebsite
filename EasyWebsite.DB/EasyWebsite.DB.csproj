@@ -80,6 +80,10 @@
     <Compile Include="Migrations\201510250820430_Create_Admin_Content.Designer.cs">
       <DependentUpon>201510250820430_Create_Admin_Content.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510311150267_alter_table_Module_Content.cs" />
+    <Compile Include="Migrations\201510311150267_alter_table_Module_Content.Designer.cs">
+      <DependentUpon>201510311150267_alter_table_Module_Content.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510250820430_Create_Admin_Content.resx">
       <DependentUpon>201510250820430_Create_Admin_Content.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510311150267_alter_table_Module_Content.resx">
+      <DependentUpon>201510311150267_alter_table_Module_Content.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
