@@ -8,7 +8,7 @@
             return $resource('/api/ModuleContent/' + moduleId).query();
         };
 
-        var saveElements = function (elements) {
+        var saveElements = function (moduleId, elements) {
             return $resource('/api/ModuleContent/' + moduleId).save(elements);
         }
 

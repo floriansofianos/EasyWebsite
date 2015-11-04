@@ -53,6 +53,8 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",
+                      "~/Scripts/app/services/ModuleHelper.js",
+                      "~/Scripts/app/services/ModuleContentHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

@@ -68,8 +68,8 @@ namespace EasyWebsite.DB.Repositories
 
         public void Delete(object id)
         {
-            Module module = _context.Modules.Find((int)id);
-            module.IsDeleted = false;
+            Module module = Find(id);
+            module.IsDeleted = true;
             InsertOrUpdate(module);
         }
 

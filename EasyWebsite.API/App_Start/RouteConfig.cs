@@ -21,7 +21,7 @@ namespace EasyWebsite.API
 
             routes.MapRoute(
                 name: "Admin Content",
-                url: "admin-content",
+                url: "admin-content/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 

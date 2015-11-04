@@ -132,6 +132,9 @@
   <data name="REMEMBER_ME" xml:space="preserve">
     <value>Se souvenir de moi</value>
   </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
   <data name="WELCOME_TO" xml:space="preserve">
     <value>Bienvenue sur</value>
   </data>

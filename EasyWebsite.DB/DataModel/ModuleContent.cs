@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyWebsite.DB.DataModel
 {
-    public class ModuleContent: IObjectWithState
+    public class ModuleContent : IObjectWithState
     {
         public int Id { get; set; }
         public int ModuleId { get; set; }
@@ -15,6 +15,15 @@ namespace EasyWebsite.DB.DataModel
         public int Row { get; set; }
         public int Col { get; set; }
         public List<ModuleContentTranslation> ModuleContentTranslations { get; set; }
+        public bool IsDeleted { get; set; }
+        public int Ui_id
+        {
+            get
+            {
+                return Id;
+            }
+
+        }
 
         public State State { get; set; }
     }

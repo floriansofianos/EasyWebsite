@@ -11,40 +11,52 @@ namespace EasyWebsite.API.Controllers
 {
     public class ModuleContentController : EWApiController
     {
-        public IHttpActionResult Get(int moduleId)
+        public IHttpActionResult Get(int id)
         {
             List<ModuleContent> moduleContents = new List<ModuleContent>();
 
             using (var _repo = new ModuleRepository(UnitOfWork))
             {
                 var module = _repo.AllIncluding(m => m.ModuleContents)
-                        .FirstOrDefault(m => m.Id == moduleId);
+                        .FirstOrDefault(m => m.Id == id);
 
                 if(module != null)
                 {
-                    moduleContents = module.ModuleContents;
+                    moduleContents = module.ModuleContents.Where(c => !c.IsDeleted).ToList();
                 }
 
                 return Ok(moduleContents);
             }
         }
 
-        public IHttpActionResult Post(int moduleId, List<ModuleContent> contents)
+        public IHttpActionResult Post(int id, List<ModuleContent> contents)
         {
-            using (var _repo = new ModuleRepository(UnitOfWork))
+            using(var _moduleContentRepo = new ModuleContentRepository(UnitOfWork))
             {
-                var module = _repo.AllIncluding(m => m.ModuleContents)
-                        .FirstOrDefault(m => m.Id == moduleId);
-
-                if (module != null)
+                using (var _repo = new ModuleRepository(UnitOfWork))
                 {
-                    module.ModuleContents = contents;
-                    module.State = State.Modified;
-                }
-                else throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.BadRequest));
-            }
+                    // First update all the elements that need updating.
+                    foreach (ModuleContent item in contents)
+                    {
+                        _moduleContentRepo.InsertOrUpdate(item);
+                    }
 
-            UnitOfWork.Save();
+                    // Then delete all the entities that are not there anymore.
+                    var module = _repo.AllIncluding(m => m.ModuleContents)
+                            .FirstOrDefault(m => m.Id == id);
+
+                    if (module != null)
+                    {
+                        // Delete the contents that needs to be deleted
+                        List<ModuleContent> contentsToDelete = module.ModuleContents.Where(c => !contents.Select(i => i.Id).Contains(c.Id)).ToList();
+                        contentsToDelete.ForEach(c => _moduleContentRepo.Delete(c.Id));
+                    }
+                    else throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.BadRequest));
+
+                    UnitOfWork.Save();
+                }
+            }
+            
 
             return Ok();
         }

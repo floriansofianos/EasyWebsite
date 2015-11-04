@@ -8,6 +8,7 @@ namespace EasyWebsite.API.Models
 {
     public class ModuleViewModel
     {
+        public int Id { get; set; }
         public string Route { get; set; }
         public string Label { get; set; }
         public string Icon { get; set; }
@@ -19,6 +20,7 @@ namespace EasyWebsite.API.Models
         {
             return new ModuleViewModel()
             {
+                Id = module.Id,
                 Route = module.Url,
                 Label = module.Name,
                 Icon = "fa-home"

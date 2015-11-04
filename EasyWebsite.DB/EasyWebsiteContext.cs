@@ -13,6 +13,7 @@ namespace EasyWebsite.DB
     {
         public DbSet<News> News { get; set; }
         public DbSet<Module> Modules { get; set; }
+        public DbSet<ModuleContent> ModuleContents { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<SiteSetting> SiteSettings { get; set; }

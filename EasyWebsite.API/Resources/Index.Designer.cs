@@ -106,6 +106,15 @@ namespace EasyWebsite.API.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Save.
+        /// </summary>
+        internal static string SAVE {
+            get {
+                return ResourceManager.GetString("SAVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Welcome to.
         /// </summary>
         internal static string WELCOME_TO {

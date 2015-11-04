@@ -17,6 +17,7 @@
                       templateUrl: 'templates/admin-content.html',
                       controller: 'adminContentController'
                   }).
+                  when('/admin-content/:id', { templateUrl: 'templates/admin-content.html', controller: 'adminContentController' }).
                   when('/login', {
                       templateUrl: 'templates/login.html',
                       controller: 'loginPage'
