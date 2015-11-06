@@ -30,7 +30,8 @@
 
                 scope.gridsterOpts = {
                     columns: 24,
-                    rowHeight: 40
+                    rowHeight: 40,
+                    floating: false
                 }
 
                 scope.addNewElement = function () {
