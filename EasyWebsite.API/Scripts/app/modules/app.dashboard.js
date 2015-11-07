@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module("app.dashboard", ['gridster']);
+    angular.module("app.dashboard", ['gridster', 'ui.bootstrap']);
 }());

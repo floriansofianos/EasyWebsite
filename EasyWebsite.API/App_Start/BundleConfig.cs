@@ -35,6 +35,7 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-local-storage.min.js",
                       "~/Scripts/angular-resource.min.js",
                       "~/Scripts/angular-gridster.min.js",
+                      "~/Scripts/ui-bootstrap-tpls-0.14.3.min.js",
                       "~/Scripts/angular-route.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
