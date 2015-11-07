@@ -9,7 +9,8 @@
         };
 
         var saveElements = function (moduleId, elements) {
-            return $resource('/api/ModuleContent/' + moduleId).save(elements);
+            var query = $resource('/api/ModuleContent/' + moduleId).save(elements);
+            query.$promise.then(function () { alert('Successful save!') });
         }
 
         return {
