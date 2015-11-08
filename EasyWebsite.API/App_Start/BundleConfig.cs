@@ -20,6 +20,10 @@ namespace EasyWebsite.API
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/tinymce").Include(
+                      "~/Scripts/tinymce.min.js"
+                      ));
+
             bundles.Add(new ScriptBundle("~/bundles/underscore").Include(
                       "~/Scripts/underscore-min.js"));
 
@@ -34,6 +38,8 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-translate-loader-url.min.js",
                       "~/Scripts/angular-local-storage.min.js",
                       "~/Scripts/angular-resource.min.js",
+                      "~/Scripts/angular-gridster.min.js",
+                      "~/Scripts/angular-tinymce.js",
                       "~/Scripts/angular-gridster.min.js",
                       "~/Scripts/ui-bootstrap-tpls-0.14.3.min.js",
                       "~/Scripts/angular-route.min.js"));
@@ -51,6 +57,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/TopMenu.js",
                       "~/Scripts/app/controllers/ContentController.js",
                       "~/Scripts/app/controllers/AdminContentController.js",
+                      "~/Scripts/app/controllers/ModalInstanceController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",
@@ -61,6 +68,7 @@ namespace EasyWebsite.API
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/angular-gridster.min.css",
+                      "~/Content/content.min.css",
                       "~/Content/site.css"));
         }
     }

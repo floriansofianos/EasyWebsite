@@ -1,11 +1,10 @@
 ﻿.border-radius (@radius: 5px) {
-	-webkit-border-radius: @radius;
-	-moz-border-radius:    @radius;
-	border-radius:         @radius;
-
-	-moz-background-clip:    padding;
-	-webkit-background-clip: padding-box;
-	background-clip:         padding-box;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
 }
 
 .gridster .gridster-item {
@@ -26,13 +25,30 @@
 }
 
 .row {
-    margin-right: 0
+    margin-right: 0;
 }
 
 .widget-header-container {
     margin-top: 10px;
+
     i {
         float: right;
         margin-right: 10px;
+    }
+}
+
+.modal-content {
+    .modal-header {
+        border-bottom: 0;
+
+        i {
+            float: right;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        width: 900px;
     }
 }
