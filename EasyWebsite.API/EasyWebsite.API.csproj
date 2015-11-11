@@ -193,6 +193,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EWApiController.cs" />
     <Compile Include="Controllers\ModuleContentController.cs" />
+    <Compile Include="Controllers\ModuleContentTranslationController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\TranslationController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

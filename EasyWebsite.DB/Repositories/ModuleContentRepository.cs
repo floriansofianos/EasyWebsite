@@ -46,9 +46,20 @@ namespace EasyWebsite.DB.Repositories
             }
         }
 
-        public void InsertOrUpdateGraph(ModuleContent entityGraph)
+        public void InsertOrUpdateGraph(ModuleContent moduleContentGraph)
         {
-            throw new NotImplementedException();
+            if (moduleContentGraph.Id == default(int))
+            {
+                // New Entity
+                _context.ModuleContents.Add(moduleContentGraph);
+            }
+            else
+            {
+                // Existing User
+                moduleContentGraph.State = State.Modified;
+                _context.ModuleContents.Add(moduleContentGraph);
+                _context.ApplyStateChanges();
+            }
         }
 
         public void Delete(object id)

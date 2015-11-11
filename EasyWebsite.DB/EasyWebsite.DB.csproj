@@ -88,11 +88,16 @@
     <Compile Include="Migrations\201511041204594_module_content_migration.Designer.cs">
       <DependentUpon>201511041204594_module_content_migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511111210558_alter_table_moduleContentTranslation_language.cs" />
+    <Compile Include="Migrations\201511111210558_alter_table_moduleContentTranslation_language.Designer.cs">
+      <DependentUpon>201511111210558_alter_table_moduleContentTranslation_language.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ModuleContentRepository.cs" />
+    <Compile Include="Repositories\ModuleContentTranslationRepository.cs" />
     <Compile Include="Repositories\ModuleRepository.cs" />
     <Compile Include="Repositories\NewsRepository.cs" />
     <Compile Include="Repositories\RefreshTokenRepository.cs" />
@@ -122,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511041204594_module_content_migration.resx">
       <DependentUpon>201511041204594_module_content_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511111210558_alter_table_moduleContentTranslation_language.resx">
+      <DependentUpon>201511111210558_alter_table_moduleContentTranslation_language.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

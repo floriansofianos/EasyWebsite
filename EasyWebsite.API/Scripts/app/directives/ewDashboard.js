@@ -58,14 +58,14 @@
                     moduleContentHelper.saveElements($routeParams.id, scope.elements);
                 }
 
-                scope.editWidget = function (id) {
+                scope.editWidget = function (elt) {
                     var modalInstance = $uibModal.open({
                         templateUrl: '/templates/admin-content-modal.html',
                         controller: 'ModalInstanceController',
                         size: 'lg',
                         resolve: {
-                            items: function () {
-                                //return elements;
+                            element: function () {
+                                return elt;
                             }
                         }
                     });

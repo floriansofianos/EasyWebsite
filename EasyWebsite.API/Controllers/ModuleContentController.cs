@@ -38,7 +38,15 @@ namespace EasyWebsite.API.Controllers
                     // First update all the elements that need updating.
                     foreach (ModuleContent item in contents)
                     {
-                        _moduleContentRepo.InsertOrUpdate(item);
+                        if(item.ModuleContentTranslations != null)
+                        {
+                            foreach (ModuleContentTranslation translation in item.ModuleContentTranslations)
+                            {
+                                if (translation.Id == default(int)) translation.State = State.Added;
+                                else translation.State = State.Modified;
+                            }
+                        }
+                        _moduleContentRepo.InsertOrUpdateGraph(item);
                     }
 
                     // Then delete all the entities that are not there anymore.

@@ -12,6 +12,7 @@ namespace EasyWebsite.DB.DataModel
         public int Id { get; set; }
         public int ModuleContentId { get; set; }
         public string Content { get; set; }
+        public string Language { get; set; }
         public State State { get; set; }
     }
 }
