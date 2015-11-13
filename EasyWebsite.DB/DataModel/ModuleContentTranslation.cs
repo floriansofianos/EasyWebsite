@@ -13,6 +13,7 @@ namespace EasyWebsite.DB.DataModel
         public int ModuleContentId { get; set; }
         public string Content { get; set; }
         public string Language { get; set; }
+        [NotMapped]
         public State State { get; set; }
     }
 }

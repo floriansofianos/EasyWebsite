@@ -17,7 +17,7 @@ namespace EasyWebsite.API.Controllers
 
             using (var _repo = new ModuleRepository(UnitOfWork))
             {
-                var module = _repo.AllIncluding(m => m.ModuleContents)
+                var module = _repo.AllIncluding(m => m.ModuleContents, m => m.ModuleContents.Select(mc => mc.ModuleContentTranslations))
                         .FirstOrDefault(m => m.Id == id);
 
                 if(module != null)

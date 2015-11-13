@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace EasyWebsite.DB.DataModel
 
         }
 
+        [NotMapped]
         public State State { get; set; }
     }
 }
