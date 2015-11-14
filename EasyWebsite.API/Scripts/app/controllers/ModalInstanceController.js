@@ -10,7 +10,12 @@
             $uibModalInstance.close();
         };
         $scope.save = function () {
-            element.moduleContentTranslations = [{ content: $scope.content, language: 'fr' }];
+            if (element.moduleContentTranslations[0]) {
+                element.moduleContentTranslations[0].content = $scope.content;
+            }
+            else {
+                element.moduleContentTranslations = [{ content: $scope.content, language: 'fr' }];
+            }
             $uibModalInstance.close();
         }
 
