@@ -3,8 +3,8 @@
 
     var modalInstanceController = function ($scope, $uibModalInstance, element) {
 
-        if (element.moduleContentTranslations) $scope.content = element.moduleContentTranslations[0].content;
-        else $scope.content = '<h4>Hello World!!</h4>';
+        if (element.moduleContentTranslations.length > 0) $scope.content = element.moduleContentTranslations[0].content;
+        else $scope.content = '<div>Hello World!!</div>';
 
         $scope.close = function () {
             $uibModalInstance.close();
