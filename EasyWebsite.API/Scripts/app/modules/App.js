@@ -13,11 +13,11 @@
                       templateUrl: 'templates/admin.html',
                       controller: 'adminPage'
                   }).
-                  when('/admin-content', {
+                  when('/admin/admin-content', {
                       templateUrl: 'templates/admin-content.html',
                       controller: 'adminContentController'
                   }).
-                  when('/admin-content/:id', { templateUrl: 'templates/admin-content.html', controller: 'adminContentController' }).
+                  when('/admin/admin-content/:id', { templateUrl: 'templates/admin-content.html', controller: 'adminContentController' }).
                   when('/login', {
                       templateUrl: 'templates/login.html',
                       controller: 'loginPage'

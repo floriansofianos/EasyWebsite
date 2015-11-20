@@ -9,7 +9,8 @@
         };
 
         var getActiveTopMenu = function () {
-            return getActiveMenus()[1];
+            var activeMenus = getActiveMenus();
+            return activeMenus[1] == 'admin' ? 'admin' : '';
         }
 
         return {

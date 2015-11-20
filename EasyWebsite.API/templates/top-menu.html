@@ -1,3 +1,5 @@
 ﻿<ul class="nav navbar-nav">
-    <top-menu-item ng-repeat="item in topMenuItems" label="{{item.label}}" route="{{item.route}}" icon="{{item.icon}}"></top-menu-item>
+    <top-menu-item ng-repeat="item in topMenuItems" label="{{item.label}}" route="{{item.route}}" icon="{{item.icon}}" section=""></top-menu-item>
+    <top-menu-item label="Admin" route="/admin" icon="fa-home" section="admin"></top-menu-item>
+    <top-menu-item label="Module Content" route="/admin/admin-content" section="admin" icon="fa-pen"></top-menu-item>
 </ul>

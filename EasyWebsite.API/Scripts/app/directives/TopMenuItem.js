@@ -8,7 +8,8 @@
             scope: {
                 label: '@',
                 route: '@',
-                icon: '@'
+                icon: '@',
+                section: '@'
             },
             templateUrl: '/templates/top-menu-item.html',
             link: function (scope, elt, attr, ctrl) {
@@ -26,6 +27,11 @@
                 // is element active?
                 scope.isActive = function () {
                     return _.any(routingHelper.getActiveMenus(), function (menu) { return menu === scope.route }) ? 'active' : '';
+                }
+
+                // is element showing?
+                scope.isShowing = function (section) {
+                    return ctrl.isShowing(section);
                 }
 
             }

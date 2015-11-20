@@ -8,7 +8,7 @@
         // In case we don't have an operator id, redirect to the first one
         if (!$routeParams.id) {
             allModules.$promise.then(function () {
-                $location.url('admin-content/' + allModules[0].id);
+                $location.url('/admin/admin-content/' + allModules[0].id);
             });
         }
 

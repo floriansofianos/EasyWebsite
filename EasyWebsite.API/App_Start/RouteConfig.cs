@@ -14,21 +14,9 @@ namespace EasyWebsite.API
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Admin",
-                url: "admin",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
-
-            routes.MapRoute(
-                name: "Admin Content",
-                url: "admin-content/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
-
-            routes.MapRoute(
-                name: "Login",
-                url: "login",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "RedirectAll",
+                url: "{*anything}",
+                defaults: new { controller = "Home", action = "Index" }
             );
 
             routes.MapRoute(
