@@ -123,11 +123,35 @@
   <data name="CANCEL" xml:space="preserve">
     <value>Annuler</value>
   </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
   <data name="EMAIL" xml:space="preserve">
     <value>Email</value>
   </data>
   <data name="LOGIN" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="MODULE_MENU_POSITION" xml:space="preserve">
+    <value>Position dans le menu :</value>
+  </data>
+  <data name="MODULE_MENU_POSITION_REQUIRED" xml:space="preserve">
+    <value>La position dans le menu est obligatoire.</value>
+  </data>
+  <data name="MODULE_NAME" xml:space="preserve">
+    <value>Nom :</value>
+  </data>
+  <data name="MODULE_NAME_REQUIRED" xml:space="preserve">
+    <value>Le nom du module est obligatoire.</value>
+  </data>
+  <data name="MODULE_TYPE" xml:space="preserve">
+    <value>Type :</value>
+  </data>
+  <data name="MODULE_URL" xml:space="preserve">
+    <value>URL :</value>
+  </data>
+  <data name="MODULE_URL_REQUIRED" xml:space="preserve">
+    <value>L'URL est obligatoire</value>
   </data>
   <data name="PASSWORD" xml:space="preserve">
     <value>Mot de passe</value>

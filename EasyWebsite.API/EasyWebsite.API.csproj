@@ -244,6 +244,7 @@
     <Content Include="Scripts\app\controllers\ModalInstanceController.js" />
     <Content Include="Scripts\app\controllers\TopMenu.js" />
     <Content Include="Scripts\app\directives\ewDashboard.js" />
+    <Content Include="Scripts\app\directives\ModuleUrl.js" />
     <Content Include="Scripts\app\directives\TopMenu.js" />
     <Content Include="Scripts\app\directives\TopMenuItem.js" />
     <Content Include="Scripts\app\modules\app.dashboard.js" />
@@ -296,6 +297,7 @@
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="templates\admin-content-modal.html" />
     <Content Include="templates\admin-content.html" />
+    <Content Include="templates\admin-module.html" />
     <Content Include="templates\admin.html" />
     <Content Include="templates\content.html" />
     <Content Include="templates\ewDashboardTemplate.html" />

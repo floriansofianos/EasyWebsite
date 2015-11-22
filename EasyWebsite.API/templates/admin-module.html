@@ -1,0 +1,30 @@
+﻿<div class="module-select-container">
+    <select ng-if="modules" ng-change="onModuleChange()" ng-model="currentModuleId">
+        <option ng-repeat="module in modules" value="{{module.id}}">{{module.label}}</option>
+    </select>
+</div>
+<div class="add-button-container" ng-click="addNewElement()">
+    <i class="fa fa-plus"></i>
+    <span>{{'ADD' | translate}}</span>
+</div>
+<form name="form" class="css-form" novalidate>
+    {{'MODULE_NAME' | translate}}
+    <input type="text" ng-model="module.name" name="mName" required="" />
+    <br />
+    <div ng-show="form.$submitted || form.mName.$touched">
+        <div ng-show="form.mName.$error.required">{{'MODULE_NAME_REQUIRED' | translate}}</div>
+    </div>
+
+    {{'MODULE_URL' | translate}}
+    <input type="text" ng-model="module.url" name="mUrl" required="" module-url />
+    <br />
+    <div ng-show="form.$submitted || form.mUrl.$touched">
+        <span ng-show="form.mUrl.$error.required">{{'MODULE_URL_REQUIRED' | translate}}</span>
+        <span ng-show="form.mUrl.$error.email">This is not a valid email.</span>
+    </div>
+
+    
+
+    <input type="button" ng-click="reset(form)" value="Reset" />
+    <input type="submit" ng-click="update(user)" value="Save" />
+</form>

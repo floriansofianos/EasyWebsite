@@ -79,6 +79,15 @@ namespace EasyWebsite.API.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Delete.
+        /// </summary>
+        internal static string DELETE {
+            get {
+                return ResourceManager.GetString("DELETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Email.
         /// </summary>
         internal static string EMAIL {
@@ -93,6 +102,69 @@ namespace EasyWebsite.API.Resources {
         internal static string LOGIN {
             get {
                 return ResourceManager.GetString("LOGIN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Menu Position:.
+        /// </summary>
+        internal static string MODULE_MENU_POSITION {
+            get {
+                return ResourceManager.GetString("MODULE_MENU_POSITION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The menu position is required..
+        /// </summary>
+        internal static string MODULE_MENU_POSITION_REQUIRED {
+            get {
+                return ResourceManager.GetString("MODULE_MENU_POSITION_REQUIRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Name:.
+        /// </summary>
+        internal static string MODULE_NAME {
+            get {
+                return ResourceManager.GetString("MODULE_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The name is required..
+        /// </summary>
+        internal static string MODULE_NAME_REQUIRED {
+            get {
+                return ResourceManager.GetString("MODULE_NAME_REQUIRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type:.
+        /// </summary>
+        internal static string MODULE_TYPE {
+            get {
+                return ResourceManager.GetString("MODULE_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à URL:.
+        /// </summary>
+        internal static string MODULE_URL {
+            get {
+                return ResourceManager.GetString("MODULE_URL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à The URL is required..
+        /// </summary>
+        internal static string MODULE_URL_REQUIRED {
+            get {
+                return ResourceManager.GetString("MODULE_URL_REQUIRED", resourceCulture);
             }
         }
         
