@@ -15,8 +15,15 @@
         // If we have a module Id, we now need to load its content
         if ($routeParams.id) {
             $scope.allElements = moduleContentHelper.getElements($routeParams.id);
+            allModules.$promise.then(function () {
+                $scope.currentModuleId = $routeParams.id;
+                $scope.modules = allModules;
+            });
         }
 
+        $scope.onModuleChange = function () {
+            $location.url('/admin/admin-content/' + $scope.currentModuleId);
+        }
         
 
     };

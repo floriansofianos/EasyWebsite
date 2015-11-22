@@ -1,3 +1,8 @@
-﻿<ew-dashboard ng-if="allElements" elements="allElements">
+﻿<div class="module-select-container">
+    <select ng-if="modules" ng-change="onModuleChange()" ng-model="currentModuleId">
+        <option ng-repeat="module in modules" value="{{module.id}}">{{module.label}}</option>
+    </select>
+</div>
+<ew-dashboard ng-if="allElements" elements="allElements">
 
 </ew-dashboard>
