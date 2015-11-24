@@ -28,5 +28,17 @@ namespace EasyWebsite.API.Controllers
 
             return Ok<List<ModuleViewModel>>(moduleViewModels);
         }
+
+        public IHttpActionResult Get(string url)
+        {
+            int moduleCount;
+            using (var _repo = new ModuleRepository(UnitOfWork))
+            {
+                moduleCount = _repo.All
+                        .Where(m => !m.IsDeleted && m.Url == url)
+                        .Count();
+            }
+            return Ok<bool>(moduleCount > 0);
+        }
     }
 }
