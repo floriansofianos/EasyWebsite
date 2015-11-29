@@ -160,6 +160,15 @@ namespace EasyWebsite.API.Resources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à This URL is already in use for another module..
+        /// </summary>
+        internal static string MODULE_URL_ALREADY_TAKEN {
+            get {
+                return ResourceManager.GetString("MODULE_URL_ALREADY_TAKEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à The URL is required..
         /// </summary>
         internal static string MODULE_URL_REQUIRED {

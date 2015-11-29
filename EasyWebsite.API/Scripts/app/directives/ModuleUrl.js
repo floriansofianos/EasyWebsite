@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module('myApp');
 
-    var topMenu = function (moduleUrlHelper) {
+    var moduleUrl = function (moduleUrlHelper, $q) {
         return {
             require: 'ngModel',
             link: function (scope, elm, attrs, ctrl) {
@@ -16,7 +16,7 @@
 
                     var isAlreadyTaken = moduleUrlHelper.verify(modelValue);
 
-                    modelValue.$promise.then(function () {
+                    isAlreadyTaken.$promise.then(function () {
                         if (isAlreadyTaken) {
                             // Reject this URL
                             def.reject();
@@ -33,5 +33,5 @@
         }
     }
 
-    app.directive('moduleUrl', ['topMenuHelper', moduleUrlHelper]);
+    app.directive('moduleUrl', ['moduleUrlHelper', '$q', moduleUrl]);
 }());

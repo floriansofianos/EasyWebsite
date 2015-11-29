@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,9 @@ namespace EasyWebsite.DB.DataModel
 
         public enum Type
         {
+            [Description("MODULE_TYPE_STATIC")]
             Static = 0,
+            [Description("MODULE_TYPE_NEWS")]
             News = 1,
 
         }

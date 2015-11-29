@@ -20,9 +20,19 @@
     <br />
     <div ng-show="form.$submitted || form.mUrl.$touched">
         <span ng-show="form.mUrl.$error.required">{{'MODULE_URL_REQUIRED' | translate}}</span>
-        <span ng-show="form.mUrl.$error.email">This is not a valid email.</span>
+        <span ng-show="form.mUrl.$error.moduleUrl">{{'MODULE_URL_ALREADY_TAKEN' | translate}}</span>
     </div>
 
+    {{'MODULE_TYPE' | translate}}
+    <select type="text" ng-model="module.type" name="mType" required="" ng-options="item as item.label for item in types track by item.id"></select>
+    <br />
+    
+    {{'MODULE_MENU_POSITION' | translate}}
+    <input type="text" ng-model="module.position" name="mPosition" required="" />
+    <br />
+    <div ng-show="form.$submitted || form.mName.$touched">
+        <div ng-show="form.mName.$error.required">{{'MODULE_MENU_POSITION_REQUIRED' | translate}}</div>
+    </div>
     
 
     <input type="button" ng-click="reset(form)" value="Reset" />

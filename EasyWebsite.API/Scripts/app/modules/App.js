@@ -22,6 +22,10 @@
                       templateUrl: 'templates/login.html',
                       controller: 'loginPage'
                   }).
+                  when('/admin/module', {
+                      templateUrl: 'templates/admin-module.html',
+                      controller: 'adminModuleController'
+                  }).
                 otherwise({
                     templateUrl: 'templates/content.html',
                     controller: 'contentController'

@@ -150,6 +150,9 @@
   <data name="MODULE_URL" xml:space="preserve">
     <value>URL:</value>
   </data>
+  <data name="MODULE_URL_ALREADY_TAKEN" xml:space="preserve">
+    <value>This URL is already in use for another module.</value>
+  </data>
   <data name="MODULE_URL_REQUIRED" xml:space="preserve">
     <value>The URL is required.</value>
   </data>
