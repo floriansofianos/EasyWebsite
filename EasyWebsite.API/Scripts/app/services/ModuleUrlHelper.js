@@ -5,9 +5,7 @@
     var moduleUrlHelper = function ($http) {
 
         var verify = function (url) {
-            $http.get({ url: '/module', data: { url: url } }).then(function (data) {
-                return data;
-            })
+            return $http({ method: 'GET', url: '/api/Module?url=' + url });
         };
 
         return {

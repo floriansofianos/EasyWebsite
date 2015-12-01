@@ -16,8 +16,8 @@
 
                     var isAlreadyTaken = moduleUrlHelper.verify(modelValue);
 
-                    isAlreadyTaken.$promise.then(function () {
-                        if (isAlreadyTaken) {
+                    isAlreadyTaken.then(function (data) {
+                        if (data.data) {
                             // Reject this URL
                             def.reject();
                         }
