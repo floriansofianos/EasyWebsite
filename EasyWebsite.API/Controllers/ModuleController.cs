@@ -40,5 +40,15 @@ namespace EasyWebsite.API.Controllers
             }
             return Ok<bool>(moduleCount > 0);
         }
+
+        public IHttpActionResult Post(Module module)
+        {
+            using(ModuleRepository _repo = new ModuleRepository(UnitOfWork))
+            {
+                _repo.InsertOrUpdate(module);
+                UnitOfWork.Save();
+            }
+            return Ok();
+        }
     }
 }

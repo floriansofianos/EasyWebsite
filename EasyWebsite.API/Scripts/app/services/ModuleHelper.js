@@ -8,8 +8,13 @@
             return $resource('/api/Module/').query();
         };
 
+        var save = function (module) {
+            return $resource('/api/Module/').save(module);
+        };
+
         return {
-            getAll: getAll
+            getAll: getAll,
+            save: save
         }
     };
 

@@ -34,7 +34,5 @@
         <div ng-show="form.mName.$error.required">{{'MODULE_MENU_POSITION_REQUIRED' | translate}}</div>
     </div>
     
-
-    <input type="button" ng-click="reset(form)" value="Reset" />
-    <input type="submit" ng-click="update(user)" value="Save" />
+    <input type="submit" ng-click="update(module)" value="{{'SAVE' | translate}}" ng-disabled="form.$invalid" />
 </form>
