@@ -1,11 +1,13 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var contentController = function ($scope, $location) {
+    var contentController = function ($scope, $location, moduleContentHelper) {
 
-        $scope.currentPage = $location.url();
+        var currentPage = $location.url();
+
+        $scope.allElements = moduleContentHelper.getElementsByURL(currentPage);
 
     };
 
-    app.controller("contentController", ['$scope', '$location', contentController]);
+    app.controller("contentController", ['$scope', '$location', 'moduleContentHelper', contentController]);
 }());

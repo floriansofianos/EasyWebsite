@@ -247,6 +247,7 @@
     <Content Include="Scripts\app\controllers\ModalInstanceController.js" />
     <Content Include="Scripts\app\controllers\TopMenu.js" />
     <Content Include="Scripts\app\directives\ewDashboard.js" />
+    <Content Include="Scripts\app\directives\ewStaticDashboard.js" />
     <Content Include="Scripts\app\directives\ModuleUrl.js" />
     <Content Include="Scripts\app\directives\TopMenu.js" />
     <Content Include="Scripts\app\directives\TopMenuItem.js" />
@@ -305,6 +306,7 @@
     <Content Include="templates\admin-module.html" />
     <Content Include="templates\admin.html" />
     <Content Include="templates\content.html" />
+    <Content Include="templates\ewStaticDashboardTemplate.html" />
     <Content Include="templates\ewDashboardTemplate.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />

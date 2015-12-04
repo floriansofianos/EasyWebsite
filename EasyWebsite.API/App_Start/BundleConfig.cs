@@ -18,6 +18,7 @@ namespace EasyWebsite.API
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/gridster-bootstrap.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/tinymce").Include(
@@ -51,6 +52,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/directives/TopMenu.js",
                       "~/Scripts/app/directives/TopMenuItem.js",
                       "~/Scripts/app/directives/ewDashboard.js",
+                      "~/Scripts/app/directives/ewStaticDashboard.js",
                       "~/Scripts/app/directives/ModuleUrl.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",

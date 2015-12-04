@@ -29,6 +29,15 @@ namespace EasyWebsite.API.Controllers
             }
         }
 
+        public IHttpActionResult Get(string url)
+        {
+            using (var _repo = new ModuleRepository(UnitOfWork))
+            {
+                int moduleId = _repo.All.FirstOrDefault(m => m.Url == url).Id;
+                return Get(moduleId);
+            }
+        }
+
         public IHttpActionResult Post(int id, List<ModuleContent> contents)
         {
             using(var _moduleContentRepo = new ModuleContentRepository(UnitOfWork))
