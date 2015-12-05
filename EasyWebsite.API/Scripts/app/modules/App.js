@@ -26,6 +26,10 @@
                       templateUrl: 'templates/admin-module.html',
                       controller: 'adminModuleController'
                   }).
+                  when('/admin/module/:id', {
+                      templateUrl: 'templates/admin-module.html',
+                      controller: 'adminModuleController'
+                  }).
                 otherwise({
                     templateUrl: 'templates/content.html',
                     controller: 'contentController'

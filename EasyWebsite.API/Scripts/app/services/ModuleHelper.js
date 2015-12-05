@@ -8,13 +8,18 @@
             return $resource('/api/Module/').query();
         };
 
+        var get = function (id) {
+            return $resource('/api/Module/' + id).get();
+        }
+
         var save = function (module) {
             return $resource('/api/Module/').save(module);
         };
 
         return {
             getAll: getAll,
-            save: save
+            save: save,
+            get: get
         }
     };
 
