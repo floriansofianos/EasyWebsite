@@ -4,8 +4,8 @@
 
     var moduleUrlHelper = function ($http) {
 
-        var verify = function (url) {
-            return $http({ method: 'GET', url: '/api/Module?url=' + url });
+        var verify = function (url, id) {
+            return $http({ method: 'GET', url: '/api/Module?url=' + url + '&id=' + id });
         };
 
         return {

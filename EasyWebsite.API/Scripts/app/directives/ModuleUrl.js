@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module('myApp');
 
-    var moduleUrl = function (moduleUrlHelper, $q) {
+    var moduleUrl = function (moduleUrlHelper, $q, $routeParams) {
         return {
             require: 'ngModel',
             link: function (scope, elm, attrs, ctrl) {
@@ -14,7 +14,7 @@
 
                     var def = $q.defer();
 
-                    var isAlreadyTaken = moduleUrlHelper.verify(modelValue);
+                    var isAlreadyTaken = moduleUrlHelper.verify(modelValue, $routeParams.id || 0);
 
                     isAlreadyTaken.then(function (data) {
                         if (data.data) {
@@ -33,5 +33,5 @@
         }
     }
 
-    app.directive('moduleUrl', ['moduleUrlHelper', '$q', moduleUrl]);
+    app.directive('moduleUrl', ['moduleUrlHelper', '$q', '$routeParams', moduleUrl]);
 }());

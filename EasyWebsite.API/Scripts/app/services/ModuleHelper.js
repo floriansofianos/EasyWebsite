@@ -13,7 +13,8 @@
         }
 
         var save = function (module) {
-            return $resource('/api/Module/').save(module);
+            var query = $resource('/api/Module/').save(module);
+            query.$promise.then(function () { alert('Successful save!') });
         };
 
         return {

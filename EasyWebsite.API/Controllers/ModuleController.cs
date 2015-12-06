@@ -29,13 +29,13 @@ namespace EasyWebsite.API.Controllers
             return Ok<List<ModuleViewModel>>(moduleViewModels);
         }
 
-        public IHttpActionResult Get(string url)
+        public IHttpActionResult Get(string url, int? id)
         {
             int moduleCount;
             using (var _repo = new ModuleRepository(UnitOfWork))
             {
                 moduleCount = _repo.All
-                        .Where(m => !m.IsDeleted && m.Url == url)
+                        .Where(m => !m.IsDeleted && m.Url == url && m.Id != id)
                         .Count();
             }
             return Ok<bool>(moduleCount > 0);

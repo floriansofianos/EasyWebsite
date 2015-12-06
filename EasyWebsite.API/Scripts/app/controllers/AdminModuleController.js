@@ -8,7 +8,9 @@
         $scope.modules = moduleHelper.getAll();
 
         if ($routeParams.id) {
-            $scope.module = moduleHelper.get($routeParams.id);
+            $scope.types.$promise.then(function () {
+                $scope.module = moduleHelper.get($routeParams.id);
+            })
             $scope.currentModuleId = $routeParams.id;
         }
 
