@@ -29,7 +29,7 @@ namespace EasyWebsite.API.Controllers
             return Ok<List<ModuleViewModel>>(moduleViewModels);
         }
 
-        public IHttpActionResult Get(string url, int? id)
+        public IHttpActionResult Get(string url, int id)
         {
             int moduleCount;
             using (var _repo = new ModuleRepository(UnitOfWork))
