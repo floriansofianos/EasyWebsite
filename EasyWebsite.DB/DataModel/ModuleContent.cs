@@ -17,6 +17,7 @@ namespace EasyWebsite.DB.DataModel
         public int Col { get; set; }
         public List<ModuleContentTranslation> ModuleContentTranslations { get; set; }
         public bool IsDeleted { get; set; }
+        public ModuleContentType ContentType { get; set; }
         public int Ui_id
         {
             get
@@ -28,5 +29,16 @@ namespace EasyWebsite.DB.DataModel
 
         [NotMapped]
         public State State { get; set; }
+
+        public enum ModuleContentType
+        {
+            Text,
+            Title,
+            Card,
+            Widget,
+            Carousel,
+            Map,
+            Module
+        }
     }
 }

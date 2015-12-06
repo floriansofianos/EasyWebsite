@@ -96,6 +96,14 @@
     <Compile Include="Migrations\201511131307145_remove_reference_to_state.Designer.cs">
       <DependentUpon>201511131307145_remove_reference_to_state.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512061220113_add_type_to_module_content.cs" />
+    <Compile Include="Migrations\201512061220113_add_type_to_module_content.Designer.cs">
+      <DependentUpon>201512061220113_add_type_to_module_content.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512061225113_add_type_to_module_content1.cs" />
+    <Compile Include="Migrations\201512061225113_add_type_to_module_content1.Designer.cs">
+      <DependentUpon>201512061225113_add_type_to_module_content1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -137,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511131307145_remove_reference_to_state.resx">
       <DependentUpon>201511131307145_remove_reference_to_state.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512061220113_add_type_to_module_content.resx">
+      <DependentUpon>201512061220113_add_type_to_module_content.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512061225113_add_type_to_module_content1.resx">
+      <DependentUpon>201512061225113_add_type_to_module_content1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
