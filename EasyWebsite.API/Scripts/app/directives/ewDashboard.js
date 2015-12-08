@@ -1,7 +1,7 @@
 ﻿(function () {
     var dashboardModule = angular.module('app.dashboard');
 
-    var ewDashboard = function (moduleContentHelper, $routeParams, $uibModal) {
+    var ewDashboard = function (moduleContentHelper, $routeParams, $uibModal, $sce) {
         return {
             scope: {
                 elements: '='
@@ -70,9 +70,13 @@
                         }
                     });
                 }
+
+                scope.trustAsHtml = function (s) {
+                    return $sce.trustAsHtml(s);
+                };
             }
         }
     }
 
-    dashboardModule.directive('ewDashboard', ['moduleContentHelper', '$routeParams', '$uibModal', ewDashboard]);
+    dashboardModule.directive('ewDashboard', ['moduleContentHelper', '$routeParams', '$uibModal', '$sce', ewDashboard]);
 }());

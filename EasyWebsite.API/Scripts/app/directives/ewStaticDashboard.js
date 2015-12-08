@@ -1,7 +1,7 @@
 ﻿(function () {
     var dashboardModule = angular.module('app.dashboard');
 
-    var ewStaticDashboard = function () {
+    var ewStaticDashboard = function ($sce) {
         return {
             scope: {
                 elements: '='
@@ -23,10 +23,14 @@
                     }
                 }
 
+                scope.trustAsHtml = function (s) {
+                    return $sce.trustAsHtml(s);
+                };
+
                 
             }
         }
     }
 
-    dashboardModule.directive('ewStaticDashboard', ewStaticDashboard);
+    dashboardModule.directive('ewStaticDashboard', ['$sce', ewStaticDashboard]);
 }());
