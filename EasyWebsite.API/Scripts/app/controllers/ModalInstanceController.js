@@ -2,19 +2,19 @@
     var app = angular.module("myApp");
 
     var modalInstanceController = function ($scope, $uibModalInstance, element) {
-
-        if (element.moduleContentTranslations.length > 0) $scope.content = element.moduleContentTranslations[0].content;
-        else $scope.content = '<div>Hello World!!</div>';
+        
+        $scope.element = element;
 
         $scope.close = function () {
             $uibModalInstance.close();
         };
-        $scope.save = function () {
+
+        $scope.save = function (content) {
             if (element.moduleContentTranslations[0]) {
-                element.moduleContentTranslations[0].content = $scope.content;
+                element.moduleContentTranslations[0].content = content;
             }
             else {
-                element.moduleContentTranslations = [{ content: $scope.content, language: 'fr' }];
+                element.moduleContentTranslations = [{ content: content, language: 'fr' }];
             }
             $uibModalInstance.close();
         }

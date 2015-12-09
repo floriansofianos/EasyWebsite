@@ -2,8 +2,6 @@
     <i class="fa fa-times" ng-click="close()"></i>
 </div>
 <div class="modal-body">
-    <textarea ui-tinymce ng-model="content"></textarea>
-    <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
-    <button type="button" class="btn btn-warning">{{'CANCEL' | translate}}</button>
+    <div ng-include="'templates/modal-content-text.html'"></div>
 </div>
 

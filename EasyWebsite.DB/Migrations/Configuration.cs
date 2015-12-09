@@ -50,6 +50,13 @@ namespace EasyWebsite.DB.Migrations
                 context.Modules.AddRange(BuildModuleList());
             }
 
+            var modulesToFix = context.ModuleContents.Where(c => c.ContentType == null).ToList();
+
+            foreach (var moduleContent in modulesToFix)
+            {
+                moduleContent.ContentType = ModuleContent.ModuleContentType.Text;
+            }
+
             
         }
 
