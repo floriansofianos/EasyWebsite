@@ -1,9 +1,13 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var modalInstanceController = function ($scope, $uibModalInstance, element) {
+    var modalInstanceController = function ($scope, $uibModalInstance, element, moduleContentTypeHelper) {
         
-        $scope.element = element;
+        $scope.moduleContentTypes = moduleContentTypeHelper.get();
+
+        $scope.moduleContentTypes.$promise.then(function () {
+            $scope.element = element;
+        })
 
         $scope.close = function () {
             $uibModalInstance.close();
@@ -21,5 +25,5 @@
 
     };
 
-    app.controller("ModalInstanceController", ['$scope', '$uibModalInstance', 'element', modalInstanceController]);
+    app.controller("ModalInstanceController", ['$scope', '$uibModalInstance', 'element', 'moduleContentTypeHelper', modalInstanceController]);
 }());

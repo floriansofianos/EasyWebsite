@@ -69,6 +69,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/ModuleHelper.js",
                       "~/Scripts/app/services/ModuleContentHelper.js",
                       "~/Scripts/app/services/ModuleTypeHelper.js",
+                      "~/Scripts/app/services/ModuleContentTypeHelper.js",
                       "~/Scripts/app/services/ModuleUrlHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 

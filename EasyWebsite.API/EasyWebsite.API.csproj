@@ -257,6 +257,7 @@
     <Content Include="Scripts\app\modules\App.js" />
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
+    <Content Include="Scripts\app\services\ModuleContentTypeHelper.js" />
     <Content Include="Scripts\app\services\ModuleContentHelper.js" />
     <Content Include="Scripts\app\services\ModuleHelper.js" />
     <Content Include="Scripts\app\services\ModuleTypeHelper.js" />
@@ -312,6 +313,7 @@
     <Content Include="templates\ewDashboardTemplate.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />
+    <Content Include="templates\modal-content-text.html" />
     <Content Include="templates\top-menu-item.html" />
     <Content Include="templates\top-menu.html" />
     <Content Include="Web.config" />
