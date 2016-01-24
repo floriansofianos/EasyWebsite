@@ -1,4 +1,4 @@
-﻿(function () {
+﻿function () {
     var app = angular.module("myApp");
 
     var modalContentTextController = function ($scope) {

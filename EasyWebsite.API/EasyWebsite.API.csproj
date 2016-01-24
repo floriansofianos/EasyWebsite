@@ -223,6 +223,7 @@
     <Content Include="Content\angular-gridster.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\colorpicker.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -246,6 +247,7 @@
     <Content Include="Scripts\app\controllers\ContentController.js" />
     <Content Include="Scripts\app\controllers\HomePage.js" />
     <Content Include="Scripts\app\controllers\LoginPage.js" />
+    <Content Include="Scripts\app\controllers\ModalContentTextController.js" />
     <Content Include="Scripts\app\controllers\ModalInstanceController.js" />
     <Content Include="Scripts\app\controllers\TopMenu.js" />
     <Content Include="Scripts\app\directives\ewDashboard.js" />
@@ -264,6 +266,7 @@
     <Content Include="Scripts\app\services\ModuleUrlHelper.js" />
     <Content Include="Scripts\app\services\RoutingHelper.js" />
     <Content Include="Scripts\app\services\TopMenuHelper.js" />
+    <Content Include="Scripts\bootstrap-colorpicker-module.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
