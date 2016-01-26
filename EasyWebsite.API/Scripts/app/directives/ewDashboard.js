@@ -33,7 +33,8 @@
                     rowHeight: 40,
                     floating: false,
                     pushing: false,
-                    swapping: false
+                    swapping: false,
+                    margins: [0,0]
                 }
 
                 scope.addNewElement = function () {

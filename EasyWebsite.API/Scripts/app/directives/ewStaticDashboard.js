@@ -20,7 +20,8 @@
                     },
                     draggable: {
                         enabled: false
-                    }
+                    },
+                    margins: [0, 0]
                 }
 
                 scope.trustAsHtml = function (s) {
