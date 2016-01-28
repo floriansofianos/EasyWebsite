@@ -4,5 +4,6 @@
 <div class="modal-body" ng-if="element">
     <select type="text" ng-model="moduleContentType" ng-options="item.id as item.label for item in moduleContentTypes"></select>
     <div ng-include="'templates/modal-content-text.html'" ng-if="moduleContentType == 0"></div>
+    <div ng-include="'templates/modal-content-title.html'" ng-if="moduleContentType == 1"></div>
 </div>
 

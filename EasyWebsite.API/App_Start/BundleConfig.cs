@@ -64,6 +64,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/ModalInstanceController.js",
                       "~/Scripts/app/controllers/AdminModuleController.js",
                       "~/Scripts/app/controllers/ModalContentTextController.js",
+                      "~/Scripts/app/controllers/ModalContentTitleController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",

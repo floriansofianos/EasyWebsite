@@ -1,0 +1,9 @@
+﻿<div ng-controller="modalContentTitleController">
+    <div>
+        <span>{{'TITLE' | translate}}</span>
+        <input type="text" ng-model="title" />
+    </div>
+    
+    <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
+    <button type="button" class="btn btn-warning">{{'CANCEL' | translate}}</button>
+</div>
