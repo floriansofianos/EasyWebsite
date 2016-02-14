@@ -63,6 +63,7 @@
     <Compile Include="DataModel\SiteSettings.cs" />
     <Compile Include="DataModel\StateHelper.cs" />
     <Compile Include="DataModel\User.cs" />
+    <Compile Include="DataModel\WebsiteFile.cs" />
     <Compile Include="EasyWebsiteContext.cs" />
     <Compile Include="Migrations\201510171253514_CreateDB.cs" />
     <Compile Include="Migrations\201510171253514_CreateDB.Designer.cs">
@@ -104,6 +105,10 @@
     <Compile Include="Migrations\201512061225113_add_type_to_module_content1.Designer.cs">
       <DependentUpon>201512061225113_add_type_to_module_content1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602140738226_add-website-file.cs" />
+    <Compile Include="Migrations\201602140738226_add-website-file.Designer.cs">
+      <DependentUpon>201602140738226_add-website-file.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -115,6 +120,7 @@
     <Compile Include="Repositories\RefreshTokenRepository.cs" />
     <Compile Include="Repositories\SiteSettingsRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\WebsiteFileRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512061225113_add_type_to_module_content1.resx">
       <DependentUpon>201512061225113_add_type_to_module_content1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602140738226_add-website-file.resx">
+      <DependentUpon>201602140738226_add-website-file.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

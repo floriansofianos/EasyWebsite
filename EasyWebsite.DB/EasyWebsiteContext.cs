@@ -18,6 +18,7 @@ namespace EasyWebsite.DB
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<SiteSetting> SiteSettings { get; set; }
+        public DbSet<WebsiteFile> WebsiteFiles { get; set; }
 
         public EasyWebsiteContext()
             : base("MyEasyWebsiteDB")
