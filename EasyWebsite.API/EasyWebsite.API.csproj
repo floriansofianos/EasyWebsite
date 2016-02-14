@@ -247,6 +247,7 @@
     <Content Include="Scripts\app\controllers\ContentController.js" />
     <Content Include="Scripts\app\controllers\HomePage.js" />
     <Content Include="Scripts\app\controllers\LoginPage.js" />
+    <Content Include="Scripts\app\controllers\ModalContentCardController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTextController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTitleController.js" />
     <Content Include="Scripts\app\controllers\ModalContentWidgetController.js" />
@@ -318,6 +319,7 @@
     <Content Include="templates\ewDashboardTemplate.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />
+    <Content Include="templates\modal-content-card.html" />
     <Content Include="templates\modal-content-text.html" />
     <Content Include="templates\modal-content-title.html" />
     <Content Include="templates\modal-content-widget.html" />

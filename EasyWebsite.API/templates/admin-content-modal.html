@@ -5,5 +5,7 @@
     <select type="text" ng-model="moduleContentType" ng-options="item.id as item.label for item in moduleContentTypes"></select>
     <div ng-include="'templates/modal-content-text.html'" ng-if="moduleContentType == 0"></div>
     <div ng-include="'templates/modal-content-title.html'" ng-if="moduleContentType == 1"></div>
+    <div ng-include="'templates/modal-content-card.html'" ng-if="moduleContentType == 2"></div>
+    <div ng-include="'templates/modal-content-widget.html'" ng-if="moduleContentType == 3"></div>
 </div>
 

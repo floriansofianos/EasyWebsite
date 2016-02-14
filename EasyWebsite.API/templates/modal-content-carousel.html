@@ -1,0 +1,13 @@
+﻿<div ng-controller="modalContentCardController">
+    <div>
+        <span>{{'ICON' | translate}}</span>
+        <input type="text" ng-model="icon" />
+    </div>
+    <div>
+        <span>{{'CONTENT' | translate}}</span>
+        <textarea ui-tinymce ng-model="content"></textarea>
+    </div>
+
+    <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
+    <button type="button" class="btn btn-warning">{{'CANCEL' | translate}}</button>
+</div>
