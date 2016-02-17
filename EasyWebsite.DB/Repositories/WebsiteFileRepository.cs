@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EasyWebsite.DB.Repositories
 {
-    public class WebsiteFileRepository
+    public class WebsiteFileRepository: IWebsiteFileRepository
     {
         private EasyWebsiteContext _context;
 
@@ -29,12 +29,12 @@ namespace EasyWebsite.DB.Repositories
 
         public WebsiteFile Find(object id)
         {
-            return _context.WebsiteFiles.Find((int)id);
+            return _context.WebsiteFiles.Find((Guid)id);
         }
 
         public void InsertOrUpdate(WebsiteFile websiteFile)
         {
-            if (websiteFile.Id == default(int))
+            if (websiteFile.Id == default(Guid))
             {
                 // New Entity
                 _context.Entry(websiteFile).State = EntityState.Added;
@@ -48,7 +48,7 @@ namespace EasyWebsite.DB.Repositories
 
         public void InsertOrUpdateGraph(WebsiteFile websiteFileGraph)
         {
-            if (websiteFileGraph.Id == default(int))
+            if (websiteFileGraph.Id == default(Guid))
             {
                 // New Entity
                 _context.WebsiteFiles.Add(websiteFileGraph);

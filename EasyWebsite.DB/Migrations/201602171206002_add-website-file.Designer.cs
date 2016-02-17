@@ -13,7 +13,7 @@ namespace EasyWebsite.DB.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201602140738226_add-website-file"; }
+            get { return "201602171206002_add-website-file"; }
         }
         
         string IMigrationMetadata.Source

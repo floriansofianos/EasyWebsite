@@ -11,7 +11,7 @@ namespace EasyWebsite.DB.Migrations
                 "dbo.WebsiteFiles",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        Id = c.Guid(nullable: false),
                         Filename = c.String(),
                         IsDeleted = c.Boolean(nullable: false),
                     })

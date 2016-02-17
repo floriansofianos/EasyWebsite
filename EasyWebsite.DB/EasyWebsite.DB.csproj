@@ -105,9 +105,9 @@
     <Compile Include="Migrations\201512061225113_add_type_to_module_content1.Designer.cs">
       <DependentUpon>201512061225113_add_type_to_module_content1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201602140738226_add-website-file.cs" />
-    <Compile Include="Migrations\201602140738226_add-website-file.Designer.cs">
-      <DependentUpon>201602140738226_add-website-file.cs</DependentUpon>
+    <Compile Include="Migrations\201602171206002_add-website-file.cs" />
+    <Compile Include="Migrations\201602171206002_add-website-file.Designer.cs">
+      <DependentUpon>201602171206002_add-website-file.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="Migrations\201512061225113_add_type_to_module_content1.resx">
       <DependentUpon>201512061225113_add_type_to_module_content1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602140738226_add-website-file.resx">
-      <DependentUpon>201602140738226_add-website-file.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602171206002_add-website-file.resx">
+      <DependentUpon>201602171206002_add-website-file.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

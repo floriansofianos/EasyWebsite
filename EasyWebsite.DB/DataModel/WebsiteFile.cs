@@ -9,7 +9,7 @@ namespace EasyWebsite.DB.DataModel
 {
     public class WebsiteFile
     {
-        public int Id {get;set;}
+        public Guid Id {get;set;}
         public string Filename { get; set; }
         public bool IsDeleted { get; set; }
 
