@@ -1,11 +1,9 @@
-﻿<div ng-controller="modalContentCardController">
+﻿<div ng-controller="modalContentCarouselController">
+    <div class="button" ngf-select="uploadFiles($files)" ngf-multiple="true" ngf-pattern="'image/*'"
+         ngf-accept="'image/*'">Select</div>
     <div>
-        <span>{{'ICON' | translate}}</span>
-        <input type="text" ng-model="icon" />
-    </div>
-    <div>
-        <span>{{'CONTENT' | translate}}</span>
-        <textarea ui-tinymce ng-model="content"></textarea>
+        <span>{{'EXISTING_IMAGES' | translate}}</span>
+        
     </div>
 
     <button type="button" class="btn btn-primary" ng-click="save()">OK</button>

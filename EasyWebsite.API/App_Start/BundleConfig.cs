@@ -44,6 +44,7 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-gridster.min.js",
                       "~/Scripts/ui-bootstrap-tpls-0.14.3.min.js",
                       "~/Scripts/angular-route.min.js",
+                      "~/Scripts/ng-file-upload.min.js",
                       "~/Scripts/bootstrap-colorpicker-module.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
@@ -67,6 +68,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/ModalContentTitleController.js",
                       "~/Scripts/app/controllers/ModalContentCardController.js",
                       "~/Scripts/app/controllers/ModalContentWidgetController.js",
+                      "~/Scripts/app/controllers/ModalContentCarouselController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",

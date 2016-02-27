@@ -250,6 +250,7 @@
     <Content Include="Scripts\app\controllers\LoginPage.js" />
     <Content Include="Scripts\app\controllers\ModalContentCardController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTextController.js" />
+    <Content Include="Scripts\app\controllers\ModalContentCarouselController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTitleController.js" />
     <Content Include="Scripts\app\controllers\ModalContentWidgetController.js" />
     <Content Include="Scripts\app\controllers\ModalInstanceController.js" />
@@ -295,6 +296,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ng-file-upload.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\skins\lightgray\content.inline.min.css" />
@@ -321,6 +323,7 @@
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />
     <Content Include="templates\modal-content-card.html" />
+    <Content Include="templates\modal-content-carousel.html" />
     <Content Include="templates\modal-content-text.html" />
     <Content Include="templates\modal-content-title.html" />
     <Content Include="templates\modal-content-widget.html" />

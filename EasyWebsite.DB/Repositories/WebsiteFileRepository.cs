@@ -34,7 +34,7 @@ namespace EasyWebsite.DB.Repositories
 
         public void InsertOrUpdate(WebsiteFile websiteFile)
         {
-            if (websiteFile.Id == default(Guid))
+            if (Find(websiteFile.Id) == null)
             {
                 // New Entity
                 _context.Entry(websiteFile).State = EntityState.Added;
