@@ -247,6 +247,7 @@
     <Content Include="Scripts\app\controllers\AdminPage.js" />
     <Content Include="Scripts\app\controllers\ContentController.js" />
     <Content Include="Scripts\app\controllers\HomePage.js" />
+    <Content Include="Scripts\app\controllers\ImagePickerController.js" />
     <Content Include="Scripts\app\controllers\LoginPage.js" />
     <Content Include="Scripts\app\controllers\ModalContentCardController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTextController.js" />
@@ -256,6 +257,7 @@
     <Content Include="Scripts\app\controllers\ModalInstanceController.js" />
     <Content Include="Scripts\app\controllers\TopMenu.js" />
     <Content Include="Scripts\app\directives\ewDashboard.js" />
+    <Content Include="Scripts\app\directives\ewImagePicker.js" />
     <Content Include="Scripts\app\directives\ewStaticDashboard.js" />
     <Content Include="Scripts\app\directives\ModuleUrl.js" />
     <Content Include="Scripts\app\directives\TopMenu.js" />
@@ -271,6 +273,7 @@
     <Content Include="Scripts\app\services\ModuleUrlHelper.js" />
     <Content Include="Scripts\app\services\RoutingHelper.js" />
     <Content Include="Scripts\app\services\TopMenuHelper.js" />
+    <Content Include="Scripts\app\services\WebsiteFileHelper.js" />
     <Content Include="Scripts\bootstrap-colorpicker-module.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -287,6 +290,7 @@
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Scripts\app\modules\app.menu.js" />
     <Content Include="Content\Site.less" />
+    <Content Include="Scripts\app\modules\app.image.picker.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -318,6 +322,7 @@
     <Content Include="templates\admin-module.html" />
     <Content Include="templates\admin.html" />
     <Content Include="templates\content.html" />
+    <Content Include="templates\ew-image-picker.html" />
     <Content Include="templates\ewStaticDashboardTemplate.html" />
     <Content Include="templates\ewDashboardTemplate.html" />
     <Content Include="templates\home.html" />

@@ -51,10 +51,12 @@ namespace EasyWebsite.API
                       "~/Scripts/app/modules/App.js",
                       "~/Scripts/app/modules/app.menu.js",
                       "~/Scripts/app/modules/app.dashboard.js",
+                      "~/Scripts/app/modules/app.image.picker.js",
                       "~/Scripts/app/directives/TopMenu.js",
                       "~/Scripts/app/directives/TopMenuItem.js",
                       "~/Scripts/app/directives/ewDashboard.js",
                       "~/Scripts/app/directives/ewStaticDashboard.js",
+                      "~/Scripts/app/directives/ewImagePicker.js",
                       "~/Scripts/app/directives/ModuleUrl.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
@@ -69,6 +71,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/ModalContentCardController.js",
                       "~/Scripts/app/controllers/ModalContentWidgetController.js",
                       "~/Scripts/app/controllers/ModalContentCarouselController.js",
+                      "~/Scripts/app/controllers/ImagePickerController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",
@@ -77,6 +80,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/ModuleTypeHelper.js",
                       "~/Scripts/app/services/ModuleContentTypeHelper.js",
                       "~/Scripts/app/services/ModuleUrlHelper.js",
+                      "~/Scripts/app/services/WebsiteFileHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

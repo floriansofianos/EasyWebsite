@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var modalContentCarouselController = function ($scope, Upload) {
+    var modalContentCarouselController = function ($scope, Upload, websiteFileHelper) {
 
         var parseHTML = function (element) {
             var container = $.parseHTML(element)[0];
@@ -42,7 +42,9 @@
             }
         };
 
+        $scope.images = websiteFileHelper.getAll();
+
     };
 
-    app.controller("modalContentCarouselController", ['$scope', 'Upload', modalContentCarouselController]);
+    app.controller("modalContentCarouselController", ['$scope', 'Upload', 'websiteFileHelper', modalContentCarouselController]);
 }());

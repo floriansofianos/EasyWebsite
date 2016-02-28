@@ -19,7 +19,7 @@ namespace EasyWebsite.DB.Repositories
 
         public IQueryable<WebsiteFile> All
         {
-            get { throw new NotImplementedException(); }
+            get { return _context.WebsiteFiles.Where(f => !f.IsDeleted); }
         }
 
         public IQueryable<WebsiteFile> AllIncluding(params System.Linq.Expressions.Expression<Func<WebsiteFile, object>>[] includeProperties)

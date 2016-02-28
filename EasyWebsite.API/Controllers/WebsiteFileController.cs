@@ -34,47 +34,51 @@ namespace EasyWebsite.API.Controllers
             }
 
             var result = new HttpResponseMessage(HttpStatusCode.OK);
-            
-                if (Request.Content.IsMimeMultipartContent())
+
+            if (Request.Content.IsMimeMultipartContent())
+            {
+                var task = streamContent.ReadAsMultipartAsync<MultipartMemoryStreamProvider>(new MultipartMemoryStreamProvider());
+                task.Wait();
+                MultipartMemoryStreamProvider provider = task.Result;
+                using (var _repo = new WebsiteFileRepository(UnitOfWork))
                 {
-                    var task = streamContent.ReadAsMultipartAsync<MultipartMemoryStreamProvider>(new MultipartMemoryStreamProvider());
-                    task.Wait();
-                    MultipartMemoryStreamProvider provider = task.Result;
-                    using (var _repo = new WebsiteFileRepository(UnitOfWork))
+                    foreach (HttpContent content in provider.Contents)
                     {
-                        foreach (HttpContent content in provider.Contents)
+                        WebsiteFile newFile = new WebsiteFile();
+                        newFile.Id = Guid.NewGuid();
+
+                        Stream stream = content.ReadAsStreamAsync().Result;
+                        string filePath = HostingEnvironment.MapPath("~/Images/");
+                        string fileName = content.Headers.ContentDisposition.FileName.Replace("\"", "");
+                        string fullPath = Path.Combine(filePath, fileName);
+
+                        using (var fileStream = File.Create(fullPath))
                         {
-                            WebsiteFile newFile = new WebsiteFile();
-                            newFile.Id = Guid.NewGuid();
-
-                            Stream stream = content.ReadAsStreamAsync().Result;
-                            string filePath = HostingEnvironment.MapPath("~/Images/");
-                            string fileName = content.Headers.ContentDisposition.FileName.Replace("\"", "");
-                            string fullPath = Path.Combine(filePath, fileName);
-
-                            using (var fileStream = File.Create(fullPath))
-                            {
-                                stream.Seek(0, SeekOrigin.Begin);
-                                stream.CopyTo(fileStream);
-                            }
-
-                            //Add To DB
-                            newFile.Filename = fileName;
-                            _repo.InsertOrUpdate(newFile);
+                            stream.Seek(0, SeekOrigin.Begin);
+                            stream.CopyTo(fileStream);
                         }
-                        UnitOfWork.Save();
-                    }   
-                   
-                    return result;
-                }
-                else
-                {
-                    throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotAcceptable, "This request is not properly formatted"));
-                }
-            
-            
 
+                        //Add To DB
+                        newFile.Filename = fileName;
+                        _repo.InsertOrUpdate(newFile);
+                    }
+                    UnitOfWork.Save();
+                }
 
+                return result;
+            }
+            else
+            {
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotAcceptable, "This request is not properly formatted"));
+            }
+        }
+
+        public IHttpActionResult Get()
+        {
+            using (var _repo = new WebsiteFileRepository(UnitOfWork))
+            {
+                return Ok(_repo.All.Where(f => !f.IsDeleted).ToList());
+            }
         }
     }
 }
