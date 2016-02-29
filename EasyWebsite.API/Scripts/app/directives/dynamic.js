@@ -5,9 +5,13 @@
         return {
             restrict: 'A',
             replace: true,
-            link: function (scope, ele, attrs) {
-                ele.html(attrs.dynamic);
-                $compile(ele.contents())(scope);
+            link: function (scope, element, attrs) {
+                scope.$watch(function () {
+                    return scope.$eval(attrs.dynamic);
+                }, function (value) {
+                    element.html(value);
+                    $compile(element.contents())(scope);
+                });
             }
         };
     };
