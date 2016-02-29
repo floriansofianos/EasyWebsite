@@ -9,7 +9,8 @@ namespace EasyWebsite.API
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/slick.min.js"));
 
             // Utilisez la version de développement de Modernizr pour développer et apprendre. Puis, lorsque vous êtes
             // prêt pour la production, utilisez l’outil de génération sur http://modernizr.com pour sélectionner uniquement les tests dont vous avez besoin.
@@ -43,6 +44,7 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-tinymce.js",
                       "~/Scripts/angular-gridster.min.js",
                       "~/Scripts/angular-touch.min.js",
+                      "~/Scripts/angular-slick.min.js",
                       "~/Scripts/ui-bootstrap-tpls-0.14.3.min.js",
                       "~/Scripts/angular-route.min.js",
                        "~/Scripts/angular-carousel.min.js",
@@ -60,6 +62,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/directives/ewStaticDashboard.js",
                       "~/Scripts/app/directives/ewImagePicker.js",
                       "~/Scripts/app/directives/ModuleUrl.js",
+                      "~/Scripts/app/directives/dynamic.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
                       "~/Scripts/app/controllers/AdminPage.js",
@@ -92,6 +95,7 @@ namespace EasyWebsite.API
                       "~/Content/content.min.css",
                       "~/Content/colorpicker.css",
                       "~/Content/angular-carousel.min.css",
+                      "~/Content/slick.css",
                       "~/Content/site.css"));
         }
     }

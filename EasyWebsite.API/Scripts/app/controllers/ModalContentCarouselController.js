@@ -19,9 +19,9 @@
             var selectedImages = imagePickerHelper.getSelectedImages('carouselImages');
             var imgElements = '';
             _.each(selectedImages, function (i) {
-                imgElements += '<li><img src="Images/' + i.filename + '" class="image-carousel" /></li>';
+                imgElements += '<div><img src="Images/' + i.filename + '" class="image-carousel" /></div>';
             });
-            $scope.$parent.save('<div class="carousel-container"><ul rn-carousel class="image">' + imgElements + '</ul></div>');
+            $scope.$parent.save('<div class="carousel-container"><slick>' + imgElements + '</slick></div>');
         }
 
         $scope.uploadFiles = function (files) {

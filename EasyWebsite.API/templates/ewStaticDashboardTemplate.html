@@ -1,7 +1,7 @@
 ﻿<div gridster="gridsterOpts" class="static-gridster">
     <ul>
         <li gridster-item="item" ng-repeat="item in elements">
-            <div ng-bind-html="trustAsHtml(item.moduleContentTranslations[0].content)" class="full-height"></div>
+            <div dynamic="trustAsHtml(item.moduleContentTranslations[0].content)" class="full-height"></div>
         </li>
     </ul>
 </div>

@@ -18,7 +18,7 @@
                     <i class="fa fa-pencil" ng-click="editWidget(item)"></i>
                 </div>
             </div>
-            <div ng-bind-html="trustAsHtml(item.moduleContentTranslations[0].content)" class="full-height"></div>
+            <div dynamic="{{trustAsHtml(item.moduleContentTranslations[0].content)}}" class="full-height"></div>
         </li>
     </ul>
 </div>
