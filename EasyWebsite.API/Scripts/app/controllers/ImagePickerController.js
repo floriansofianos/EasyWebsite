@@ -1,19 +1,14 @@
 ﻿(function () {
     var app = angular.module("app.image.picker");
 
-    var imagePickerController = function ($scope) {
+    var imagePickerController = function ($scope, imagePickerHelper) {
 
-        $scope.selectedItem = [];
+        imagePickerHelper.registerImagePicker($scope.id);
 
         $scope.selectItem = function (item) {
-            if (_.any($scope.selectedItem, function (i) { return i == item })) {
-                delete $scope.selectedItem[$scope.selectedItem.indexOf(item)];
-            }
-            else {
-                $scope.selectedItem.push(item);
-            }
+            imagePickerHelper.setSelectedImage($scope.id, item);
         }
     };
 
-    app.controller("imagePickerController", ['$scope', imagePickerController]);
+    app.controller("imagePickerController", ['$scope', 'imagePickerHelper', imagePickerController]);
 }());

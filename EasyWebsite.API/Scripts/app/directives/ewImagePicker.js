@@ -5,7 +5,8 @@
         return {
             replace: true,
             scope: {
-                images: '='
+                images: '=',
+                id: '='
             },
             templateUrl: '/templates/ew-image-picker.html',
             controller: 'imagePickerController',

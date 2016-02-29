@@ -221,14 +221,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\angular-carousel.min.css" />
     <Content Include="Content\angular-gridster.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\colorpicker.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Site.min.css">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-carousel.min.js" />
     <Content Include="Scripts\angular-gridster.min.js" />
     <Content Include="Scripts\angular-local-storage.min.js" />
     <Content Include="Scripts\angular-locale_en-au.js" />
@@ -239,6 +244,7 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-tinymce.js" />
+    <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular-translate-loader-url.min.js" />
     <Content Include="Scripts\angular-translate.min.js" />
     <Content Include="Scripts\angular.min.js" />
@@ -266,6 +272,7 @@
     <Content Include="Scripts\app\modules\App.js" />
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
+    <Content Include="Scripts\app\services\ImagePickerHelper.js" />
     <Content Include="Scripts\app\services\ModuleContentTypeHelper.js" />
     <Content Include="Scripts\app\services\ModuleContentHelper.js" />
     <Content Include="Scripts\app\services\ModuleHelper.js" />
@@ -291,6 +298,9 @@
     <Content Include="Scripts\app\modules\app.menu.js" />
     <Content Include="Content\Site.less" />
     <Content Include="Scripts\app\modules\app.image.picker.js" />
+    <Content Include="Content\Site.css.map">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

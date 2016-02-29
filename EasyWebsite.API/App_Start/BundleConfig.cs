@@ -42,8 +42,10 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-gridster.min.js",
                       "~/Scripts/angular-tinymce.js",
                       "~/Scripts/angular-gridster.min.js",
+                      "~/Scripts/angular-touch.min.js",
                       "~/Scripts/ui-bootstrap-tpls-0.14.3.min.js",
                       "~/Scripts/angular-route.min.js",
+                       "~/Scripts/angular-carousel.min.js",
                       "~/Scripts/ng-file-upload.min.js",
                       "~/Scripts/bootstrap-colorpicker-module.min.js"));
 
@@ -81,6 +83,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/ModuleContentTypeHelper.js",
                       "~/Scripts/app/services/ModuleUrlHelper.js",
                       "~/Scripts/app/services/WebsiteFileHelper.js",
+                      "~/Scripts/app/services/ImagePickerHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -88,6 +91,7 @@ namespace EasyWebsite.API
                       "~/Content/angular-gridster.min.css",
                       "~/Content/content.min.css",
                       "~/Content/colorpicker.css",
+                      "~/Content/angular-carousel.min.css",
                       "~/Content/site.css"));
         }
     }

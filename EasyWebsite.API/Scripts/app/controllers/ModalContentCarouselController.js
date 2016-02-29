@@ -1,11 +1,11 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var modalContentCarouselController = function ($scope, Upload, websiteFileHelper) {
+    var modalContentCarouselController = function ($scope, Upload, websiteFileHelper, imagePickerHelper, $timeout) {
 
         var parseHTML = function (element) {
             var container = $.parseHTML(element)[0];
-            $scope.title = container.innerHTML;
+            //TODO: Parse the HTML
         };
 
         var element = $scope.$parent.element;
@@ -16,7 +16,12 @@
         parseHTML($scope.content);
 
         $scope.save = function () {
-            $scope.$parent.save('<div class="carousel-container">' + $scope.title + '</div>');
+            var selectedImages = imagePickerHelper.getSelectedImages('carouselImages');
+            var imgElements = '';
+            _.each(selectedImages, function (i) {
+                imgElements += '<li><img src="Images/' + i.filename + '" class="image-carousel" /></li>';
+            });
+            $scope.$parent.save('<div class="carousel-container"><ul rn-carousel class="image">' + imgElements + '</ul></div>');
         }
 
         $scope.uploadFiles = function (files) {
@@ -46,5 +51,5 @@
 
     };
 
-    app.controller("modalContentCarouselController", ['$scope', 'Upload', 'websiteFileHelper', modalContentCarouselController]);
+    app.controller("modalContentCarouselController", ['$scope', 'Upload', 'websiteFileHelper', 'imagePickerHelper', '$timeout', modalContentCarouselController]);
 }());
