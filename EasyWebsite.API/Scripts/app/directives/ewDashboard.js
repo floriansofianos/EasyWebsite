@@ -29,8 +29,8 @@
 
 
                 scope.gridsterOpts = {
-                    columns: 24,
-                    rowHeight: 40,
+                    columns: 600,
+                    rowHeight: 10,
                     floating: false,
                     pushing: false,
                     swapping: false,
