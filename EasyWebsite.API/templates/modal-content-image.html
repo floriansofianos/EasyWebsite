@@ -1,0 +1,11 @@
+﻿<div ng-controller="modalContentImageController">
+    <div class="button" ngf-select="uploadFiles($files)" ngf-multiple="true" ngf-pattern="'image/*'"
+         ngf-accept="'image/*'">Select</div>
+    <div>
+        <span>{{'EXISTING_IMAGES' | translate}}</span>
+        <ew-image-picker images="images" id="'carouselImages'"></ew-image-picker>
+    </div>
+
+    <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
+    <button type="button" class="btn btn-warning">{{'CANCEL' | translate}}</button>
+</div>

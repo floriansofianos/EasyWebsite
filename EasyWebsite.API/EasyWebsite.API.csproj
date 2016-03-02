@@ -258,6 +258,7 @@
     <Content Include="Scripts\app\controllers\ImagePickerController.js" />
     <Content Include="Scripts\app\controllers\LoginPage.js" />
     <Content Include="Scripts\app\controllers\ModalContentCardController.js" />
+    <Content Include="Scripts\app\controllers\ModalContentImageController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTextController.js" />
     <Content Include="Scripts\app\controllers\ModalContentCarouselController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTitleController.js" />
@@ -343,6 +344,7 @@
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />
     <Content Include="templates\modal-content-card.html" />
+    <Content Include="templates\modal-content-image.html" />
     <Content Include="templates\modal-content-carousel.html" />
     <Content Include="templates\modal-content-text.html" />
     <Content Include="templates\modal-content-title.html" />

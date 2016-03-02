@@ -10,7 +10,7 @@
             link: function (scope) {
                 
                 scope.gridsterOpts = {
-                    columns: 600,
+                    columns: 200,
                     rowHeight: 10,
                     floating: false,
                     pushing: false,

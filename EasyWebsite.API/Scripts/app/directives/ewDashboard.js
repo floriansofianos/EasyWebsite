@@ -29,7 +29,7 @@
 
 
                 scope.gridsterOpts = {
-                    columns: 600,
+                    columns: 200,
                     rowHeight: 10,
                     floating: false,
                     pushing: false,
@@ -43,8 +43,8 @@
                     
                     scope.elements.push({
                         ui_id: maxId + 1,
-                        sizeX: 3,
-                        sizeY: 3,
+                        sizeX: 30,
+                        sizeY: 30,
                         row: 0,
                         col: 0,
                         moduleId: $routeParams.id

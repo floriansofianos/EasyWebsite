@@ -46,7 +46,9 @@ namespace EasyWebsite.DB.DataModel
             [Description("MODULE_CONTENT_TYPE_MAP")]
             Map,
             [Description("MODULE_CONTENT_TYPE_MODULE")]
-            Module
+            Module,
+            [Description("MODULE_CONTENT_TYPE_IMAGE")]
+            Image
         }
     }
 }
