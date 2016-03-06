@@ -1,5 +1,5 @@
 ﻿(function () {
-    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker', 'uiGmapgoogle-maps']);
 
     // Routing configuration
     myApp.config(['$routeProvider', '$locationProvider',
@@ -53,6 +53,13 @@
     myApp.config(function ($httpProvider) {
         $httpProvider.interceptors.push('authInterceptorService');
     });
+
+    myApp.config(function (uiGmapGoogleMapApiProvider) {
+        uiGmapGoogleMapApiProvider.configure({
+            //    key: 'your api key',
+            libraries: 'weather,geometry,visualization,places'
+        });
+    })
 
     myApp.run(['authService', function (authService) {
         authService.fillAuthData();

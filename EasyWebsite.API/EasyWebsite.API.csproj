@@ -235,6 +235,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular-carousel.min.js" />
+    <Content Include="Scripts\angular-google-maps.min.js" />
     <Content Include="Scripts\angular-gridster.min.js" />
     <Content Include="Scripts\angular-local-storage.min.js" />
     <Content Include="Scripts\angular-locale_en-au.js" />
@@ -244,6 +245,7 @@
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular-simple-logger.min.js" />
     <Content Include="Scripts\angular-slick.min.js" />
     <Content Include="Scripts\angular-tinymce.js" />
     <Content Include="Scripts\angular-touch.min.js" />
@@ -262,6 +264,7 @@
     <Content Include="Scripts\app\controllers\ModalContentTextController.js" />
     <Content Include="Scripts\app\controllers\ModalContentCarouselController.js" />
     <Content Include="Scripts\app\controllers\ModalContentTitleController.js" />
+    <Content Include="Scripts\app\controllers\ModalContentMapController.js" />
     <Content Include="Scripts\app\controllers\ModalContentWidgetController.js" />
     <Content Include="Scripts\app\controllers\ModalInstanceController.js" />
     <Content Include="Scripts\app\controllers\TopMenu.js" />
@@ -343,11 +346,13 @@
     <Content Include="templates\ewDashboardTemplate.html" />
     <Content Include="templates\home.html" />
     <Content Include="templates\login.html" />
+    <Content Include="templates\map-searchbox.html" />
     <Content Include="templates\modal-content-card.html" />
     <Content Include="templates\modal-content-image.html" />
     <Content Include="templates\modal-content-carousel.html" />
     <Content Include="templates\modal-content-text.html" />
     <Content Include="templates\modal-content-title.html" />
+    <Content Include="templates\modal-content-map.html" />
     <Content Include="templates\modal-content-widget.html" />
     <Content Include="templates\top-menu-item.html" />
     <Content Include="templates\top-menu.html" />
