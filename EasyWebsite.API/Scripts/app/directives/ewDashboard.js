@@ -34,7 +34,8 @@
                     floating: false,
                     pushing: false,
                     swapping: false,
-                    margins: [0,0]
+                    margins: [0, 0],
+                    maxRows: 900
                 }
 
                 scope.addNewElement = function () {

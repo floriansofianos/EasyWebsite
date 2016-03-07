@@ -21,7 +21,8 @@
                     draggable: {
                         enabled: false
                     },
-                    margins: [0, 0]
+                    margins: [0, 0],
+                    maxRows: 900
                 }
 
                 scope.trustAsHtml = function (s) {

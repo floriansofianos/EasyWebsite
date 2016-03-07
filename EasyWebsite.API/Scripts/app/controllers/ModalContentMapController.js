@@ -44,7 +44,7 @@
         parseHTML($scope.content);
 
         $scope.save = function () {
-            $scope.$parent.save('<div class="map-container"><ui-gmap-google-map center="' + JSON.stringify($scope.map.center).replace(new RegExp('"', "g"), '&quot;') + '" zoom="' + $scope.map.zoom + '"><ui-gmap-marker coords="' + JSON.stringify($scope.map.center).replace(new RegExp('"', "g"), '&quot;') + '" idkey="' + $scope.marker.idKey + '"><ui-gmap-window options="' + JSON.stringify($scope.windowOptions).replace(new RegExp('"', "g"), '&quot;') + '"><div dynamic="' + $scope.companyDetails.replace(new RegExp('"', "g"), '&quot;') + '"></div></ui-gmap-window></ui-gmap-marker></div>');
+            $scope.$parent.save('<div class="map-container"><ui-gmap-google-map center="' + JSON.stringify($scope.map.center).replace(new RegExp('"', "g"), '&quot;') + '" zoom="' + $scope.map.zoom + '"><ui-gmap-marker coords="' + JSON.stringify($scope.map.center).replace(new RegExp('"', "g"), '&quot;') + '" idkey="' + $scope.marker.idKey + '"><ui-gmap-window options="' + JSON.stringify($scope.windowOptions).replace(new RegExp('"', "g"), '&quot;') + '" show="true"><div dynamic="\'' + $scope.companyDetails.replace(new RegExp('"', "g"), '&quot;') + '\'"></div></ui-gmap-window></ui-gmap-marker></div>');
         }
 
 
