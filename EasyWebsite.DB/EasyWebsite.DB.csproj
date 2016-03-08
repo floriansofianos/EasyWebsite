@@ -109,6 +109,10 @@
     <Compile Include="Migrations\201602171206002_add-website-file.Designer.cs">
       <DependentUpon>201602171206002_add-website-file.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603081225116_changes-for-news.cs" />
+    <Compile Include="Migrations\201603081225116_changes-for-news.Designer.cs">
+      <DependentUpon>201603081225116_changes-for-news.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602171206002_add-website-file.resx">
       <DependentUpon>201602171206002_add-website-file.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603081225116_changes-for-news.resx">
+      <DependentUpon>201603081225116_changes-for-news.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
