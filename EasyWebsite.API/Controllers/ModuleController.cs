@@ -52,6 +52,19 @@ namespace EasyWebsite.API.Controllers
             return Ok<Module>(module);
         }
 
+        public IHttpActionResult Get(string url)
+        {
+            Module module;
+            using (var _repo = new ModuleRepository(UnitOfWork))
+            {
+                module = _repo.All
+                        .Where(m => !m.IsDeleted && m.Url == url)
+                        .FirstOrDefault();
+
+            }
+            return Ok<Module>(module);
+        }
+
         public IHttpActionResult Post(Module module)
         {
             using(ModuleRepository _repo = new ModuleRepository(UnitOfWork))

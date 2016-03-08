@@ -1,13 +1,19 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var contentController = function ($scope, $location, moduleContentHelper) {
+    var contentController = function ($scope, $location, moduleContentHelper, moduleHelper) {
 
         var currentPage = $location.url();
 
-        $scope.allElements = moduleContentHelper.getElementsByURL(currentPage);
+        $scope.module = moduleHelper.getByUrl(currentPage);
+
+        $scope.module.$promise.then(function () {
+            if ($scope.module.moduleType == 0) $scope.allElements = moduleContentHelper.getElementsByURL(currentPage);
+        });
+
+        
 
     };
 
-    app.controller("contentController", ['$scope', '$location', 'moduleContentHelper', contentController]);
+    app.controller("contentController", ['$scope', '$location', 'moduleContentHelper', 'moduleHelper', contentController]);
 }());
