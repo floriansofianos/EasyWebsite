@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="add-button-container" ng-click="addNews()">
+        <i class="fa fa-plus"></i>
+        <span>{{'ADD' | translate}}</span>
+    </div>
+</div>
+<div class="news-creation-container" ng-if="creatingNews">
+    <div class="news-creation-row">
+        <span class="news-creation-title">{{'NEWS_LANGUAGE | translate'}}</span>
+        <span class="news-creation-input"><input type="text" ng-model="newLanguage" /></span>
+    </div>
+    <div class="news-creation-row">
+        <span class="news-creation-title">{{'NEWS_TITLE | translate'}}</span>
+        <span class="news-creation-input"><input type="text" ng-model="newTitle" /></span>
+    </div>
+    <div class="news-creation-row">
+        <span class="news-creation-title">{{'NEWS_CONTENT | translate'}}</span>
+        <span class="news-creation-input"><textarea ui-tinymce ng-model="newBody"></textarea></span>
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
+    <button type="button" class="btn btn-warning" ng-click="cancel()">{{'CANCEL' | translate}}</button>
+</div>
+<div class="news-container" ng-repeat="item in allNews" ng-if="!creatingNews">
+    <div class="news-title">{{item.title}}</div>
+    <div class="news-date">{{item.date}}</div>
+    <div class="news-content" dynamic="item.body"></div>
+</div>

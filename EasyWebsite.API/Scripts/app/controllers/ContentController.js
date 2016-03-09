@@ -9,6 +9,7 @@
 
         $scope.module.$promise.then(function () {
             if ($scope.module.moduleType == 0) $scope.allElements = moduleContentHelper.getElementsByURL(currentPage);
+            if ($scope.module.moduleType == 1) $scope.allNews = newsHelper.get($scope.module.id);
         });
 
         
