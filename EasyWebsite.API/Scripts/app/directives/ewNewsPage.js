@@ -5,8 +5,8 @@
         return {
             replace: true,
             scope: {
-                allNews: '=',
-                moduleId: '='
+                news: '=',
+                moduleid: '='
             },
             templateUrl: '/templates/ew-news-page.html',
             controller: 'newsPageController',

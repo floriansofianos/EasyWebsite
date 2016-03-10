@@ -1,4 +1,5 @@
-﻿using EasyWebsite.DB.Repositories;
+﻿using EasyWebsite.DB.DataModel;
+using EasyWebsite.DB.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,22 @@ namespace EasyWebsite.API.Controllers
             {
                 return Ok(_repo.All.Where(n => !n.IsDeleted && n.ModuleId == id).ToList());
             }
+        }
+
+        [Authorize]
+        public IHttpActionResult Post(News news)
+        {
+            using (UserRepository _userRepo = new UserRepository(UnitOfWork))
+            {
+                news.Author = _userRepo.All.First(u => u.UserName == User.Identity.Name);
+                using (NewsRepository _repo = new NewsRepository(UnitOfWork))
+                {
+                    _repo.InsertOrUpdate(news);
+                    UnitOfWork.Save();
+                }
+            }
+            
+            return Ok();
         }
     }
 }

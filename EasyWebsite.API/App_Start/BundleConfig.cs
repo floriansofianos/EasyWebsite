@@ -65,6 +65,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/directives/ewImagePicker.js",
                       "~/Scripts/app/directives/ModuleUrl.js",
                       "~/Scripts/app/directives/dynamic.js",
+                      "~/Scripts/app/directives/ewNewsPage.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
                       "~/Scripts/app/controllers/AdminPage.js",
@@ -81,6 +82,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/ModalContentMapController.js",
                       "~/Scripts/app/controllers/ModalContentImageController.js",
                       "~/Scripts/app/controllers/ImagePickerController.js",
+                      "~/Scripts/app/controllers/NewsPageController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",
@@ -91,6 +93,8 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/ModuleUrlHelper.js",
                       "~/Scripts/app/services/WebsiteFileHelper.js",
                       "~/Scripts/app/services/ImagePickerHelper.js",
+                      "~/Scripts/app/services/NewsHelper.js",
+                      "~/Scripts/app/services/UserHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

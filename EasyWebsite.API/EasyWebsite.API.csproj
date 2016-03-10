@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -199,6 +200,7 @@
     <Compile Include="Controllers\ModuleTypeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\TranslationController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Controllers\WebsiteFileController.cs" />
     <Compile Include="Global.asax.cs">
@@ -288,6 +290,7 @@
     <Content Include="Scripts\app\services\ModuleHelper.js" />
     <Content Include="Scripts\app\services\ModuleTypeHelper.js" />
     <Content Include="Scripts\app\services\ModuleUrlHelper.js" />
+    <Content Include="Scripts\app\services\UserHelper.js" />
     <Content Include="Scripts\app\services\RoutingHelper.js" />
     <Content Include="Scripts\app\services\TopMenuHelper.js" />
     <Content Include="Scripts\app\services\NewsHelper.js" />

@@ -1,11 +1,15 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var newsPageController = function ($scope, authService) {
+    var newsPageController = function ($scope, authService, newsHelper, userHelper) {
 
         //TODO Only show the news for current language
 
         //TODO Ability to write news in multiple languages
+
+        $scope.newElement = {
+            newLanguage: 'fr'
+        };
 
         $scope.addNews = function () {
             $scope.creatingNews = true;
@@ -16,15 +20,14 @@
         }
 
         $scope.save = function () {
-            // Create new entry
             var news = {
-                moduleId: $scope.moduleId,
-                title: $scope.newTitle,
-                body: $scope.newBody,
+                moduleId: parseInt($scope.moduleid),
+                title: $scope.newElement.newTitle,
+                body: $scope.newElement.newBody,
                 date: (new Date()).toJSON(),
-                author: userHelper.get(authService.authentication.userName),
-                language: $scope.newLanguage
+                language: $scope.newElement.newLanguage
             };
+            newsHelper.save(news);
             $scope.creatingNews = false;
         }
 
@@ -32,5 +35,5 @@
 
     };
 
-    app.controller("newsPageController", ['$scope', 'authService', newsPageController]);
+    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', newsPageController]);
 }());

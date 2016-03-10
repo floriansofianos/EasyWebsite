@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var contentController = function ($scope, $location, moduleContentHelper, moduleHelper) {
+    var contentController = function ($scope, $location, moduleContentHelper, moduleHelper, newsHelper) {
 
         var currentPage = $location.url();
 
@@ -16,5 +16,5 @@
 
     };
 
-    app.controller("contentController", ['$scope', '$location', 'moduleContentHelper', 'moduleHelper', contentController]);
+    app.controller("contentController", ['$scope', '$location', 'moduleContentHelper', 'moduleHelper', 'newsHelper', contentController]);
 }());
