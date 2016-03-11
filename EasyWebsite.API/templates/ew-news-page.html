@@ -8,7 +8,9 @@
     <div class="news-creation-container" ng-if="creatingNews">
         <div class="news-creation-row">
             <span class="news-creation-title">{{'NEWS_LANGUAGE' | translate}}</span>
-            <span class="news-creation-input"><input type="text" ng-model="newElement.newLanguage" /></span>
+            <span class="news-creation-input">
+                <select type="text" ng-model="newElement.newLanguage" ng-options="item.code as item.label for item in languages"></select>
+            </span>
         </div>
         <div class="news-creation-row">
             <span class="news-creation-title">{{'NEWS_TITLE' | translate}}</span>

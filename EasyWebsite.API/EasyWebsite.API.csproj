@@ -285,6 +285,7 @@
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
     <Content Include="Scripts\app\services\ImagePickerHelper.js" />
+    <Content Include="Scripts\app\services\LanguageHelper.js" />
     <Content Include="Scripts\app\services\ModuleContentTypeHelper.js" />
     <Content Include="Scripts\app\services\ModuleContentHelper.js" />
     <Content Include="Scripts\app\services\ModuleHelper.js" />

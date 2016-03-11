@@ -95,6 +95,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/ImagePickerHelper.js",
                       "~/Scripts/app/services/NewsHelper.js",
                       "~/Scripts/app/services/UserHelper.js",
+                      "~/Scripts/app/services/LanguageHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

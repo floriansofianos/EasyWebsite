@@ -1,14 +1,16 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var newsPageController = function ($scope, authService, newsHelper, userHelper) {
+    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper) {
 
         //TODO Only show the news for current language
 
         //TODO Ability to write news in multiple languages
 
+        $scope.languages = languageHelper.availableLanguages;
+
         $scope.newElement = {
-            newLanguage: 'fr'
+            newLanguage: window.navigator.language
         };
 
         $scope.addNews = function () {
@@ -35,5 +37,5 @@
 
     };
 
-    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', newsPageController]);
+    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', newsPageController]);
 }());
