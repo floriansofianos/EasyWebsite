@@ -1,3 +1,13 @@
-﻿<div>
-    Secret Value: {{secretValue}}
+﻿<div class="admin-title">
+    {{'GENERAL_SETTINGS' | translate}}
 </div>
+<div>
+    <span>{{'LANGUAGES_FOR_WEBSITE' | translate}}</span>
+    <ui-select multiple ng-model="settings.languages.value" theme="select2" style="width: 300px;">
+        <ui-select-match placeholder="{{'SELECT_LANGUAGES' | translate}}">{{$item.label}}</ui-select-match>
+        <ui-select-choices repeat="language in availableLanguages | filter:$select.search">
+            {{language.label}}
+        </ui-select-choices>
+    </ui-select>
+</div>
+<button type="button" class="btn btn-primary" ng-click="save()">{{'SAVE' | translate}}</button>

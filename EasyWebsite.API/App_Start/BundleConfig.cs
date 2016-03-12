@@ -51,6 +51,7 @@ namespace EasyWebsite.API
                       "~/Scripts/angular-route.min.js",
                        "~/Scripts/angular-carousel.min.js",
                       "~/Scripts/ng-file-upload.min.js",
+                      "~/Scripts/select-ui.min.js",
                       "~/Scripts/bootstrap-colorpicker-module.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
@@ -96,6 +97,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/NewsHelper.js",
                       "~/Scripts/app/services/UserHelper.js",
                       "~/Scripts/app/services/LanguageHelper.js",
+                      "~/Scripts/app/services/SettingsHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -105,6 +107,8 @@ namespace EasyWebsite.API
                       "~/Content/colorpicker.css",
                       "~/Content/angular-carousel.min.css",
                       "~/Content/slick.css",
+                      "~/Content/select-ui.min.css",
+                      "~/Content/select2.css",
                       "~/Content/site.css"));
         }
     }
