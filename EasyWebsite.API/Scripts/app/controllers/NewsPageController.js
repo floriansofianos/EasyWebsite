@@ -1,13 +1,20 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper) {
+    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings) {
 
         //TODO Only show the news for current language
 
         //TODO Ability to write news in multiple languages
 
-        $scope.languages = languageHelper.availableLanguages;
+        $scope.availableLanguages = settings.getAvailableLanguages();
+        $scope.availableLanguages.$promise.then(function () {
+            var allLanguages = languageHelper.availableLanguages;
+            $scope.languages = _.filter(allLanguages, function (l) {
+                return $scope.availableLanguages.value.indexOf(l.code) > -1;
+            });
+        });
+        
 
         $scope.newElement = {
             newLanguage: window.navigator.language
@@ -37,5 +44,5 @@
 
     };
 
-    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', newsPageController]);
+    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', newsPageController]);
 }());

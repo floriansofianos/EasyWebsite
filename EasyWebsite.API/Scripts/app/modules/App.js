@@ -67,6 +67,7 @@
     }]);
 
     myApp.run(['$translate', 'settings', function ($translate, settings) {
+        // Just making sure that the preferred language is correct
         var availableLanguages = settings.getAvailableLanguages();
         availableLanguages.$promise.then(function () {
             if (availableLanguages && availableLanguages.value.indexOf($translate.use()) == -1) {
