@@ -7,11 +7,11 @@
         var availableLanguages = [
             {
                 label: 'LANGUAGE_FRENCH',
-                code: 'fr'
+                code: 'fr_FR'
             },
             {
                 label: 'LANGUAGE_ENGLISH',
-                code: 'en'
+                code: 'en_AU'
             }
         ];
 

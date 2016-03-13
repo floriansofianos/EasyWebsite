@@ -1,9 +1,9 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var adminPage = function ($scope, languageHelper, settingsHelper) {
+    var adminPage = function ($scope, languageHelper, settings) {
 
-        var allSettings = settingsHelper.get();
+        var allSettings = settings.get();
         $scope.availableLanguages = languageHelper.availableLanguages;
 
         allSettings.$promise.then(function () {
@@ -30,10 +30,10 @@
                     });
                 }
             }
-            settingsHelper.save(allSettings);
+            settings.save(allSettings);
         }
         
     };
 
-    app.controller("adminPage", ['$scope', 'languageHelper', 'settingsHelper', adminPage]);
+    app.controller("adminPage", ['$scope', 'languageHelper', 'settings', adminPage]);
 }());

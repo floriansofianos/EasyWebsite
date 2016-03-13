@@ -15,8 +15,10 @@ namespace EasyWebsite.API.Controllers
         public IHttpActionResult Get(string lang)
         {
             var resourceObject = new JObject();
-
-            var resourceSet = Resources.Index.ResourceManager.GetResourceSet(new CultureInfo(lang), true, true);
+            // Don't know why but the JS does not give us the correct format
+            lang = lang.Replace("_", "-");
+            CultureInfo currentCulture = CultureInfo.GetCultures(CultureTypes.AllCultures).FirstOrDefault(c => c.Name == lang);
+            var resourceSet = Resources.Index.ResourceManager.GetResourceSet(currentCulture, true, true);
             IDictionaryEnumerator enumerator = resourceSet.GetEnumerator();
             while (enumerator.MoveNext())
             {

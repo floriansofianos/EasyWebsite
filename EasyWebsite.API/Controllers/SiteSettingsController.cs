@@ -20,6 +20,14 @@ namespace EasyWebsite.API.Controllers
             }
         }
 
+        public IHttpActionResult Get(string key)
+        {
+            using (var _repo = new SiteSettingsRepository(UnitOfWork))
+            {
+                return Ok(_repo.All.FirstOrDefault(s => s.Key == key));
+            }
+        }
+
         [Authorize]
         public IHttpActionResult Post(List<SiteSetting> settings)
         {

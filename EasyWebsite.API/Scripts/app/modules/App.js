@@ -1,5 +1,5 @@
 ﻿(function () {
-    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker', 'uiGmapgoogle-maps', 'ui.select']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker', 'uiGmapgoogle-maps', 'ui.select', 'app.settings']);
 
     // Routing configuration
     myApp.config(['$routeProvider', '$locationProvider',
@@ -43,10 +43,11 @@
           }]);
 
     // Translation configuration
-    myApp.config(['$translateProvider',
-        function ($translateProvider) {
+    myApp.config(['$translateProvider', 'settingsProvider',
+        function ($translateProvider, $resource) {
             $translateProvider.useUrlLoader('/api/translation');
-            $translateProvider.preferredLanguage(window.navigator.language);
+            $translateProvider.determinePreferredLanguage();
+            //$translateProvider.preferredLanguage(preferredLanguage);
             $translateProvider.useSanitizeValueStrategy('sanitize');
         }]);
 
@@ -63,6 +64,22 @@
 
     myApp.run(['authService', function (authService) {
         authService.fillAuthData();
+    }]);
+
+    myApp.run(['$translate', 'settings', function ($translate, settings) {
+        var availableLanguages = settings.getAvailableLanguages();
+        availableLanguages.$promise.then(function () {
+            if (availableLanguages && availableLanguages.value.indexOf($translate.use()) == -1) {
+                // Case where we don't have this language in the available languages. Default to english if available.
+                if (availableLanguages.value.indexOf('en') > -1) {
+                    $translate.use('en');
+                }
+                else {
+                    // Epic fail, just use the first language available
+                    $translate.use(availableLanguages.value.split('|')[0]);
+                }
+            }
+        });
     }]);
 
 }());

@@ -55,6 +55,7 @@ namespace EasyWebsite.API
                       "~/Scripts/bootstrap-colorpicker-module.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
+                      "~/Scripts/app/modules/app.settings.js",
                       "~/Scripts/app/modules/App.js",
                       "~/Scripts/app/modules/app.menu.js",
                       "~/Scripts/app/modules/app.dashboard.js",

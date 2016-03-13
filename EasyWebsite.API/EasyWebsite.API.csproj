@@ -284,6 +284,7 @@
     <Content Include="Scripts\app\directives\TopMenu.js" />
     <Content Include="Scripts\app\directives\TopMenuItem.js" />
     <Content Include="Scripts\app\modules\app.dashboard.js" />
+    <Content Include="Scripts\app\modules\app.settings.js" />
     <Content Include="Scripts\app\modules\App.js" />
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
