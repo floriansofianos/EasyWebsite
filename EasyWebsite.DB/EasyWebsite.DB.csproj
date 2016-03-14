@@ -124,6 +124,7 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\ModuleContentRepository.cs" />
     <Compile Include="Repositories\ModuleContentTranslationRepository.cs" />
+    <Compile Include="Repositories\ModuleNameRepository.cs" />
     <Compile Include="Repositories\ModuleRepository.cs" />
     <Compile Include="Repositories\NewsRepository.cs" />
     <Compile Include="Repositories\RefreshTokenRepository.cs" />

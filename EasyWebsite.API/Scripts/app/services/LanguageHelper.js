@@ -15,11 +15,26 @@
             }
         ];
 
-        var currentLanguage = '';
+        var currentLanguage;
+
+        var setCurrentLanguage = function (lang) {
+            currentLanguage = lang;
+        };
+
+        var getCurrentLanguage = function () {
+            return currentLanguage;
+        };
+
+        var getModuleLabel = function (moduleNames) {
+            var correctModuleName = _.find(moduleNames, function (n) { return n.language == getCurrentLanguage() || n.language.indexOf(getCurrentLanguage()) > -1; });
+            return correctModuleName ? correctModuleName.name : '';
+        };
 
         return {
             availableLanguages: availableLanguages,
-            currentLanguage: currentLanguage
+            setCurrentLanguage: setCurrentLanguage,
+            getCurrentLanguage: getCurrentLanguage,
+            getModuleLabel: getModuleLabel
         }
     };
 

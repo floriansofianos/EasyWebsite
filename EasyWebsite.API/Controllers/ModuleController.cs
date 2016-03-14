@@ -46,7 +46,7 @@ namespace EasyWebsite.API.Controllers
             Module module;
             using (var _repo = new ModuleRepository(UnitOfWork))
             {
-                module = _repo.Find(id);
+                module = _repo.AllIncluding(m => m.Name).FirstOrDefault(m => m.Id == id);
                         
             }
             return Ok<Module>(module);
@@ -57,7 +57,7 @@ namespace EasyWebsite.API.Controllers
             Module module;
             using (var _repo = new ModuleRepository(UnitOfWork))
             {
-                module = _repo.All
+                module = _repo.AllIncluding(m => m.Name)
                         .Where(m => !m.IsDeleted && m.Url == url)
                         .FirstOrDefault();
 
@@ -69,8 +69,17 @@ namespace EasyWebsite.API.Controllers
         {
             using(ModuleRepository _repo = new ModuleRepository(UnitOfWork))
             {
-                _repo.InsertOrUpdate(module);
-                UnitOfWork.Save();
+                using (ModuleNameRepository _moduleNameRepo = new ModuleNameRepository(UnitOfWork))
+                {
+                    if (module.Id != default(int))
+                    {
+                        // Need to specify the state of everything in order not to have double-ups
+                        module.State = State.Modified;
+                        module.Name.ForEach(n => _moduleNameRepo.InsertOrUpdate(n));
+                    }
+                    _repo.InsertOrUpdate(module);
+                    UnitOfWork.Save();
+                }
             }
             return Ok();
         }

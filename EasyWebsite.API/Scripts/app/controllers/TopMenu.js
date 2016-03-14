@@ -12,9 +12,8 @@
         };
 
         this.getLabel = function (moduleNames) {
-            var correctModuleName = _.find(moduleNames, function (n) { return n.language == languageHelper.currentLanguage || n.language.indexOf(languageHelper.currentLanguage) > -1; });
-            return correctModuleName ? correctModuleName.name : '';
-        }
+            return languageHelper.getModuleLabel(moduleNames);
+        };
 
     };
 
