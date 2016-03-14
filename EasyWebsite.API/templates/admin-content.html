@@ -1,7 +1,10 @@
 ﻿<div class="module-select-container">
     <select ng-change="onModuleChange()" ng-model="currentModuleId">
-        <option ng-repeat="module in modules" value="{{module.id}}">{{module.label}}</option>
+        <option ng-repeat="module in modules" value="{{module.id}}">{{ getLabel(module.label) }}</option>
     </select>
+</div>
+<div class="module-language-select-container">
+    <select ng-model="moduleContentLanguage" ng-options="item.code as item.label for item in availableLanguages"></select>
 </div>
 <ew-dashboard ng-if="allElements" elements="allElements">
 

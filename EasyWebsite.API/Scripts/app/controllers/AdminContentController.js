@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var adminContentController = function ($scope, $routeParams, $location, moduleHelper, moduleContentHelper, moduleContentTypeHelper) {
+    var adminContentController = function ($scope, $routeParams, $location, moduleHelper, moduleContentHelper, moduleContentTypeHelper, languageHelper) {
 
         var allModules = moduleHelper.getAll();
 
@@ -28,9 +28,13 @@
         $scope.onModuleChange = function () {
             $location.url('/admin/module-content/' + $scope.currentModuleId);
         }
+
+        $scope.getLabel = function (label) {
+            return languageHelper.getModuleLabel(label);
+        };
         
 
     };
 
-    app.controller("adminContentController", ['$scope', '$routeParams', '$location', 'moduleHelper', 'moduleContentHelper', 'moduleContentTypeHelper', adminContentController]);
+    app.controller("adminContentController", ['$scope', '$routeParams', '$location', 'moduleHelper', 'moduleContentHelper', 'moduleContentTypeHelper', 'languageHelper', adminContentController]);
 }());
