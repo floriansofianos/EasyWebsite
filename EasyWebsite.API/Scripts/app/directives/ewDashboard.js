@@ -69,6 +69,9 @@
                         resolve: {
                             element: function () {
                                 return elt;
+                            },
+                            language: function () {
+                                return scope.language;
                             }
                         }
                     });

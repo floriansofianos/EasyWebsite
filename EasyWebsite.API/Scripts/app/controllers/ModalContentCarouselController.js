@@ -9,8 +9,10 @@
         };
 
         var element = $scope.$parent.element;
+        var language = $scope.$parent.language;
 
-        if (element.moduleContentTranslations.length > 0) $scope.content = element.moduleContentTranslations[0].content;
+        var moduleContentTranslation = _.find(element.moduleContentTranslations, function (e) { return e.language == language; })
+        if (moduleContentTranslation) $scope.content = moduleContentTranslation.content;
         else $scope.content = '<div class="carousel-container"></div>';
 
         parseHTML($scope.content);
