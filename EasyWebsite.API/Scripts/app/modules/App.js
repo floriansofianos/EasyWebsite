@@ -47,7 +47,6 @@
         function ($translateProvider, $resource) {
             $translateProvider.useUrlLoader('/api/translation');
             $translateProvider.determinePreferredLanguage();
-            //$translateProvider.preferredLanguage(preferredLanguage);
             $translateProvider.useSanitizeValueStrategy('sanitize');
         }]);
 
@@ -66,7 +65,7 @@
         authService.fillAuthData();
     }]);
 
-    myApp.run(['$translate', 'settings', function ($translate, settings) {
+    myApp.run(['$translate', 'settings', 'languageHelper', function ($translate, settings, languageHelper) {
         // Just making sure that the preferred language is correct
         var availableLanguages = settings.getAvailableLanguages();
         availableLanguages.$promise.then(function () {
@@ -74,12 +73,18 @@
                 // Case where we don't have this language in the available languages. Default to english if available.
                 if (availableLanguages.value.indexOf('en') > -1) {
                     $translate.use('en');
+                    languageHelper.currentLanguage = 'en_';
                 }
                 else {
                     // Epic fail, just use the first language available
                     $translate.use(availableLanguages.value.split('|')[0]);
+                    languageHelper.currentLanguage = availableLanguages.value.split('|')[0];
                 }
             }
+            else {
+                languageHelper.currentLanguage = $translate.use();
+            }
+
         });
     }]);
 

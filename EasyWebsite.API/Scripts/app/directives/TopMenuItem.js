@@ -6,7 +6,7 @@
             require: '^topMenu',
             replace: true,
             scope: {
-                label: '@',
+                label: '=',
                 route: '@',
                 icon: '@',
                 section: '@'
@@ -32,6 +32,11 @@
                 // is element showing?
                 scope.isShowing = function (section) {
                     return ctrl.isShowing(section);
+                }
+
+                // get label
+                scope.getLabel = function (label) {
+                    return ctrl.getLabel(label);
                 }
 
             }

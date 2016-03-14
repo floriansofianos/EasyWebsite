@@ -15,8 +15,11 @@
             }
         ];
 
+        var currentLanguage = '';
+
         return {
-            availableLanguages: availableLanguages
+            availableLanguages: availableLanguages,
+            currentLanguage: currentLanguage
         }
     };
 

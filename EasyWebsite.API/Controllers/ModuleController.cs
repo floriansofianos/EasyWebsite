@@ -18,7 +18,7 @@ namespace EasyWebsite.API.Controllers
 
             using(var _repo = new ModuleRepository(UnitOfWork))
             {
-                modules = _repo.All
+                modules = _repo.AllIncluding(m => m.Name)
                         .Where(m => !m.IsDeleted)
                         .OrderBy(m => m.MenuPosition)
                         .ToList();

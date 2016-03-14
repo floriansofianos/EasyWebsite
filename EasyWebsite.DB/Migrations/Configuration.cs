@@ -50,6 +50,11 @@ namespace EasyWebsite.DB.Migrations
                 context.Modules.AddRange(BuildModuleList());
             }
 
+            if (context.SiteSettings.Count() == 0)
+            {
+                context.SiteSettings.AddRange(BuildSettingsList());
+            }
+
             var modulesToFix = context.ModuleContents.Where(c => c.ContentType == null).ToList();
 
             foreach (var moduleContent in modulesToFix)
@@ -88,12 +93,25 @@ namespace EasyWebsite.DB.Migrations
                     IsDeleted = false,
                     MenuPosition = 1,
                     ModuleType = Module.Type.Static,
-                    Name = "Test Module",
+                    Name = new List<ModuleName> { new ModuleName { Language = "fr_FR", Name = "Test Module" }, new ModuleName { Language = "en_AU", Name = "Module Test" } },
                     Url = "/test-module"
                 }
             };
 
             return moduleList;
+        }
+
+        private static List<SiteSetting> BuildSettingsList()
+        {
+            List<SiteSetting> settingsList = new List<SiteSetting>()
+            {
+                new SiteSetting
+                {
+                    Key = "languages",
+                    Value = ""
+                }
+            };
+            return settingsList;
         }
     }
 }

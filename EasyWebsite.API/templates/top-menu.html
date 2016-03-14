@@ -1,6 +1,6 @@
 ﻿<ul class="nav navbar-nav">
-    <top-menu-item ng-repeat="item in topMenuItems" label="{{item.label}}" route="{{item.route}}" icon="{{item.icon}}" section=""></top-menu-item>
-    <top-menu-item label="Admin" route="/admin" icon="fa-home" section="admin"></top-menu-item>
-    <top-menu-item label="Module" route="/admin/module" section="admin"></top-menu-item>
-    <top-menu-item label="Module Content" route="/admin/module-content" section="admin" icon="fa-pen"></top-menu-item>
+    <top-menu-item ng-repeat="item in topMenuItems" label="item.label" route="{{item.route}}" icon="{{item.icon}}" section=""></top-menu-item>
+    <top-menu-item label="[{language: 'fr_FR', name: 'Administration'},{language: 'en_AU', name: 'Admin'}]" route="/admin" icon="fa-home" section="admin"></top-menu-item>
+    <top-menu-item label="[{language: 'fr_FR', name: 'Module'},{language: 'en_AU', name: 'Module'}]" route="/admin/module" section="admin"></top-menu-item>
+    <top-menu-item label="[{language: 'fr_FR', name: 'Contenu de module'},{language: 'en_AU', name: 'Module Content'}]" route="/admin/module-content" section="admin" icon="fa-pen"></top-menu-item>
 </ul>

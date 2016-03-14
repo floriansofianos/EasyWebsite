@@ -58,6 +58,7 @@
     <Compile Include="DataModel\Module.cs" />
     <Compile Include="DataModel\ModuleContent.cs" />
     <Compile Include="DataModel\ModuleContentTranslation.cs" />
+    <Compile Include="DataModel\ModuleName.cs" />
     <Compile Include="DataModel\News.cs" />
     <Compile Include="DataModel\RefreshToken.cs" />
     <Compile Include="DataModel\SiteSettings.cs" />
@@ -113,6 +114,10 @@
     <Compile Include="Migrations\201603081225116_changes-for-news.Designer.cs">
       <DependentUpon>201603081225116_changes-for-news.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603140026513_module-name-in-multiple-languages.cs" />
+    <Compile Include="Migrations\201603140026513_module-name-in-multiple-languages.Designer.cs">
+      <DependentUpon>201603140026513_module-name-in-multiple-languages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -167,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603081225116_changes-for-news.resx">
       <DependentUpon>201603081225116_changes-for-news.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603140026513_module-name-in-multiple-languages.resx">
+      <DependentUpon>201603140026513_module-name-in-multiple-languages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

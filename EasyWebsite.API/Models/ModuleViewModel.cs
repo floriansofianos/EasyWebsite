@@ -10,7 +10,7 @@ namespace EasyWebsite.API.Models
     {
         public int Id { get; set; }
         public string Route { get; set; }
-        public string Label { get; set; }
+        public List<ModuleName> Label { get; set; }
         public string Icon { get; set; }
     }
 

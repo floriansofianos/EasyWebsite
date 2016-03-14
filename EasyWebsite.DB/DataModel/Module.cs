@@ -11,7 +11,7 @@ namespace EasyWebsite.DB.DataModel
     public class Module: IObjectWithState
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public List<ModuleName> Name { get; set; }
         public string Url { get; set; }
         public Type ModuleType { get; set; }
         public int? MenuPosition { get; set; }
