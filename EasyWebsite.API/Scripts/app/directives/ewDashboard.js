@@ -4,7 +4,8 @@
     var ewDashboard = function (moduleContentHelper, $routeParams, $uibModal, $sce) {
         return {
             scope: {
-                elements: '='
+                elements: '=',
+                language: '='
             },
             templateUrl: 'templates/ewDashboardTemplate.html',
             link: function (scope) {
@@ -72,6 +73,11 @@
                         }
                     });
                 }
+
+                scope.getCorrectTranslation = function (moduleTranslations) {
+                    var translation = _.find(moduleTranslations, function (t) { return t.language == scope.language; });
+                    return translation ? translation.content : '';
+                };
 
                 scope.trustAsHtml = function (s) {
                     return $sce.trustAsHtml(s);

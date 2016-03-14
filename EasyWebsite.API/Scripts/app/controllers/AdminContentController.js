@@ -1,11 +1,16 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var adminContentController = function ($scope, $routeParams, $location, moduleHelper, moduleContentHelper, moduleContentTypeHelper, languageHelper) {
+    var adminContentController = function ($scope, $routeParams, $location, moduleHelper, moduleContentHelper, moduleContentTypeHelper, languageHelper, settings) {
 
         var allModules = moduleHelper.getAll();
 
         $scope.moduleContentTypes = moduleContentTypeHelper.get();
+
+        var strAvailableLanguages = settings.getAvailableLanguages();
+        strAvailableLanguages.$promise.then(function () {
+            $scope.availableLanguages = _.filter(languageHelper.availableLanguages, function (l) { return strAvailableLanguages.value.indexOf(l.code) > -1});
+        });
 
         // In case we don't have a module id, redirect to the first one
         if (!$routeParams.id) {
@@ -36,5 +41,5 @@
 
     };
 
-    app.controller("adminContentController", ['$scope', '$routeParams', '$location', 'moduleHelper', 'moduleContentHelper', 'moduleContentTypeHelper', 'languageHelper', adminContentController]);
+    app.controller("adminContentController", ['$scope', '$routeParams', '$location', 'moduleHelper', 'moduleContentHelper', 'moduleContentTypeHelper', 'languageHelper', 'settings', adminContentController]);
 }());
