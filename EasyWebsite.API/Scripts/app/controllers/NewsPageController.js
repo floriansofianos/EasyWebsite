@@ -3,9 +3,10 @@
 
     var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings) {
 
-        //TODO Only show the news for current language
-
-        //TODO Ability to write news in multiple languages
+        // Only show the news for current language
+        $scope.news.$promise.then(function () {
+            $scope.news = _.filter($scope.news, function (n) { return n.language == languageHelper.getCurrentLanguage(); });
+        });
 
         $scope.availableLanguages = settings.getAvailableLanguages();
         $scope.availableLanguages.$promise.then(function () {
@@ -17,7 +18,7 @@
         
 
         $scope.newElement = {
-            newLanguage: window.navigator.language
+            newLanguage: languageHelper.getCurrentLanguage()
         };
 
         $scope.addNews = function () {

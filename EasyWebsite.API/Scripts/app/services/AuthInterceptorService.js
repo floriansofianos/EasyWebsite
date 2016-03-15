@@ -33,7 +33,7 @@
         }
 
         var _retryHttpRequest = function (config, deferred) {
-            $http = $http || $injector.get('$http');
+            var $http = $http || $injector.get('$http');
             $http(config).then(function (response) {
                 deferred.resolve(response);
             }, function (response) {

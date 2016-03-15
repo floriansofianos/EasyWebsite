@@ -73,7 +73,7 @@
                 // Case where we don't have this language in the available languages. Default to english if available.
                 if (availableLanguages.value.indexOf('en') > -1) {
                     $translate.use('en');
-                    languageHelper.setCurrentLanguage('en_');
+                    languageHelper.setCurrentLanguage('en_AU');
                 }
                 else {
                     // Epic fail, just use the first language available

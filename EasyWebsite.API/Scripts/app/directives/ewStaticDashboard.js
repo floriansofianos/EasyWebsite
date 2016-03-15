@@ -1,7 +1,7 @@
 ﻿(function () {
     var dashboardModule = angular.module('app.dashboard');
 
-    var ewStaticDashboard = function ($sce) {
+    var ewStaticDashboard = function ($sce, languageHelper) {
         return {
             scope: {
                 elements: '='
@@ -29,10 +29,15 @@
                     return $sce.trustAsHtml(s);
                 };
 
+                scope.getTranslatedContent = function (moduleContentTranslations) {
+                    var moduleContentTranslation = _.find(moduleContentTranslations, function (t) { return t.language == languageHelper.getCurrentLanguage(); });
+                    return moduleContentTranslation ? moduleContentTranslation.content : '';
+                }
+
                 
             }
         }
     }
 
-    dashboardModule.directive('ewStaticDashboard', ['$sce', ewStaticDashboard]);
+        dashboardModule.directive('ewStaticDashboard', ['$sce', 'languageHelper', ewStaticDashboard]);
 }());
