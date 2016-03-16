@@ -88,21 +88,37 @@
         });
     }]);
 
-    myApp.run(function ($rootScope, $location, authService) {
-        var urlWithAuth = "/admin/";
+    myApp.run(function ($rootScope, $location, authService, permissionHelper) {
+        var urlWithAdminPermission = "/admin";
+
+        var verifyPermissions = function () {
+            if ($location.url().indexOf(urlWithAdminPermission) > -1) {
+                var accessPromise = permissionHelper.get('ROLE_ADMINISTRATOR');
+                accessPromise.$promise.then(function () {
+                    if (!accessPromise.access) {
+                        // redirect back to login
+                        $location.path('/login');
+                    }
+                });
+            };
+        };
 
         $rootScope.$on('$routeChangeStart', function (event, next, current) {
-            // if route requires auth and user is not logged in
-            if ($location.url().indexOf(urlWithAuth) > -1 && !authService.authentication.isAuth) {
+
+            // Authenticate the user if not already the case
+            if (!authService.authentication.isAuth) {
                 // maybe we just have a referesh token
-                authService.refreshToken().then(function (response) {
-                    // Nothing, we are connected
-                },
-                function (error) {
-                    // redirect back to login
-                    $location.path('/login');
+                var refreshTokenPromise = authService.refreshToken();
+            }
+
+            if (refreshTokenPromise) {
+                refreshTokenPromise.then(function () {
+                    verifyPermissions();
+                }, function () {
+                    verifyPermissions();
                 });
             }
+            else verifyPermissions();
         });
     });
 
