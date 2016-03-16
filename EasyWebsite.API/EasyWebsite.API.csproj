@@ -194,6 +194,7 @@
     <Compile Include="Controllers\HasRoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EWApiController.cs" />
+    <Compile Include="Controllers\IsAuthenticatedController.cs" />
     <Compile Include="Controllers\ModuleContentController.cs" />
     <Compile Include="Controllers\ModuleContentTranslationController.cs" />
     <Compile Include="Controllers\ModuleContentTypeController.cs" />

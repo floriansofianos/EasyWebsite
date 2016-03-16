@@ -14,8 +14,9 @@
         $scope.login = function () {
 
             authService.login($scope.loginData).then(function (response) {
-
-                $location.path('/admin');
+                var redirect = $location.search().redirect;
+                if (redirect) $location.path(redirect).search({});
+                else $location.path('/');
 
             },
              function (err) {

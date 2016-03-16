@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var authService = function ($http, $q, localStorageService) {
+    var authService = function ($http, $q, localStorageService, $resource) {
 
         var _authentication = {
             isAuth: false,
@@ -92,14 +92,19 @@
             return deferred.promise;
         };
 
+        var isAuthenticated = function () {
+            return $resource('/api/IsAuthenticated/').get();
+        }
+
         return {
             login: _login,
             authentication: _authentication,
             fillAuthData: _fillAuthData,
             logOut: _logOut,
-            refreshToken: _refreshToken
+            refreshToken: _refreshToken,
+            isAuthenticated: isAuthenticated
         };
     };
 
-    app.factory('authService', ['$http', '$q', 'localStorageService', authService]);
+    app.factory('authService', ['$http', '$q', 'localStorageService', '$resource', authService]);
 }());

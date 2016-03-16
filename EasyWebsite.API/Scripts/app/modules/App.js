@@ -92,12 +92,14 @@
         var urlWithAdminPermission = "/admin";
 
         var verifyPermissions = function () {
+            // Verifies that we do not try to access an admin page with user credentials
             if ($location.url().indexOf(urlWithAdminPermission) > -1) {
                 var accessPromise = permissionHelper.get('ROLE_ADMINISTRATOR');
                 accessPromise.$promise.then(function () {
                     if (!accessPromise.access) {
                         // redirect back to login
-                        $location.path('/login');
+                        var urlToRedirect = $location.url();
+                        $location.path('/login').search({ redirect: urlToRedirect });
                     }
                 });
             };
@@ -106,19 +108,25 @@
         $rootScope.$on('$routeChangeStart', function (event, next, current) {
 
             // Authenticate the user if not already the case
-            if (!authService.authentication.isAuth) {
-                // maybe we just have a referesh token
-                var refreshTokenPromise = authService.refreshToken();
-            }
+            var isAuthenticatedPromise = authService.isAuthenticated();
 
-            if (refreshTokenPromise) {
-                refreshTokenPromise.then(function () {
-                    verifyPermissions();
-                }, function () {
-                    verifyPermissions();
-                });
-            }
-            else verifyPermissions();
+            isAuthenticatedPromise.$promise.then(function () {
+                if (!isAuthenticatedPromise.authenticated) {
+                    // maybe we just have a refresh token
+                    var refreshTokenPromise = authService.refreshToken();
+                }
+
+                if (refreshTokenPromise) {
+                    refreshTokenPromise.then(function () {
+                        verifyPermissions();
+                    }, function () {
+                        verifyPermissions();
+                    });
+                }
+                else verifyPermissions();
+            });
+            
+            
         });
     });
 

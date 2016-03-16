@@ -23,7 +23,8 @@
                     _retryHttpRequest(rejection.config, deferred);
                 }, function () {
                     authService.logOut();
-                    $location.path('/login');
+                    var urlToRedirect = $location.url();
+                    $location.path('/login').search({ redirect: urlToRedirect });
                     deferred.reject(rejection);
                 });
             } else {
