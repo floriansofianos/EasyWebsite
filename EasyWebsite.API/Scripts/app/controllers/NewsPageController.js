@@ -1,7 +1,9 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings) {
+    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings, permissionHelper) {
+
+        $scope.canWriteNews = permissionHelper.get('ROLE_NEWS_WRITER');
 
         // Only show the news for current language
         $scope.news.$promise.then(function () {
@@ -45,5 +47,5 @@
 
     };
 
-    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', newsPageController]);
+    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', 'permissionHelper', newsPageController]);
 }());

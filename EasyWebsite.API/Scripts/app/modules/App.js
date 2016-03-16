@@ -88,4 +88,22 @@
         });
     }]);
 
+    myApp.run(function ($rootScope, $location, authService) {
+        var urlWithAuth = "/admin/";
+
+        $rootScope.$on('$routeChangeStart', function (event, next, current) {
+            // if route requires auth and user is not logged in
+            if ($location.url().indexOf(urlWithAuth) > -1 && !authService.authentication.isAuth) {
+                // maybe we just have a referesh token
+                authService.refreshToken().then(function (response) {
+                    // Nothing, we are connected
+                },
+                function (error) {
+                    // redirect back to login
+                    $location.path('/login');
+                });
+            }
+        });
+    });
+
 }());

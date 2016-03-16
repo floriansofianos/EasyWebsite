@@ -32,12 +32,18 @@ namespace EasyWebsite.DB.Migrations
             //    );
             //
 
+            if (context.Roles.Count() == 0)
+            {
+                BuildRolesList().ForEach(r => context.Roles.Add(r));
+            }
+
             if (!(context.Users.Any(u => u.UserName == "superadmin")))
             {
                 var userStore = new UserStore<User>(context);
                 var userManager = new UserManager<User>(userStore);
                 var userToInsert = new User { UserName = "superadmin", FirstName = "", Surname = "superadmin" };
                 userManager.Create(userToInsert, "Brisbane=4000");
+                userManager.AddToRole(userToInsert.Id, "ROLE_ADMINISTRATOR");
             }
 
             if (context.Clients.Count() == 0)
@@ -112,6 +118,22 @@ namespace EasyWebsite.DB.Migrations
                 }
             };
             return settingsList;
+        }
+
+        private static List<IdentityRole> BuildRolesList()
+        {
+            List<IdentityRole> rolesList = new List<IdentityRole>()
+            {
+                new IdentityRole
+                {
+                    Name = "ROLE_ADMINISTRATOR"
+                },
+                new IdentityRole
+                {
+                    Name = "ROLE_NEWS_WRITER"
+                }
+            };
+            return rolesList;
         }
     }
 }

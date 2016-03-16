@@ -99,6 +99,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/UserHelper.js",
                       "~/Scripts/app/services/LanguageHelper.js",
                       "~/Scripts/app/services/SettingsHelper.js",
+                      "~/Scripts/app/services/PermissionHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

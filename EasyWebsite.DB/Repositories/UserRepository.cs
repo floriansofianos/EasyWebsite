@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity;
 
 namespace EasyWebsite.DB.Repositories
 {
@@ -64,6 +66,20 @@ namespace EasyWebsite.DB.Repositories
         public User Find(object id)
         {
             return _context.Users.Find((string)id);
+        }
+
+        public User FindByUsername(string username)
+        {
+            return _context.Users.FirstOrDefault(u => !u.IsDeleted && u.UserName == username);
+        }
+
+        public bool UserHasRole(string username, string role)
+        {
+            var userStore = new UserStore<User>(_context);
+            var userManager = new UserManager<User>(userStore);
+            var currentUser = FindByUsername(username);
+            if (currentUser == null) return false;
+            else return (userManager.IsInRole(currentUser.Id, role) || userManager.IsInRole(currentUser.Id, "ROLE_ADMINISTRATOR"));
         }
 
         public void Delete(object id)

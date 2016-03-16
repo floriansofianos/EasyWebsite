@@ -1,5 +1,5 @@
 ﻿<div class="news-page-container">
-    <div class="row">
+    <div class="row" ng-if="canWriteNews.access">
         <div class="add-button-container" ng-click="addNews()">
             <i class="fa fa-plus"></i>
             <span>{{'ADD' | translate}}</span>
