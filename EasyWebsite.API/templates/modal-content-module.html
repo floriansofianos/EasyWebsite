@@ -1,0 +1,9 @@
+﻿<div ng-controller="modalContentModuleController">
+    <div>
+        <span>{{'SELECT_MODULE' | translate}}</span>
+        <select ng-model="moduleId" ng-options="item.id as item.label for item in allModules"></select>
+    </div>
+
+    <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
+    <button type="button" class="btn btn-warning">{{'CANCEL' | translate}}</button>
+</div>

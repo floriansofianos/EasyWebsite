@@ -12,6 +12,7 @@ namespace EasyWebsite.API.Models
         public string Route { get; set; }
         public List<ModuleName> Label { get; set; }
         public string Icon { get; set; }
+        public int Type { get; set; }
     }
 
     public static class ModuleVMExtensions
@@ -23,7 +24,8 @@ namespace EasyWebsite.API.Models
                 Id = module.Id,
                 Route = module.Url,
                 Label = module.Name,
-                Icon = "fa-home"
+                Icon = "fa-home",
+                Type = (int)module.ModuleType
             };
         }
     }

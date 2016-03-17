@@ -83,6 +83,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/ModalContentCarouselController.js",
                       "~/Scripts/app/controllers/ModalContentMapController.js",
                       "~/Scripts/app/controllers/ModalContentImageController.js",
+                       "~/Scripts/app/controllers/ModalContentModuleController.js",
                       "~/Scripts/app/controllers/ImagePickerController.js",
                       "~/Scripts/app/controllers/NewsPageController.js",
                       "~/Scripts/app/services/AuthService.js",
