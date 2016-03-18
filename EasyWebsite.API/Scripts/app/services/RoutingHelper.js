@@ -8,14 +8,14 @@
             return $location.path().split('/');
         };
 
-        var getActiveTopMenu = function () {
+        var getActiveSection = function () {
             var activeMenus = getActiveMenus();
             return activeMenus[1] == 'admin' ? 'admin' : '';
         }
 
         return {
             getActiveMenus: getActiveMenus,
-            getActiveTopMenu: getActiveTopMenu,
+            getActiveSection: getActiveSection,
         }
     };
 

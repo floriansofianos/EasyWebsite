@@ -13,24 +13,13 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/tinymce")
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/bootstrap")
 </head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <body ng-app="myApp">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <top-menu>
-                </top-menu>
-            </div>
-        </div>
-    </div>
+    <top-menu ng-if="$root.languageLoaded">
+    </top-menu>
+
     <div class="body-content">
         @RenderBody()
     </div>

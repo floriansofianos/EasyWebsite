@@ -10,10 +10,11 @@
             templateUrl: '/templates/top-menu.html',
             controller: 'TopMenuController',
             link: function (scope, elt, attr) {
-                scope.topMenuItems = topMenuHelper.getAll();
+                
+
             }
         }
     }
 
-    menuModule.directive('topMenu', ['topMenuHelper', topMenu]);
+    menuModule.directive('topMenu', topMenu);
 }());

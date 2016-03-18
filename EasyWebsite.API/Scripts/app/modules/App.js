@@ -65,7 +65,7 @@
         authService.fillAuthData();
     }]);
 
-    myApp.run(['$translate', 'settings', 'languageHelper', function ($translate, settings, languageHelper) {
+    myApp.run(['$translate', 'settings', 'languageHelper', '$rootScope', function ($translate, settings, languageHelper, $rootScope) {
         // Just making sure that the preferred language is correct
         var availableLanguages = settings.getAvailableLanguages();
         availableLanguages.$promise.then(function () {
@@ -84,7 +84,7 @@
             else {
                 languageHelper.setCurrentLanguage($translate.use());
             }
-
+            $rootScope.languageLoaded = true;
         });
     }]);
 

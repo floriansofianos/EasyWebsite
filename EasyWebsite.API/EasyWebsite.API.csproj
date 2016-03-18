@@ -229,6 +229,7 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\angular-carousel.min.css" />
     <Content Include="Content\angular-gridster.min.css" />
+    <Content Include="Content\angular-navbar.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\colorpicker.css" />
@@ -250,6 +251,7 @@
     <Content Include="Scripts\angular-locale_en-gb.js" />
     <Content Include="Scripts\angular-locale_en-us.js" />
     <Content Include="Scripts\angular-locale_fr-fr.js" />
+    <Content Include="Scripts\angular-navbar.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
@@ -287,7 +289,6 @@
     <Content Include="Scripts\app\directives\ewStaticDashboard.js" />
     <Content Include="Scripts\app\directives\ModuleUrl.js" />
     <Content Include="Scripts\app\directives\TopMenu.js" />
-    <Content Include="Scripts\app\directives\TopMenuItem.js" />
     <Content Include="Scripts\app\modules\app.dashboard.js" />
     <Content Include="Scripts\app\modules\app.settings.js" />
     <Content Include="Scripts\app\modules\App.js" />
@@ -377,7 +378,6 @@
     <Content Include="templates\modal-content-title.html" />
     <Content Include="templates\modal-content-map.html" />
     <Content Include="templates\modal-content-widget.html" />
-    <Content Include="templates\top-menu-item.html" />
     <Content Include="templates\top-menu.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

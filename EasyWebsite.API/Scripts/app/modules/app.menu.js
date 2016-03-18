@@ -1,3 +1,3 @@
 ﻿(function () {
-	angular.module("app.menu", []);
+	angular.module("app.menu", ['app.navbar']);
 }());
