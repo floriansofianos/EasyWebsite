@@ -24,7 +24,7 @@
         <button type="button" class="btn btn-warning" ng-click="cancel()">{{'CANCEL' | translate}}</button>
     </div>
     <div class="news-container" ng-repeat="item in news" ng-if="!creatingNews">
-        <div class="news-title">{{item.title}}</div>
+        <div class="news-title clickable" ng-click="goToNews(item.id)">{{item.title}}</div>
         <div class="news-date">{{item.date}}</div>
         <div class="news-content" dynamic="item.body"></div>
     </div>
