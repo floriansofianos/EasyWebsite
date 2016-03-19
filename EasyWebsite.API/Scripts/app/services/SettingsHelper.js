@@ -14,8 +14,12 @@
 
             var getAvailableLanguages = function () {
                 return $resource('/api/SiteSettings/', { key: 'languages' }).get();
-            }
+            };
 
+            var getBusinessName = function () {
+                return $resource('/api/SiteSettings/', { key: 'businessName' }).get();
+            };
+            
             var save = function (settings) {
                 var query = $resource('/api/SiteSettings/').save(settings);
                 query.$promise.then(function () { alert('Successful save!') });
@@ -24,7 +28,8 @@
             return {
                 get: get,
                 save: save,
-                getAvailableLanguages: getAvailableLanguages
+                getAvailableLanguages: getAvailableLanguages,
+                getBusinessName: getBusinessName
             }
         };
     });

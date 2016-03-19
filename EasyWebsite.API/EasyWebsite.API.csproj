@@ -233,6 +233,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\colorpicker.css" />
+    <None Include="Content\Pharmacie.less" />
+    <Content Include="Content\Pharmacie.css" />
     <Content Include="Content\select-ui.min.css" />
     <Content Include="Content\select2.css" />
     <Content Include="Content\Site.css" />

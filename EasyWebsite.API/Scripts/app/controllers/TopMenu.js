@@ -1,10 +1,15 @@
 ﻿(function () {
     var menuModule = angular.module('app.menu');
 
-    var TopMenuController = function ($scope, $location, routingHelper, languageHelper, topMenuHelper) {
+    var TopMenuController = function ($scope, $location, routingHelper, languageHelper, topMenuHelper, settings) {
 
         $scope.affixed = 'top';
         $scope.inverse = true;
+        var businessName = settings.getBusinessName();
+
+        businessName.$promise.then(function () {
+            if(businessName.value) $scope.brand = businessName.value;
+        });
 
         var getLabel = function (moduleNames) {
             return languageHelper.getModuleLabel(moduleNames);
@@ -52,8 +57,12 @@
         $scope.setRoute = function (route) {
             $location.url(route);
         };
+
+        $scope.navigateToHome = function () {
+            $location.url('/');
+        }
     };
 
-    menuModule.controller('TopMenuController', ['$scope', '$location', 'routingHelper', 'languageHelper', 'topMenuHelper', TopMenuController]);
+    menuModule.controller('TopMenuController', ['$scope', '$location', 'routingHelper', 'languageHelper', 'topMenuHelper', 'settings', TopMenuController]);
 
 }());

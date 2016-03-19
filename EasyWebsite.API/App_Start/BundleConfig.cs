@@ -117,7 +117,8 @@ namespace EasyWebsite.API
                       "~/Content/select-ui.min.css",
                       "~/Content/select2.css",
                       "~/Content/angular-navbar.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/Pharmacie.css"));
         }
     }
 }
