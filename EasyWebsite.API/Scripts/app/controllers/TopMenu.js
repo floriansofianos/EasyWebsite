@@ -12,7 +12,8 @@
 
         var adminMenus = [{
             label: [{ language: 'fr_FR', name: 'Administration' }, { language: 'en_AU', name: 'Admin' }],
-            action: '/admin'
+            action: '/admin',
+            icon: 'fa-home'
         },
         {
             label: [{ language: 'fr_FR', name: 'Module' }, { language: 'en_AU', name: 'Module' }],
@@ -28,7 +29,8 @@
             _.each(adminMenus, function (m) {
                 $scope.topMenuItems.push({
                     title: getLabel(m.label),
-                    action: m.action
+                    action: m.action,
+                    icon: m.icon
                 });
             });
         }
@@ -40,7 +42,8 @@
                 _.each($scope.allModules, function (m) {
                     $scope.topMenuItems.push({
                         title: getLabel(m.label),
-                        action: m.route
+                        action: m.route,
+                        icon: m.icon
                     });
                 });
             });

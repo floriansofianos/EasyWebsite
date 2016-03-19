@@ -55,10 +55,11 @@ namespace EasyWebsite.API.Controllers
         public IHttpActionResult Get(string url)
         {
             Module module;
+            string partialUrl = url.Split('/')[1];
             using (var _repo = new ModuleRepository(UnitOfWork))
             {
                 module = _repo.AllIncluding(m => m.Name)
-                        .Where(m => !m.IsDeleted && m.Url == url)
+                        .Where(m => !m.IsDeleted && (m.Url == url || m.Url == "/" + partialUrl))
                         .FirstOrDefault();
 
             }

@@ -267,6 +267,7 @@
     <Content Include="Scripts\app\controllers\AdminPage.js" />
     <Content Include="Scripts\app\controllers\ModalContentModuleController.js" />
     <Content Include="Scripts\app\controllers\ModuleNewsController.js" />
+    <Content Include="Scripts\app\controllers\SingleNewsPageController.js" />
     <Content Include="Scripts\app\controllers\NewsPageController.js" />
     <Content Include="Scripts\app\controllers\ContentController.js" />
     <Content Include="Scripts\app\controllers\HomePage.js" />
@@ -284,6 +285,7 @@
     <Content Include="Scripts\app\directives\dynamic.js" />
     <Content Include="Scripts\app\directives\ewDashboard.js" />
     <Content Include="Scripts\app\directives\ewModuleNews.js" />
+    <Content Include="Scripts\app\directives\ewSingleNewsPage.js" />
     <Content Include="Scripts\app\directives\ewNewsPage.js" />
     <Content Include="Scripts\app\directives\ewImagePicker.js" />
     <Content Include="Scripts\app\directives\ewStaticDashboard.js" />
@@ -364,6 +366,7 @@
     <Content Include="templates\content.html" />
     <Content Include="templates\ew-image-picker.html" />
     <Content Include="templates\ew-module-news.html" />
+    <Content Include="templates\ew-single-news-page.html" />
     <Content Include="templates\ew-news-page.html" />
     <Content Include="templates\ewStaticDashboardTemplate.html" />
     <Content Include="templates\ewDashboardTemplate.html" />

@@ -1,5 +1,5 @@
 ﻿/* If you plan on using affixed states, you need to include these in your CSS */
-body.navbar-affixed-top { padding-top: 70px; }
+body.navbar-affixed-top { padding-top: 30px; }
 body.navbar-affixed-bottom { padding-bottom: 70px; }
 
 /* Bootstrap relies on HREF property of the A tag to be present to display the correct cursor but since we're using ng-click we need to have the following CSS */

@@ -8,14 +8,19 @@
             return $resource('/api/News/' + moduleId).query();
         };
 
+        var getSingleNews = function (moduleId, newsId) {
+            return $resource('/api/News/' + moduleId, { newsId: newsId }).get();
+        }
+
         var save = function (news) {
             var query = $resource('/api/News/').save(news);
             query.$promise.then(function () { alert('Successful save!') });
-        }
+        };
 
         return {
             get: get,
-            save: save
+            save: save,
+            getSingleNews: getSingleNews
         }
     };
 

@@ -19,6 +19,14 @@ namespace EasyWebsite.API.Controllers
             }
         }
 
+        public IHttpActionResult Get(int id, int newsId)
+        {
+            using (var _repo = new NewsRepository(UnitOfWork))
+            {
+                return Ok(_repo.All.FirstOrDefault(n => !n.IsDeleted && n.Id == newsId));
+            }
+        }
+
         [Authorize]
         public IHttpActionResult Post(News news)
         {

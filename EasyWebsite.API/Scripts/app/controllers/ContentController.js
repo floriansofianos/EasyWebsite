@@ -9,7 +9,13 @@
 
         $scope.module.$promise.then(function () {
             if ($scope.module.moduleType == 0) $scope.allElements = moduleContentHelper.getElementsByURL(currentPage);
-            if ($scope.module.moduleType == 1) $scope.allNews = newsHelper.get($scope.module.id);
+            if ($scope.module.moduleType == 1) {
+                $scope.allNews = newsHelper.get($scope.module.id);
+                if (currentPage.split('/').length > 2) {
+                    // We are in a single news situation
+                    $scope.singleNews = newsHelper.getSingleNews($scope.module.id, currentPage.split('/')[2]);
+                }
+            }
         });
 
         
