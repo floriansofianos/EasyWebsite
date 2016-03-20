@@ -7,6 +7,7 @@
     box-shadow: none;
     li {
         transition: top .15s ease-in-out;
+        margin-left: 20px;
         a {
             color: #6b7770;
             border-bottom-left-radius: 6px;
@@ -17,7 +18,7 @@
             margin-right: 5px;
         }
     }
-    li:hover {
+    a:hover {
         top: 3px;
     }
 }
@@ -29,6 +30,10 @@
 .navbar-inverse .navbar-nav>li>a:hover {
     background-color: #AFAEAE;
 	color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li:hover {
+    background-color: #AFAEAE;
 }
 
 .navbar-inverse .navbar-brand:hover {
@@ -43,4 +48,24 @@
 
 .navbar-inverse .navbar-nav>li>.menu-active:hover {
     background-color: #e3daa8;
+}
+
+.navbar-inverse .navbar-nav>li.menu-active {
+    background-color: #e3daa8;
+}
+
+.navbar-inverse .navbar-nav>li.menu-active:hover {
+    background-color: #e3daa8;
+}
+
+.navbar-toggle {
+    background-color: #6b7770;
+    
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+}
+.navbar-inverse .navbar-collapse {
+    border-color: transparent;
 }
