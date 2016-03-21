@@ -18,6 +18,7 @@ namespace EasyWebsite.DB.DataModel
         public bool IsDeleted { get; set; }
         public List<ModuleContent> ModuleContents { get; set; }
         public List<News> News { get; set; }
+        public bool IsHomePage { get; set; }
 
         [NotMapped]
         public State State { get; set; }  

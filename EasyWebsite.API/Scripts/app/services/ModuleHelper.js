@@ -12,6 +12,10 @@
             return $resource('/api/Module/' + id).get();
         };
 
+        var getHomeModule = function () {
+            return $resource('/api/HomePage/').get();
+        };
+
         var save = function (module) {
             var query = $resource('/api/Module/').save(module);
             query.$promise.then(function () { alert('Successful save!') });
@@ -26,7 +30,8 @@
             getAll: getAll,
             save: save,
             get: get,
-            getByUrl: getByUrl
+            getByUrl: getByUrl,
+            getHomeModule: getHomeModule
         }
     };
 

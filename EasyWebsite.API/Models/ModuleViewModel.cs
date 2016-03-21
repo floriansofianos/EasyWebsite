@@ -13,6 +13,7 @@ namespace EasyWebsite.API.Models
         public List<ModuleName> Label { get; set; }
         public string Icon { get; set; }
         public int Type { get; set; }
+        public bool IsHomePage { get; set; }
     }
 
     public static class ModuleVMExtensions
@@ -25,7 +26,8 @@ namespace EasyWebsite.API.Models
                 Route = module.Url,
                 Label = module.Name,
                 Icon = "fa-home",
-                Type = (int)module.ModuleType
+                Type = (int)module.ModuleType,
+                IsHomePage = module.IsHomePage
             };
         }
     }

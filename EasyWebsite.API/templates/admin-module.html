@@ -35,6 +35,10 @@
     <div ng-show="form.$submitted || form.mName.$touched">
         <div ng-show="form.mName.$error.required">{{'MODULE_MENU_POSITION_REQUIRED' | translate}}</div>
     </div>
+
+    {{'MODULE_IS_HOMEPAGE' | translate}}
+    <input type="checkbox" ng-model="module.isHomePage" name="mIsHomePage" />
+    <br />
     
     <input type="submit" ng-click="update(module)" value="{{'SAVE' | translate}}" ng-disabled="form.$invalid" />
 </form>

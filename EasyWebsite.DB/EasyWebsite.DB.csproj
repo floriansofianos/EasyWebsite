@@ -118,6 +118,10 @@
     <Compile Include="Migrations\201603140026513_module-name-in-multiple-languages.Designer.cs">
       <DependentUpon>201603140026513_module-name-in-multiple-languages.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603210358209_module-is-homepage.cs" />
+    <Compile Include="Migrations\201603210358209_module-is-homepage.Designer.cs">
+      <DependentUpon>201603210358209_module-is-homepage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
@@ -176,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603140026513_module-name-in-multiple-languages.resx">
       <DependentUpon>201603140026513_module-name-in-multiple-languages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603210358209_module-is-homepage.resx">
+      <DependentUpon>201603210358209_module-is-homepage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

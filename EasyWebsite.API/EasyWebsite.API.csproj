@@ -194,6 +194,7 @@
     <Compile Include="Controllers\HasRoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EWApiController.cs" />
+    <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\IsAuthenticatedController.cs" />
     <Compile Include="Controllers\ModuleContentController.cs" />
     <Compile Include="Controllers\ModuleContentTranslationController.cs" />
@@ -233,8 +234,15 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\colorpicker.css" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Content\Pharmacie.less" />
     <Content Include="Content\Pharmacie.css" />
+    <Content Include="Content\Pharmacie.min.css">
+      <DependentUpon>Pharmacie.css</DependentUpon>
+    </Content>
     <Content Include="Content\select-ui.min.css" />
     <Content Include="Content\select2.css" />
     <Content Include="Content\Site.css" />
