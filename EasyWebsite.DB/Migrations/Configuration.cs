@@ -115,6 +115,11 @@ namespace EasyWebsite.DB.Migrations
                 {
                     Key = "languages",
                     Value = ""
+                },
+                new SiteSetting
+                {
+                    Key = "theme",
+                    Value = ""
                 }
             };
             return settingsList;

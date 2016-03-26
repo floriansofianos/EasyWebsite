@@ -19,6 +19,10 @@
             var getBusinessName = function () {
                 return $resource('/api/SiteSettings/', { key: 'businessName' }).get();
             };
+
+            var getFooter = function () {
+                return $resource('/api/SiteSettings/', { key: 'footer' }).get();
+            }
             
             var save = function (settings) {
                 var query = $resource('/api/SiteSettings/').save(settings);
@@ -29,7 +33,8 @@
                 get: get,
                 save: save,
                 getAvailableLanguages: getAvailableLanguages,
-                getBusinessName: getBusinessName
+                getBusinessName: getBusinessName,
+                getFooter: getFooter
             }
         };
     });

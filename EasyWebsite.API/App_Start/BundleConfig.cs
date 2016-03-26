@@ -1,5 +1,8 @@
-﻿using System.Web;
+﻿using EasyWebsite.DB;
+using EasyWebsite.DB.Repositories;
+using System.Web;
 using System.Web.Optimization;
+using System.Linq;
 
 namespace EasyWebsite.API
 {
@@ -69,6 +72,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/directives/dynamic.js",
                       "~/Scripts/app/directives/ewNewsPage.js",
                       "~/Scripts/app/directives/ewSingleNewsPage.js",
+                      "~/Scripts/app/directives/ewFooter.js",
                       "~/Scripts/app/directives/ewModuleNews.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
@@ -90,6 +94,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/NewsPageController.js",
                       "~/Scripts/app/controllers/SingleNewsPageController.js",
                       "~/Scripts/app/controllers/ModuleNewsController.js",
+                      "~/Scripts/app/controllers/FooterController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",
@@ -117,8 +122,19 @@ namespace EasyWebsite.API
                       "~/Content/select-ui.min.css",
                       "~/Content/select2.css",
                       "~/Content/angular-navbar.css",
-                      "~/Content/site.css",
-                      "~/Content/Pharmacie.css"));
+                      "~/Content/site.css"));
+
+            UnitOfWork UnitOfWork = new UnitOfWork();
+            using(SiteSettingsRepository _repo = new SiteSettingsRepository(UnitOfWork))
+            {
+                var cssTheme = _repo.All.FirstOrDefault(s => s.Key == "theme");
+                if(cssTheme != null)
+                {
+                    bundles.Add(new StyleBundle("~/Content/theme").Include(
+                        string.Format("~/Content/{0}.css", cssTheme.Value)
+                    ));
+                }
+            }
         }
     }
 }
