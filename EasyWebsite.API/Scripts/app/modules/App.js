@@ -1,5 +1,5 @@
 ﻿(function () {
-    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker', 'uiGmapgoogle-maps', 'ui.select', 'app.settings']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker', 'uiGmapgoogle-maps', 'ui.select', 'app.settings', 'tmh.dynamicLocale']);
 
     // Routing configuration
     myApp.config(['$routeProvider', '$locationProvider',
@@ -65,7 +65,7 @@
         authService.fillAuthData();
     }]);
 
-    myApp.run(['$translate', 'settings', 'languageHelper', '$rootScope', function ($translate, settings, languageHelper, $rootScope) {
+    myApp.run(['$translate', 'settings', 'languageHelper', '$rootScope', 'tmhDynamicLocale', function ($translate, settings, languageHelper, $rootScope, tmhDynamicLocale) {
         // Just making sure that the preferred language is correct
         var availableLanguages = settings.getAvailableLanguages();
         availableLanguages.$promise.then(function () {
@@ -74,15 +74,18 @@
                 if (availableLanguages.value.indexOf('en') > -1) {
                     $translate.use('en');
                     languageHelper.setCurrentLanguage('en_AU');
+                    tmhDynamicLocale.set('en_AU');
                 }
                 else {
                     // Epic fail, just use the first language available
                     $translate.use(availableLanguages.value.split('|')[0]);
                     languageHelper.setCurrentLanguage(availableLanguages.value.split('|')[0]);
+                    tmhDynamicLocale.set(availableLanguages.value.split('|')[0]);
                 }
             }
             else {
                 languageHelper.setCurrentLanguage($translate.use());
+                tmhDynamicLocale.set($translate.use());
             }
             $rootScope.languageLoaded = true;
         });

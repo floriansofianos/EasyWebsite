@@ -56,6 +56,7 @@ namespace EasyWebsite.API
                       "~/Scripts/ng-file-upload.min.js",
                       "~/Scripts/select-ui.min.js",
                       "~/Scripts/angular-navbar.js",
+                      "~/Scripts/angular-dynamic-locale.min.js",
                       "~/Scripts/bootstrap-colorpicker-module.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
@@ -110,6 +111,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/LanguageHelper.js",
                       "~/Scripts/app/services/SettingsHelper.js",
                       "~/Scripts/app/services/PermissionHelper.js",
+                      "~/Scripts/app/services/NavbarHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

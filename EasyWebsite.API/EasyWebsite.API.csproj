@@ -254,13 +254,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular-carousel.min.js" />
+    <Content Include="Scripts\angular-dynamic-locale.min.js" />
     <Content Include="Scripts\angular-google-maps.min.js" />
     <Content Include="Scripts\angular-gridster.min.js" />
     <Content Include="Scripts\angular-local-storage.min.js" />
-    <Content Include="Scripts\angular-locale_en-au.js" />
-    <Content Include="Scripts\angular-locale_en-gb.js" />
-    <Content Include="Scripts\angular-locale_en-us.js" />
-    <Content Include="Scripts\angular-locale_fr-fr.js" />
+    <Content Include="angular\i18n\angular-locale_en_AU.js" />
+    <Content Include="angular\i18n\angular-locale_en_GB.js" />
+    <Content Include="angular\i18n\angular-locale_en_US.js" />
+    <Content Include="angular\i18n\angular-locale_fr_FR.js" />
     <Content Include="Scripts\angular-navbar.js" />
     <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -315,6 +316,7 @@
     <Content Include="Scripts\app\services\ModuleHelper.js" />
     <Content Include="Scripts\app\services\ModuleTypeHelper.js" />
     <Content Include="Scripts\app\services\ModuleUrlHelper.js" />
+    <Content Include="Scripts\app\services\NavbarHelper.js" />
     <Content Include="Scripts\app\services\SettingsHelper.js" />
     <Content Include="Scripts\app\services\PermissionHelper.js" />
     <Content Include="Scripts\app\services\UserHelper.js" />

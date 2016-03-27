@@ -1,13 +1,13 @@
 ﻿<div class="small-module-news-container">
     <div class="last-news-container">
         <div class="last-news-title">{{lastNews.title}}</div>
-        <div class="last-news-date">{{lastNews.date}}</div>
+        <div class="last-news-date"><i class="fa fa-clock-o"></i><span>{{lastNews.date}}</span></div>
         <div class="last-news-content" dynamic="lastNews.body"></div>
     </div>
     <div class="other-news-container">
         <div ng-repeat="item in otherNews" class="small-news-container">
             <div class="small-news-title">{{item.title}}</div>
-            <div class="small-news-date">{{item.date}}</div>
+            <div class="small-news-date"><i class="fa fa-clock-o"></i><span>{{item.date}}</span></div>
         </div>
     </div>
 </div>

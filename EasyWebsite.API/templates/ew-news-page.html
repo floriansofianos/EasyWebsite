@@ -25,7 +25,7 @@
     </div>
     <div class="news-container" ng-repeat="item in news" ng-if="!creatingNews">
         <div class="news-title clickable" ng-click="goToNews(item.id)">{{item.title}}</div>
-        <div class="news-date">{{item.date}}</div>
+        <div class="news-date"><i class="fa fa-clock-o"></i><span>{{item.date | date:'fullDate'}}</span></div>
         <div class="news-content" dynamic="item.body"></div>
     </div>
 </div>
