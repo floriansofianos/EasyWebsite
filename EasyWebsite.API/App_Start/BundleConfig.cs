@@ -34,10 +34,6 @@ namespace EasyWebsite.API
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                       "~/Scripts/angular.min.js",
-                      "~/Scripts/angular-locale_fr-fr.js",
-                      "~/Scripts/angular-locale_en-us.js",
-                      "~/Scripts/angular-locale_en-gb.js",
-                      "~/Scripts/angular-locale_en-au.js",
                       "~/Scripts/angular-translate.min.js",
                       "~/Scripts/angular-sanitize.min.js",
                       "~/Scripts/angular-translate-loader-url.min.js",
@@ -75,6 +71,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/directives/ewSingleNewsPage.js",
                       "~/Scripts/app/directives/ewFooter.js",
                       "~/Scripts/app/directives/ewModuleNews.js",
+                      "~/Scripts/app/directives/ewTextfield.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
                       "~/Scripts/app/controllers/AdminPage.js",
@@ -96,6 +93,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/SingleNewsPageController.js",
                       "~/Scripts/app/controllers/ModuleNewsController.js",
                       "~/Scripts/app/controllers/FooterController.js",
+                      "~/Scripts/app/controllers/TextfieldController.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",

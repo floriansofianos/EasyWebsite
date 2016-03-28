@@ -18,7 +18,7 @@
         </div>
         <div class="news-creation-row">
             <span class="news-creation-title">{{'NEWS_CONTENT' | translate}}</span>
-            <span class="news-creation-input"><textarea ui-tinymce ng-model="newElement.newBody"></textarea></span>
+            <span class="news-creation-input"><ew-textfield model="newElement.newBody"></ew-textfield></span>
         </div>
         <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
         <button type="button" class="btn btn-warning" ng-click="cancel()">{{'CANCEL' | translate}}</button>
