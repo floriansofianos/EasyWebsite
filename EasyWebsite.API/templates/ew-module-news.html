@@ -15,5 +15,8 @@
             <div class="small-news-title clickable">{{item.title}}</div>
             <div class="news-date"><i class="fa fa-clock-o"></i><span>{{item.date | date:'fullDate'}}</span></div>
         </div>
+        <div class="add-button-container" ng-click="goToNews(module.id)">
+            <span>{{'SEE_ALL_NEWS' | translate}}</span>
+        </div>
     </div>
 </div>
