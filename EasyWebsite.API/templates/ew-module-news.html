@@ -1,13 +1,19 @@
-﻿<div class="small-module-news-container">
-    <div class="last-news-container">
-        <div class="last-news-title">{{lastNews.title}}</div>
-        <div class="last-news-date"><i class="fa fa-clock-o"></i><span>{{lastNews.date}}</span></div>
-        <div class="last-news-content" dynamic="lastNews.body"></div>
+﻿<div class="small-module-news-container row">
+    <h2 class="title title-center">
+        <span>{{'NEWS' | translate}}</span>
+    </h2>
+    <div class="last-news-container col-md-9">
+        <div class="last-news-title clickable">{{lastNews.title}}</div>
+        <div class="news-date"><i class="fa fa-clock-o"></i><span>{{lastNews.date | date:'fullDate'}}</span></div>
+        <div class="news-content" dynamic="lastNews.body"></div>
     </div>
-    <div class="other-news-container">
+    <div class="other-news-container col-md-3">
+        <h2 class="title title-left">
+            <span>{{'RECENT_NEWS' | translate}}</span>
+        </h2>
         <div ng-repeat="item in otherNews" class="small-news-container">
-            <div class="small-news-title">{{item.title}}</div>
-            <div class="small-news-date"><i class="fa fa-clock-o"></i><span>{{item.date}}</span></div>
+            <div class="small-news-title clickable">{{item.title}}</div>
+            <div class="news-date"><i class="fa fa-clock-o"></i><span>{{item.date | date:'fullDate'}}</span></div>
         </div>
     </div>
 </div>
