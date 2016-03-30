@@ -3,7 +3,7 @@
         <span>{{'NEWS' | translate}}</span>
     </h2>
     <div class="last-news-container col-md-9">
-        <div class="last-news-title clickable">{{lastNews.title}}</div>
+        <div class="last-news-title clickable" ng-click="goToNews(module.url, lastNews.id)">{{lastNews.title}}</div>
         <div class="news-date"><i class="fa fa-clock-o"></i><span>{{lastNews.date | date:'fullDate'}}</span></div>
         <div class="news-content" dynamic="lastNews.body"></div>
     </div>
@@ -12,10 +12,10 @@
             <span>{{'RECENT_NEWS' | translate}}</span>
         </h2>
         <div ng-repeat="item in otherNews" class="small-news-container">
-            <div class="small-news-title clickable">{{item.title}}</div>
+            <div class="small-news-title clickable" ng-click="goToNews(module.url, item.id)">{{item.title}}</div>
             <div class="news-date"><i class="fa fa-clock-o"></i><span>{{item.date | date:'fullDate'}}</span></div>
         </div>
-        <div class="add-button-container" ng-click="goToNews(module.id)">
+        <div class="add-button-container button-left" ng-click="goToNewsModule(module.url)">
             <span>{{'SEE_ALL_NEWS' | translate}}</span>
         </div>
     </div>
