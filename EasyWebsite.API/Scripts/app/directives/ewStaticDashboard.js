@@ -22,7 +22,8 @@
                         enabled: false
                     },
                     margins: [0, 0],
-                    maxRows: 900
+                    maxRows: 900,
+                    mobileBreakPoint: 750
                 }
 
                 scope.trustAsHtml = function (s) {
