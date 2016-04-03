@@ -1,11 +1,13 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var contentController = function ($scope, $location, moduleContentHelper, moduleHelper, newsHelper) {
+    var contentController = function ($scope, $location, moduleContentHelper, moduleHelper, newsHelper, settings) {
 
         var currentPage = $location.url();
 
         $scope.module = moduleHelper.getByUrl(currentPage);
+
+        $scope.siteTitle = settings.getBusinessName();
 
         $scope.module.$promise.then(function () {
             if ($scope.module.moduleType == 0) $scope.allElements = moduleContentHelper.getElementsByURL(currentPage);
@@ -22,5 +24,5 @@
 
     };
 
-    app.controller("contentController", ['$scope', '$location', 'moduleContentHelper', 'moduleHelper', 'newsHelper', contentController]);
+    app.controller("contentController", ['$scope', '$location', 'moduleContentHelper', 'moduleHelper', 'newsHelper', 'settings', contentController]);
 }());

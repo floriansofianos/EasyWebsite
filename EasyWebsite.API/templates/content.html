@@ -1,4 +1,6 @@
-﻿<ew-static-dashboard ng-if="allElements && module.moduleType == 0" elements="allElements"></ew-static-dashboard>
+﻿<div class="site-title" ng-if="module.isHomePage"><h2 class="title title-center"><span>{{siteTitle.value}}</span></h2></div>
+
+<ew-static-dashboard ng-if="allElements && module.moduleType == 0" elements="allElements"></ew-static-dashboard>
 
 <ew-news-page ng-if="module.moduleType == 1 && allNews && !singleNews" news="allNews" moduleId="module.id"></ew-news-page>
 
