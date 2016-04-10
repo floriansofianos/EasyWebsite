@@ -15,7 +15,7 @@ namespace EasyWebsite.API.Controllers
         {
             using (var _repo = new NewsRepository(UnitOfWork))
             {
-                return Ok(_repo.All.Where(n => !n.IsDeleted && n.ModuleId == id).ToList());
+                return Ok(_repo.All.Where(n => !n.IsDeleted && n.ModuleId == id).OrderByDescending(n => n.Date).ToList());
             }
         }
 

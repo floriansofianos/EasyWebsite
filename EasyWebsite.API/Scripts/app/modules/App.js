@@ -1,5 +1,5 @@
 ﻿(function () {
-    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker', 'uiGmapgoogle-maps', 'ui.select', 'app.settings', 'tmh.dynamicLocale']);
+    var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'ngSanitize', 'LocalStorageModule', 'app.menu', 'app.dashboard', 'colorpicker.module', 'ngFileUpload', 'app.image.picker', 'uiGmapgoogle-maps', 'ui.select', 'app.settings', 'tmh.dynamicLocale', 'ngAnimate']);
 
     // Routing configuration
     myApp.config(['$routeProvider', '$locationProvider',
@@ -7,7 +7,8 @@
               $routeProvider.
                 when('/', {
                     templateUrl: 'templates/home.html',
-                    controller: 'homePage'
+                    controller: 'homePage',
+                    animation: 'fade-in'
                 }).
                   when('/admin', {
                       templateUrl: 'templates/admin.html',
@@ -35,7 +36,8 @@
                   }).
                 otherwise({
                     templateUrl: 'templates/content.html',
-                    controller: 'contentController'
+                    controller: 'contentController',
+                    animation: 'left-animation'
                 });
 
               // Use HTML5 URLs
@@ -109,6 +111,8 @@
         };
 
         $rootScope.$on('$routeChangeStart', function (event, next, current) {
+
+            $rootScope.animation = next.animation;
 
             // Authenticate the user if not already the case
             var isAuthenticatedPromise = authService.isAuthenticated();

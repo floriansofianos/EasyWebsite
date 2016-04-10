@@ -5,7 +5,9 @@
         $scope.tinymceOptions = {
             plugins: 'advlist autolink link image lists charmap print preview table',
             skin: 'lightgray',
-            theme: 'modern'
+            theme: 'modern',
+            image_advtab: true ,
+            paste_data_images: true
         };
 
     };

@@ -34,6 +34,7 @@ namespace EasyWebsite.API
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                       "~/Scripts/angular.min.js",
+                      "~/Scripts/angular-animate.min.js",
                       "~/Scripts/angular-translate.min.js",
                       "~/Scripts/angular-sanitize.min.js",
                       "~/Scripts/angular-translate-loader-url.min.js",
@@ -122,6 +123,7 @@ namespace EasyWebsite.API
                       "~/Content/select-ui.min.css",
                       "~/Content/select2.css",
                       "~/Content/angular-navbar.css",
+                      "~/Content/wfmi-style.css",
                       "~/Content/site.css"));
 
             UnitOfWork UnitOfWork = new UnitOfWork();
