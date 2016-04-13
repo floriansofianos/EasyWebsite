@@ -159,14 +159,32 @@
   <data name="MODULE_URL_REQUIRED" xml:space="preserve">
     <value>L'URL est obligatoire</value>
   </data>
+  <data name="NEWS" xml:space="preserve">
+    <value>Actualités</value>
+  </data>
+  <data name="NEWS_CONTENT" xml:space="preserve">
+    <value>Contenu</value>
+  </data>
+  <data name="NEWS_LANGUAGE" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="NEWS_TITLE" xml:space="preserve">
+    <value>Titre</value>
+  </data>
   <data name="PASSWORD" xml:space="preserve">
     <value>Mot de passe</value>
+  </data>
+  <data name="RECENT_NEWS" xml:space="preserve">
+    <value>Actualités récentes</value>
   </data>
   <data name="REMEMBER_ME" xml:space="preserve">
     <value>Se souvenir de moi</value>
   </data>
   <data name="SAVE" xml:space="preserve">
     <value>Sauvegarder</value>
+  </data>
+  <data name="SEE_ALL_NEWS" xml:space="preserve">
+    <value>Voir toutes les actualités</value>
   </data>
   <data name="WELCOME_TO" xml:space="preserve">
     <value>Bienvenue sur</value>

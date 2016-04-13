@@ -187,11 +187,56 @@ namespace EasyWebsite.API.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to News.
+        /// </summary>
+        internal static string NEWS {
+            get {
+                return ResourceManager.GetString("NEWS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content.
+        /// </summary>
+        internal static string NEWS_CONTENT {
+            get {
+                return ResourceManager.GetString("NEWS_CONTENT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string NEWS_LANGUAGE {
+            get {
+                return ResourceManager.GetString("NEWS_LANGUAGE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        internal static string NEWS_TITLE {
+            get {
+                return ResourceManager.GetString("NEWS_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string PASSWORD {
             get {
                 return ResourceManager.GetString("PASSWORD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recent News.
+        /// </summary>
+        internal static string RECENT_NEWS {
+            get {
+                return ResourceManager.GetString("RECENT_NEWS", resourceCulture);
             }
         }
         
@@ -210,6 +255,15 @@ namespace EasyWebsite.API.Resources {
         internal static string SAVE {
             get {
                 return ResourceManager.GetString("SAVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See all news.
+        /// </summary>
+        internal static string SEE_ALL_NEWS {
+            get {
+                return ResourceManager.GetString("SEE_ALL_NEWS", resourceCulture);
             }
         }
         
