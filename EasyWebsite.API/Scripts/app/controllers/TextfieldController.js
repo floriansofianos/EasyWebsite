@@ -3,7 +3,7 @@
 
     var textfieldController = function ($scope) {
         $scope.tinymceOptions = {
-            plugins: 'advlist autolink link image lists charmap print preview table',
+            plugins: 'advlist autolink link image lists charmap print preview table paste',
             skin: 'lightgray',
             theme: 'modern',
             image_advtab: true ,

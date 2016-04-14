@@ -14,7 +14,7 @@
 
         var save = function (news) {
             var query = $resource('/api/News/').save(news);
-            query.$promise.then(function () { alert('Successful save!') });
+            return query.$promise;
         };
 
         return {

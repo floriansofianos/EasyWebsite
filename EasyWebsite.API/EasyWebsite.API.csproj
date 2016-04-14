@@ -250,6 +250,7 @@
       <DependentUpon>Site.css</DependentUpon>
     </Content>
     <Content Include="Content\slick.css" />
+    <Content Include="Content\spinner.css" />
     <Content Include="Content\wfmi-style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -279,6 +280,7 @@
     <Content Include="Scripts\app\controllers\AdminContentController.js" />
     <Content Include="Scripts\app\controllers\AdminModuleController.js" />
     <Content Include="Scripts\app\controllers\AdminPage.js" />
+    <Content Include="Scripts\app\controllers\SpinnerController.js" />
     <Content Include="Scripts\app\controllers\TextfieldController.js" />
     <Content Include="Scripts\app\controllers\ModalContentModuleController.js" />
     <Content Include="Scripts\app\controllers\ModuleNewsController.js" />
@@ -308,10 +310,12 @@
     <Content Include="Scripts\app\directives\ewImagePicker.js" />
     <Content Include="Scripts\app\directives\ewStaticDashboard.js" />
     <Content Include="Scripts\app\directives\ModuleUrl.js" />
+    <Content Include="Scripts\app\directives\Spinner.js" />
     <Content Include="Scripts\app\directives\TopMenu.js" />
     <Content Include="Scripts\app\modules\app.dashboard.js" />
     <Content Include="Scripts\app\modules\app.settings.js" />
     <Content Include="Scripts\app\modules\App.js" />
+    <Content Include="Scripts\app\modules\app.spinner.js" />
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
     <Content Include="Scripts\app\services\ImagePickerHelper.js" />
@@ -324,6 +328,7 @@
     <Content Include="Scripts\app\services\NavbarHelper.js" />
     <Content Include="Scripts\app\services\SettingsHelper.js" />
     <Content Include="Scripts\app\services\PermissionHelper.js" />
+    <Content Include="Scripts\app\services\SpinnerHelper.js" />
     <Content Include="Scripts\app\services\UserHelper.js" />
     <Content Include="Scripts\app\services\RoutingHelper.js" />
     <Content Include="Scripts\app\services\TopMenuHelper.js" />
@@ -582,6 +587,7 @@
     <Content Include="templates\modal-content-title.html" />
     <Content Include="templates\modal-content-map.html" />
     <Content Include="templates\modal-content-widget.html" />
+    <Content Include="templates\spinner.html" />
     <Content Include="templates\top-menu.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

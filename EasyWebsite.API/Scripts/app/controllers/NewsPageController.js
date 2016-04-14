@@ -1,7 +1,9 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings, permissionHelper, $location) {
+    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings, permissionHelper, $location, spinnerHelper, $route) {
+
+        $scope.notSavingNews = true;
 
         $scope.canWriteNews = permissionHelper.get('ROLE_NEWS_WRITER');
 
@@ -43,13 +45,19 @@
                 date: (new Date()).toJSON(),
                 language: $scope.newElement.newLanguage
             };
-            newsHelper.save(news);
-            $scope.creatingNews = false;
+            var promise = newsHelper.save(news);
+           $scope.notSavingNews = false;
+            spinnerHelper.show();
+            promise.then(function() {
+                spinnerHelper.hide();
+                $route.reload();
+            });
+
         }
 
         
 
     };
 
-    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', 'permissionHelper', '$location', newsPageController]);
+    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', 'permissionHelper', '$location', 'spinnerHelper', '$route', newsPageController]);
 }());

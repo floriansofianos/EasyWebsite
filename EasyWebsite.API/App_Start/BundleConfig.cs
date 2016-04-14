@@ -62,6 +62,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/modules/app.menu.js",
                       "~/Scripts/app/modules/app.dashboard.js",
                       "~/Scripts/app/modules/app.image.picker.js",
+                      "~/Scripts/app/modules/app.spinner.js",
                       "~/Scripts/app/directives/TopMenu.js",
                       "~/Scripts/app/directives/ewDashboard.js",
                       "~/Scripts/app/directives/ewStaticDashboard.js",
@@ -73,6 +74,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/directives/ewFooter.js",
                       "~/Scripts/app/directives/ewModuleNews.js",
                       "~/Scripts/app/directives/ewTextfield.js",
+                      "~/Scripts/app/directives/Spinner.js",
                       "~/Scripts/app/controllers/HomePage.js",
                       "~/Scripts/app/controllers/LoginPage.js",
                       "~/Scripts/app/controllers/AdminPage.js",
@@ -93,6 +95,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/NewsPageController.js",
                       "~/Scripts/app/controllers/SingleNewsPageController.js",
                       "~/Scripts/app/controllers/ModuleNewsController.js",
+                      "~/Scripts/app/controllers/SpinnerController.js",
                       "~/Scripts/app/controllers/FooterController.js",
                       "~/Scripts/app/controllers/TextfieldController.js",
                       "~/Scripts/app/services/AuthService.js",
@@ -111,10 +114,12 @@ namespace EasyWebsite.API
                       "~/Scripts/app/services/SettingsHelper.js",
                       "~/Scripts/app/services/PermissionHelper.js",
                       "~/Scripts/app/services/NavbarHelper.js",
+                      "~/Scripts/app/services/SpinnerHelper.js",
                       "~/Scripts/app/services/AuthInterceptorService.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
+                      "~/Content/spinner.css",
                       "~/Content/angular-gridster.min.css",
                       "~/Content/content.min.css",
                       "~/Content/colorpicker.css",
