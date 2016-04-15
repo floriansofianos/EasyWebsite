@@ -46,6 +46,7 @@
   text-indent: -9999px;
   width: 48px;
   height: 48px;
+  margin: auto;
 }
 .timer-loader:not(:required)::before {
   -moz-animation: timer-loader 1250ms infinite linear;
@@ -86,4 +87,10 @@
   height: 16px;
   left: 15px;
   top: 15px;
+}
+
+.spinner-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
 }

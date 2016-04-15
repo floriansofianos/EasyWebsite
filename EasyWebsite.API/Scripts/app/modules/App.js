@@ -49,7 +49,7 @@
         function ($translateProvider, $resource) {
             $translateProvider.useUrlLoader('/api/translation');
             $translateProvider.determinePreferredLanguage();
-            $translateProvider.useSanitizeValueStrategy('sanitize');
+            $translateProvider.useSanitizeValueStrategy('escape');
         }]);
 
     myApp.config(function ($httpProvider) {
