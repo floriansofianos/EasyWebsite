@@ -1,7 +1,7 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings, permissionHelper, $location, spinnerHelper, $route) {
+    var newsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings, permissionHelper, $location, spinnerHelper, $route, $window, $filter) {
 
         $scope.notSavingNews = true;
 
@@ -38,14 +38,15 @@
         }
 
         $scope.save = function () {
-            var news = {
-                moduleId: parseInt($scope.moduleid),
-                title: $scope.newElement.newTitle,
-                body: $scope.newElement.newBody,
-                date: (new Date()).toJSON(),
-                language: $scope.newElement.newLanguage
-            };
-            var promise = newsHelper.save(news);
+           var news = {
+               moduleId: parseInt($scope.moduleid),
+               title: $scope.newElement.newTitle,
+               body: $scope.newElement.newBody,
+               date: (new Date()).toJSON(),
+               language: $scope.newElement.newLanguage,
+               id: $scope.newElement.id
+           };
+           var promise = newsHelper.save(news);
            $scope.notSavingNews = false;
             spinnerHelper.show();
             promise.then(function() {
@@ -55,9 +56,32 @@
 
         }
 
+        $scope.editNews = function (id) {
+            var currentNews = _.find($scope.news, function (n) { return n.id == id; });
+            $scope.newElement = {
+                newTitle: currentNews.title,
+                newBody: currentNews.body,
+                newLanguage: currentNews.language,
+                id: currentNews.id
+            };
+            $scope.creatingNews = true;
+        }
+
+        $scope.deleteNews = function (id) {
+            if ($window.confirm($filter('translate')('CONFIRM_DELETE_NEWS'))) {
+                var promise = newsHelper.deleteNews(id);
+                $scope.notSavingNews = false;
+                spinnerHelper.show();
+                promise.then(function () {
+                    spinnerHelper.hide();
+                    $route.reload();
+                });
+            }            
+        }
+
         
 
     };
 
-    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', 'permissionHelper', '$location', 'spinnerHelper', '$route', newsPageController]);
+    app.controller("newsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', 'permissionHelper', '$location', 'spinnerHelper', '$route', '$window', '$filter', newsPageController]);
 }());

@@ -1,7 +1,9 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var singleNewsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings, permissionHelper) {
+    var singleNewsPageController = function ($scope, authService, newsHelper, userHelper, languageHelper, settings, permissionHelper, spinnerHelper, $filter, $window, $route, $location, moduleHelper) {
+
+        $scope.notSavingNews = true;
 
         $scope.canWriteNews = permissionHelper.get('ROLE_NEWS_WRITER');
 
@@ -37,15 +39,45 @@
                 title: $scope.newElement.newTitle,
                 body: $scope.newElement.newBody,
                 date: (new Date()).toJSON(),
-                language: $scope.newElement.newLanguage
+                language: $scope.newElement.newLanguage,
+                id: $scope.newElement.id
             };
-            newsHelper.save(news);
-            $scope.creatingNews = false;
+            var promise = newsHelper.save(news);
+            $scope.notSavingNews = false;
+            spinnerHelper.show();
+            promise.then(function () {
+                spinnerHelper.hide();
+                $route.reload();
+            });
         }
 
-        
+        $scope.editNews = function (id) {
+            var currentNews = _.find($scope.allnews, function (n) { return n.id == id; });
+            $scope.newElement = {
+                newTitle: currentNews.title,
+                newBody: currentNews.body,
+                newLanguage: currentNews.language,
+                id: currentNews.id
+            };
+            $scope.creatingNews = true;
+        }
+
+        $scope.deleteNews = function (id) {
+            if ($window.confirm($filter('translate')('CONFIRM_DELETE_NEWS'))) {
+                var promise = newsHelper.deleteNews(id);
+                $scope.notSavingNews = false;
+                spinnerHelper.show();
+                promise.then(function () {
+                    var module = moduleHelper.get(parseInt($scope.moduleid));
+                    module.$promise.then(function () {
+                        spinnerHelper.hide();
+                        $location.url(module.url);
+                    });
+                });
+            }
+        }        
 
     };
 
-    app.controller("singleNewsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', 'permissionHelper', singleNewsPageController]);
+    app.controller("singleNewsPageController", ['$scope', 'authService', 'newsHelper', 'userHelper', 'languageHelper', 'settings', 'permissionHelper', 'spinnerHelper', '$filter', '$window', '$route', '$location', 'moduleHelper', singleNewsPageController]);
 }());

@@ -42,5 +42,17 @@ namespace EasyWebsite.API.Controllers
             
             return Ok();
         }
+
+        [Authorize]
+        public IHttpActionResult Post(int id, string method)
+        {
+            using (NewsRepository _repo = new NewsRepository(UnitOfWork))
+            {
+                _repo.Delete(id);
+                UnitOfWork.Save();
+            }
+
+            return Ok();
+        }
     }
 }

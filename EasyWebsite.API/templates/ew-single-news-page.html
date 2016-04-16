@@ -1,11 +1,11 @@
 ﻿<div class="news-page-container">
-    <div class="row" ng-if="canWriteNews.access">
+    <div class="row" ng-if="canWriteNews.access && notSavingNews">
         <div class="add-button-container" ng-click="addNews()">
             <i class="fa fa-plus"></i>
             <span>{{'ADD' | translate}}</span>
         </div>
     </div>
-    <div class="news-creation-container" ng-if="creatingNews">
+    <div class="news-creation-container" ng-if="creatingNews && notSavingNews">
         <div class="news-creation-row">
             <span class="news-creation-title">{{'NEWS_LANGUAGE' | translate}}</span>
             <span class="news-creation-input">
@@ -23,9 +23,13 @@
         <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
         <button type="button" class="btn btn-warning" ng-click="cancel()">{{'CANCEL' | translate}}</button>
     </div>
-    <div class="news-container" ng-if="!creatingNews">
+    <div class="news-container" ng-if="!creatingNews && notSavingNews">
         <div class="news-title">{{singlenews.title}}</div>
-        <div class="news-date"><i class="fa fa-clock-o"></i><span>{{singlenews.date}}</span></div>
+        <div ng-if="canWriteNews.access" class="news-buttons-container">
+            <i class="fa fa-pencil-square-o" ng-click="editNews(singlenews.id)"></i>
+            <i class="fa fa-trash" ng-click="deleteNews(singlenews.id)"></i>
+        </div>
+        <div class="news-date"><i class="fa fa-clock-o"></i><span>{{singlenews.date | date:'fullDate'}}</span></div>
         <div class="news-content" dynamic="singlenews.body"></div>
     </div>
 </div>

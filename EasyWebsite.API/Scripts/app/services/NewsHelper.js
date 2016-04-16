@@ -17,10 +17,16 @@
             return query.$promise;
         };
 
+        var deleteNews = function (id) {
+            var query = $resource('/api/News/', { id: id, method: 'delete' }).save();
+            return query.$promise;
+        };
+
         return {
             get: get,
             save: save,
-            getSingleNews: getSingleNews
+            getSingleNews: getSingleNews,
+            deleteNews: deleteNews
         }
     };
 

@@ -23,8 +23,14 @@
         <button type="button" class="btn btn-primary" ng-click="save()">OK</button>
         <button type="button" class="btn btn-warning" ng-click="cancel()">{{'CANCEL' | translate}}</button>
     </div>
-    <div class="news-container" ng-repeat="item in news" ng-if="!creatingNews">
-        <div class="news-title clickable" ng-click="goToNews(item.id)">{{item.title}}</div>
+    <div class="news-container" ng-repeat="item in news" ng-if="!creatingNews && notSavingNews">
+        <div class="news-title clickable" ng-click="goToNews(item.id)">
+            {{item.title}}
+        </div>
+        <div ng-if="canWriteNews.access" class="news-buttons-container">
+            <i class="fa fa-pencil-square-o" ng-click="editNews(item.id)"></i>
+            <i class="fa fa-trash" ng-click="deleteNews(item.id)"></i>
+        </div>
         <div class="news-date"><i class="fa fa-clock-o"></i><span>{{item.date | date:'fullDate'}}</span></div>
         <div class="news-content" dynamic="item.body"></div>
     </div>
