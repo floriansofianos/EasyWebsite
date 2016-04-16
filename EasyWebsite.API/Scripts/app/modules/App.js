@@ -34,6 +34,7 @@
                       templateUrl: 'templates/admin-module.html',
                       controller: 'adminModuleController'
                   }).
+                 when('/error', { templateUrl: '/templates/error.html', controller: 'errorController' }).
                 otherwise({
                     templateUrl: 'templates/content.html',
                     controller: 'contentController',
@@ -136,5 +137,17 @@
             
         });
     });
+
+    // Angular Error interceptor
+    myApp.config(['$provide', function ($provide) {
+        $provide.decorator("$exceptionHandler", ['$delegate', '$injector', 'errorEmailHelper', function ($delegate, $injector, errorEmailHelper) {
+            return function (exception, cause) {
+                $delegate(exception, cause);
+                var location = $injector.get('$location')
+                errorEmailHelper.sendEmail('Error accessing ' + encodeURIComponent(location.url().toString()) + ' \nError: ' + encodeURIComponent(exception.stack));
+                location.url('/error');
+            };
+        }]);
+    }]);
 
 }());

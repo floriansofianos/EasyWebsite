@@ -28,6 +28,11 @@
                     deferred.reject(rejection);
                 });
             } else {
+                var message = 'Error accessing ' + encodeURIComponent(rejection.config.url) + '\n'
+                          + 'Status: ' + rejection.status + '\n'
+                          + 'Error: ' + encodeURIComponent(rejection.statusText) + '\n';
+                errorEmailHelper.sendEmail(message);
+                $location.url('/error');
                 deferred.reject(rejection);
             }
             return deferred.promise;

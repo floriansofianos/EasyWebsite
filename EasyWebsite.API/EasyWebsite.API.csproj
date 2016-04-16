@@ -191,6 +191,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EmailErrorController.cs" />
     <Compile Include="Controllers\HasRoleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EWApiController.cs" />
@@ -280,6 +281,7 @@
     <Content Include="Scripts\app\controllers\AdminContentController.js" />
     <Content Include="Scripts\app\controllers\AdminModuleController.js" />
     <Content Include="Scripts\app\controllers\AdminPage.js" />
+    <Content Include="Scripts\app\controllers\ErrorController.js" />
     <Content Include="Scripts\app\controllers\SpinnerController.js" />
     <Content Include="Scripts\app\controllers\TextfieldController.js" />
     <Content Include="Scripts\app\controllers\ModalContentModuleController.js" />
@@ -318,6 +320,7 @@
     <Content Include="Scripts\app\modules\app.spinner.js" />
     <Content Include="Scripts\app\services\AuthInterceptorService.js" />
     <Content Include="Scripts\app\services\AuthService.js" />
+    <Content Include="Scripts\app\services\ErrorEmailHelper.js" />
     <Content Include="Scripts\app\services\ImagePickerHelper.js" />
     <Content Include="Scripts\app\services\LanguageHelper.js" />
     <Content Include="Scripts\app\services\ModuleContentTypeHelper.js" />
@@ -568,6 +571,7 @@
     <Content Include="templates\admin-module.html" />
     <Content Include="templates\admin.html" />
     <Content Include="templates\content.html" />
+    <Content Include="templates\error.html" />
     <Content Include="templates\ew-textfield.html" />
     <Content Include="templates\ew-image-picker.html" />
     <Content Include="templates\ew-module-news.html" />
