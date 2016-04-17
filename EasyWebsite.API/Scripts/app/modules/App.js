@@ -136,6 +136,17 @@
             
             
         });
+
+        $rootScope.$on('$routeChangeSuccess', function (event, currentRoute) {
+            switch (currentRoute.templateUrl) {
+                case 'templates/login.html':
+                    $rootScope.bodyClass = 'login-layout';
+                    break;
+                default:
+                    $rootScope.bodyClass = '';
+                    break;
+            }
+        });
     });
 
     // Angular Error interceptor

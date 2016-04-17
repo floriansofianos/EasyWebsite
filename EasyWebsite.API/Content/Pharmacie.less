@@ -1,4 +1,31 @@
-﻿html, body {
+﻿.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: -o-linear-gradient(@stop,
+                                 @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+html, body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -316,5 +343,17 @@ h2.title-center {
 
 .news-buttons-container:hover {
     cursor: pointer;
+}
+
+.login-container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    .border-radius(2px);
+    text-align: center;
+}
+
+.login-layout {
+    .gradient(#F5F5F5, #EAEAEA, #FFF);
 }
 
