@@ -126,8 +126,14 @@
   <data name="CANCEL" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="CONFIRM_DELETE_NEWS" xml:space="preserve">
+    <value>Do you really want to delete this article?</value>
+  </data>
   <data name="DELETE" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="DONT_PANIC" xml:space="preserve">
+    <value>Don't panic, an email has been sent to the development team.</value>
   </data>
   <data name="EMAIL" xml:space="preserve">
     <value>Email</value>
@@ -170,6 +176,9 @@
   </data>
   <data name="NEWS_TITLE" xml:space="preserve">
     <value>Title</value>
+  </data>
+  <data name="OOPS_SOMETHING_WENT_WRONG" xml:space="preserve">
+    <value>Oops! Something went wrong when serving the requested page.</value>
   </data>
   <data name="PASSWORD" xml:space="preserve">
     <value>Password</value>

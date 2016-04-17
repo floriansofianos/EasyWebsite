@@ -88,11 +88,29 @@ namespace EasyWebsite.API.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you really want to delete this article?.
+        /// </summary>
+        internal static string CONFIRM_DELETE_NEWS {
+            get {
+                return ResourceManager.GetString("CONFIRM_DELETE_NEWS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         internal static string DELETE {
             get {
                 return ResourceManager.GetString("DELETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t panic, an email has been sent to the development team..
+        /// </summary>
+        internal static string DONT_PANIC {
+            get {
+                return ResourceManager.GetString("DONT_PANIC", resourceCulture);
             }
         }
         
@@ -219,6 +237,15 @@ namespace EasyWebsite.API.Resources {
         internal static string NEWS_TITLE {
             get {
                 return ResourceManager.GetString("NEWS_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oops! Something went wrong when serving the requested page..
+        /// </summary>
+        internal static string OOPS_SOMETHING_WENT_WRONG {
+            get {
+                return ResourceManager.GetString("OOPS_SOMETHING_WENT_WRONG", resourceCulture);
             }
         }
         
