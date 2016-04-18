@@ -19,13 +19,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <body ng-app="myApp" ng-class="$root.bodyClass">
     <spinner></spinner>
-    <top-menu ng-if="$root.languageLoaded">
+    <top-menu ng-if="$root.languageLoaded && $root.bodyClass === ''">
     </top-menu>
 
     <div class="body-content">
         @RenderBody()
     </div>
-    <ew-footer></ew-footer>
+    <ew-footer ng-if="$root.bodyClass === ''"></ew-footer>
     @Scripts.Render("~/bundles/scripts")
     @RenderSection("scripts", required: false)
 </body>

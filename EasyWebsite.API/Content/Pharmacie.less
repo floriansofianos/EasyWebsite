@@ -25,6 +25,12 @@
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
 }
 
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
 html, body {
     height: 100%;
     width: 100%;
@@ -350,10 +356,16 @@ h2.title-center {
     margin-left: auto;
     margin-right: auto;
     .border-radius(2px);
-    text-align: center;
+    margin-top: 200px;
+    padding: 40px;
+    .box-shadow(0 5px 10px -5px #666;);
+    background-color: #FFF;
+    input {
+        margin-bottom: 15px;
+    }
 }
 
 .login-layout {
-    .gradient(#F5F5F5, #EAEAEA, #FFF);
+    .gradient(#8b9790, #EAEAEA, #FFF);
 }
 
