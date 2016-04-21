@@ -229,7 +229,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\angular-carousel.min.css" />
     <Content Include="Content\angular-gridster.min.css" />
     <Content Include="Content\angular-navbar.css" />
     <Content Include="Content\bootstrap.css" />
@@ -250,7 +249,6 @@
     <Content Include="Content\Site.min.css">
       <DependentUpon>Site.css</DependentUpon>
     </Content>
-    <Content Include="Content\slick.css" />
     <Content Include="Content\spinner.css" />
     <Content Include="Content\wfmi-style.css" />
     <Content Include="favicon.ico" />
@@ -258,7 +256,6 @@
     <Content Include="fonts\webfont-medical-icons.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular-animate.min.js" />
-    <Content Include="Scripts\angular-carousel.min.js" />
     <Content Include="Scripts\angular-dynamic-locale.min.js" />
     <Content Include="Scripts\angular-google-maps.min.js" />
     <Content Include="Scripts\angular-gridster.min.js" />
@@ -272,7 +269,6 @@
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-simple-logger.min.js" />
-    <Content Include="Scripts\angular-slick.min.js" />
     <Content Include="Scripts\angular-tinymce.js" />
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular-translate-loader-url.min.js" />
@@ -561,7 +557,6 @@
     <Content Include="Scripts\skins\lightgray\img\trans.gif" />
     <Content Include="Scripts\skins\lightgray\skin.ie7.min.css" />
     <Content Include="Scripts\skins\lightgray\skin.min.css" />
-    <Content Include="Scripts\slick.min.js" />
     <Content Include="Scripts\themes\modern\theme.min.js" />
     <Content Include="Scripts\tinymce.min.js" />
     <Content Include="Scripts\ui-bootstrap-tpls-0.14.3.min.js" />
