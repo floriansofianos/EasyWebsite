@@ -3,7 +3,7 @@
 
     var adminContentController = function ($scope, $routeParams, $location, moduleHelper, moduleContentHelper, moduleContentTypeHelper, languageHelper, settings) {
 
-        var allModules = moduleHelper.getAll();
+        var allModules = moduleHelper.getAllStatic();
 
         $scope.moduleContentTypes = moduleContentTypeHelper.get();
 

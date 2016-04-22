@@ -8,6 +8,10 @@
             return $resource('/api/Module/').query();
         };
 
+        var getAllStatic = function () {
+            return $resource('/api/Module?staticType=true').query();
+        };
+
         var get = function (id) {
             return $resource('/api/Module/' + id).get();
         };
@@ -28,6 +32,7 @@
 
         return {
             getAll: getAll,
+            getAllStatic: getAllStatic,
             save: save,
             get: get,
             getByUrl: getByUrl,

@@ -66,6 +66,20 @@ namespace EasyWebsite.API.Controllers
             return Ok<Module>(module);
         }
 
+        public IHttpActionResult Get(bool staticType)
+        {
+            List<ModuleViewModel> modules;
+            using (var _repo = new ModuleRepository(UnitOfWork))
+            {
+                modules = _repo.AllIncluding(m => m.Name)
+                    .Where(m => !m.IsDeleted && m.ModuleType == Module.Type.Static).ToList()
+                    .Select(m => m.ToModuleViewModel())
+                        .ToList();
+
+            }
+            return Ok<List<ModuleViewModel>>(modules);
+        }
+
         public IHttpActionResult Post(Module module)
         {
             using(ModuleRepository _repo = new ModuleRepository(UnitOfWork))
