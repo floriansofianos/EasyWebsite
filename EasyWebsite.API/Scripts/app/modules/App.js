@@ -10,7 +10,7 @@
                     controller: 'homePage',
                     animation: 'fade-in'
                 }).
-                  when('/admin', {
+                  when('/admin/home', {
                       templateUrl: 'templates/admin.html',
                       controller: 'adminPage'
                   }).

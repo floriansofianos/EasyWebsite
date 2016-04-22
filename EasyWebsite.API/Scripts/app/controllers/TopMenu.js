@@ -17,7 +17,7 @@
 
         var adminMenus = [{
             label: [{ language: 'fr_FR', name: 'Administration' }, { language: 'en_AU', name: 'Admin' }],
-            action: '/admin',
+            action: '/admin/home',
             icon: 'fa-home'
         },
         {

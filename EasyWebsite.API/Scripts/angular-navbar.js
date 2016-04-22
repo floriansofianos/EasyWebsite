@@ -110,7 +110,7 @@
 
             $scope.isActive = function (menu) {
                 var activeMenus = navbarHelper.getActiveMenus();
-                return _.any(activeMenus, function (m) { return menu.action.replace('/','') == m }) ? 'menu-active' : '';
+                return _.any(activeMenus, function (m) { return menu.action.replace('/admin/', '').replace('/', '') == m }) ? 'menu-active' : '';
             }
 
             /**
