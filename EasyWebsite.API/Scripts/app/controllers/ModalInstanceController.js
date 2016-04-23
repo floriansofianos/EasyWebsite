@@ -1,9 +1,14 @@
 ﻿(function () {
     var app = angular.module("myApp");
 
-    var modalInstanceController = function ($scope, $uibModalInstance, element, language, moduleContentTypeHelper) {
+    var modalInstanceController = function ($scope, $uibModalInstance, element, language, moduleContentTypeHelper, settings, languageHelper) {
         
         $scope.moduleContentTypes = moduleContentTypeHelper.get();
+
+        var strAvailableLanguages = settings.getAvailableLanguages();
+        strAvailableLanguages.$promise.then(function () {
+            $scope.availableLanguages = _.filter(languageHelper.availableLanguages, function (l) { return strAvailableLanguages.value.indexOf(l.code) > -1 });
+        });
 
         $scope.moduleContentTypes.$promise.then(function () {
             $scope.element = element;
@@ -20,12 +25,15 @@
                 moduleContentTranslation.content = content;
             }
             else {
-                element.moduleContentTranslations.push({ content: content, language: language });
+                if (!element.moduleContentTranslations) element.moduleContentTranslations = [];
+                _.each($scope.availableLanguages, function (l) {
+                    element.moduleContentTranslations.push({ content: content, language: l.code });
+                });
             }
             $uibModalInstance.close();
         }
 
     };
 
-    app.controller("ModalInstanceController", ['$scope', '$uibModalInstance', 'element', 'language', 'moduleContentTypeHelper', modalInstanceController]);
+    app.controller("ModalInstanceController", ['$scope', '$uibModalInstance', 'element', 'language', 'moduleContentTypeHelper', 'settings', 'languageHelper', modalInstanceController]);
 }());
