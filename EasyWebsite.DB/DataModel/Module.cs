@@ -19,6 +19,7 @@ namespace EasyWebsite.DB.DataModel
         public List<ModuleContent> ModuleContents { get; set; }
         public List<News> News { get; set; }
         public bool IsHomePage { get; set; }
+        public string Icon { get; set; }
 
         [NotMapped]
         public State State { get; set; }  

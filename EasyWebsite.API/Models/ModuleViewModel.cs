@@ -25,7 +25,7 @@ namespace EasyWebsite.API.Models
                 Id = module.Id,
                 Route = module.Url,
                 Label = module.Name,
-                Icon = "fa-home",
+                Icon = module.Icon,
                 Type = (int)module.ModuleType,
                 IsHomePage = module.IsHomePage
             };

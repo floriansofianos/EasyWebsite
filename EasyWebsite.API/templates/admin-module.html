@@ -39,6 +39,10 @@
     {{'MODULE_IS_HOMEPAGE' | translate}}
     <input type="checkbox" ng-model="module.isHomePage" name="mIsHomePage" />
     <br />
+
+    {{'MODULE_ICON' | translate}}
+    <input type="text" ng-model="module.icon" name="mIcon" />
+    <br />
     
     <input type="submit" ng-click="update(module)" value="{{'SAVE' | translate}}" ng-disabled="form.$invalid" />
 </form>
