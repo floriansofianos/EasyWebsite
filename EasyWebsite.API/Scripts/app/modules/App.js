@@ -8,31 +8,37 @@
                 when('/', {
                     templateUrl: 'templates/home.html',
                     controller: 'homePage',
-                    animation: 'fade-in'
+                    animation: 'left-animation'
                 }).
                   when('/admin/home', {
                       templateUrl: 'templates/admin.html',
-                      controller: 'adminPage'
+                      controller: 'adminPage',
+                      animation: 'left-animation'
                   }).
                   when('/admin/module-content', {
                       templateUrl: 'templates/admin-content.html',
-                      controller: 'adminContentController'
+                      controller: 'adminContentController',
+                      animation: 'left-animation'
                   }).
                   when('/admin/module-content/:id', {
                       templateUrl: 'templates/admin-content.html',
-                      controller: 'adminContentController'
+                      controller: 'adminContentController',
+                      animation: 'left-animation'
                   }).
                   when('/login', {
                       templateUrl: 'templates/login.html',
-                      controller: 'loginPage'
+                      controller: 'loginPage',
+                      animation: 'left-animation'
                   }).
                   when('/admin/module', {
                       templateUrl: 'templates/admin-module.html',
-                      controller: 'adminModuleController'
+                      controller: 'adminModuleController',
+                      animation: 'left-animation'
                   }).
                   when('/admin/module/:id', {
                       templateUrl: 'templates/admin-module.html',
-                      controller: 'adminModuleController'
+                      controller: 'adminModuleController',
+                      animation: 'left-animation'
                   }).
                  when('/error', { templateUrl: '/templates/error.html', controller: 'errorController' }).
                 otherwise({

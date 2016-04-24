@@ -38,9 +38,9 @@
                 moduleId: parseInt($scope.moduleid),
                 title: $scope.newElement.newTitle,
                 body: $scope.newElement.newBody,
-                date: (new Date()).toJSON(),
                 language: $scope.newElement.newLanguage,
-                id: $scope.newElement.id
+                id: $scope.newElement.id,
+                date: $scope.newElement.date
             };
             var promise = newsHelper.save(news);
             $scope.notSavingNews = false;
@@ -57,7 +57,8 @@
                 newTitle: currentNews.title,
                 newBody: currentNews.body,
                 newLanguage: currentNews.language,
-                id: currentNews.id
+                id: currentNews.id,
+                date: currentNews.date
             };
             $scope.creatingNews = true;
         }

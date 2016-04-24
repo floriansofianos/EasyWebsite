@@ -33,6 +33,7 @@ namespace EasyWebsite.API.Controllers
             using (UserRepository _userRepo = new UserRepository(UnitOfWork))
             {
                 news.Author = _userRepo.All.First(u => u.UserName == User.Identity.Name);
+                if (news.Id == default(int)) news.Date = DateTime.UtcNow;
                 using (NewsRepository _repo = new NewsRepository(UnitOfWork))
                 {
                     _repo.InsertOrUpdate(news);

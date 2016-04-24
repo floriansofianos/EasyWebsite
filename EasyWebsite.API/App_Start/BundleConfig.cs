@@ -51,6 +51,7 @@ namespace EasyWebsite.API
                       "~/Scripts/select-ui.min.js",
                       "~/Scripts/angular-navbar.js",
                       "~/Scripts/angular-dynamic-locale.min.js",
+                      "~/Scripts/moment.min.js",
                       "~/Scripts/bootstrap-colorpicker-module.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
@@ -96,6 +97,7 @@ namespace EasyWebsite.API
                       "~/Scripts/app/controllers/FooterController.js",
                       "~/Scripts/app/controllers/TextfieldController.js",
                       "~/Scripts/app/controllers/ErrorController.js",
+                      "~/Scripts/app/filters/newsDate.js",
                       "~/Scripts/app/services/AuthService.js",
                       "~/Scripts/app/services/RoutingHelper.js",
                       "~/Scripts/app/services/TopMenuHelper.js",

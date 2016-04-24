@@ -31,7 +31,7 @@
             <i class="fa fa-pencil-square-o" ng-click="editNews(item.id)"></i>
             <i class="fa fa-trash" ng-click="deleteNews(item.id)"></i>
         </div>
-        <div class="news-date"><i class="fa fa-clock-o"></i><span>{{item.date | date:'fullDate'}}</span></div>
+        <div class="news-date"><i class="fa fa-clock-o"></i><span>{{item.date | newsDate}}</span></div>
         <div class="news-content" dynamic="item.body"></div>
     </div>
 </div>

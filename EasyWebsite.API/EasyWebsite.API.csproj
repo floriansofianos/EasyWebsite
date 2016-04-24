@@ -310,6 +310,7 @@
     <Content Include="Scripts\app\directives\ModuleUrl.js" />
     <Content Include="Scripts\app\directives\Spinner.js" />
     <Content Include="Scripts\app\directives\TopMenu.js" />
+    <Content Include="Scripts\app\filters\newsDate.js" />
     <Content Include="Scripts\app\modules\app.dashboard.js" />
     <Content Include="Scripts\app\modules\app.settings.js" />
     <Content Include="Scripts\app\modules\App.js" />
@@ -366,6 +367,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\ng-file-upload.min.js" />
     <Content Include="Scripts\plugins\advlist\plugin.js" />
     <Content Include="Scripts\plugins\advlist\plugin.min.js" />
@@ -612,7 +614,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\app\filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
